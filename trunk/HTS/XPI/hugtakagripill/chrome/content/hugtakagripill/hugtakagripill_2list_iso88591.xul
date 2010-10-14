@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window>
+<window xmlns= "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+        xmlns:html="http://www.w3.org/1999/xhtml" 
+        windowtype="hugtakagripill"
+        onload="listBakDocs();">
+  <script src="hugtakagripill.js"/>
+  
+  <toolbox>
+    <menubar>
+      <menu label="Skrá">
+        <menupopup>
+          <menuitem label="Hætta"/>
+        </menupopup>
+      </menu>
+      <menu label="Sýn">
+        <menupopup>
+          <menuitem label="Pör"/>
+          <menuseparator/>
+          <menuitem label="Hugtök"/>
+          <menuitem label="Vinnslulisti"/>
+          <menuitem label="Stopplisti"/>
+        </menupopup>
+      </menu>
+      <menu label="Aðgerðir">
+        <menupopup>
+          <menuitem label="Lesa inn pör úr BAK skrám" oncommand="upload_files()"/>
+          <menuitem label="Handfæra inn par"/>
+          <menuseparator/>
+          <menuitem label="Sækja MT innflutningsskapalón"/>
+          <menuseparator/>
+          <menuitem label="Skrá svið"/>
+        </menupopup>
+      </menu>
+    </menubar>
+  </toolbox>
+  <hbox flex="1">
+    <vbox id="viewSelectPaneBox" persist="width">
+      <hbox align="center">
+        <button label="Hressa" onclick="listBakDocs()"/>
+      </hbox>
+      <tree id="skjol-tree" ref="urn:root" datasources="rdf:null" flags="dont-build-content"
+        containment="http://hugtakasafn.utn.stjr.is/hugtakagripill#skjol"
+        seltype="single" flex="1" class="plain focusring" enableColumnDrag="true"
+        onselect="selectBakDoc(event);">
+        <treecols>
+          <treecol flex="1" id="skjol-skjal" label="Skjal nr." persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="skjol-flokkun" label="Flokkun" persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="skjol-rit" label="Rit" persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="skjol-bls" label="Bls" persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="skjol-dags" label="Dags" persist="hidden ordinal width"/>
+        </treecols>
+        
+        <template>
+          <rule>
+            <conditions>
+              <treeitem uri="?uri"/>
+              <triple subject="?uri" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#skjol" object="?skjol"/>
+              <member container="?skjol" child="?skjal"/>
+            </conditions>
+            <bindings>
+              <binding subject="?skjal" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#skrarheiti" object="?skrarheiti"/>
+              <binding subject="?skjal" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#flokkur" object="?flokkur"/>
+              <binding subject="?skjal" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#rit" object="?rit"/>
+              <binding subject="?skjal" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#bls" object="?bls"/>
+              <binding subject="?skjal" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#dags" object="?dags"/>
+            </bindings>
+            <action>
+              <treechildren>
+                <treeitem uri="?skjal">
+                  <treerow>
+                    <treecell label="?skrarheiti"/>
+                    <treecell label="?flokkur"/>
+                    <treecell label="?rit"/>
+                    <treecell label="?bls"/>
+                    <treecell label="?dags"/>
+                  </treerow>
+                </treeitem>
+              </treechildren>
+            </action>
+          </rule>
+        </template>
+        
+      </tree>
+    </vbox>
+    <splitter collapse="before" persist="state">
+      <grippy/>
+    </splitter>
+    <vbox flex="1" persist="width">
+
+      <hbox align="center">
+        <hbox align="center">
+          <label value="Sjá:" accesskey="s"/>
+          <menulist>
+            <menupopup>
+              <menuitem label="Öll pör" value="0"/>
+              <menuitem label="Pör með uppástungum" value="0"/>
+              <menuitem label="Pör án nýjunga" value="0"/>
+              <menuseparator/>
+              <menuitem label="Sérsníða..." value="0"/>
+            </menupopup>
+          </menulist>
+        </hbox>
+        <label value="Pör innihalda"/>
+        <textbox flex="5"/>
+        <button label="Hreinsa" disabled="true" tooltiptext="Hreinsa leitarskilyrði og sýna öll pör"/>
+      </hbox>
+      <tree id="por-tree" ref="urn:por" datasources="rdf:null" flags="dont-build-content" 
+        containment="http://hugtakasafn.utn.stjr.is/hugtakagripill#por"
+        flex="1" class="plain focusring" enableColumnDrag="true"
+        onselect="selectPair(event);">
+        <treecols>
+          <treecol flex="1" id="parEnska" label="Enska" persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="parIslenska" label="Íslenska" persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="parNr" label="Par nr." persist="hidden ordinal width"/>
+          <splitter class="tree-splitter"/>
+          <treecol flex="1" id="parSkjal" label="Skjal nr." persist="hidden ordinal width"/>
+        </treecols>
+        
+        <template>
+          <rule>
+            <conditions>
+              <treeitem uri="?uri"/>
+              <triple subject="?uri" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#por" object="?por"/>
+              <member container="?por" child="?par"/>
+            </conditions>
+            <bindings>
+              <binding subject="?par" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#nr" object="?nr"/>
+              <binding subject="?par" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#skrarheiti" object="?skrarheiti"/>
+              <binding subject="?par" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#enska" object="?enska"/>
+              <binding subject="?par" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#islenska" object="?islenska"/>
+            </bindings>
+            <action>
+              <treechildren>
+                <treeitem uri="?par">
+                  <treerow>
+                    <treecell label="?enska"/>
+                    <treecell label="?islenska"/>
+                    <treecell label="?nr"/>
+                    <treecell label="?skrarheiti"/>
+                  </treerow>
+                </treeitem>
+              </treechildren>
+            </action>
+          </rule>
+        </template>
+
+      </tree>
+      <splitter collapse="after" persist="state">
+        <grippy/>
+      </splitter>
+      <vbox flex="3" persist="collapsed height">
+        <groupbox flex="1" collapsed="false">
+          <caption label="Par"/>
+	  <hbox flex="1">
+	    <vbox flex="1">
+	      <label value="Enska"/>
+	      <textbox id="parskraning-enska" multiline="true" flex="1" value=""/>
+	      <label value="Íslenska"/>
+	      <textbox id="parskraning-islenska" multiline="true" flex="1" value=""/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Stakorð"/>
+	      <tree id="tillogur-stakord" flex="1"
+		  datasources="rdf:null" ref="urn:tillogur"
+		  containment="http://hugtakasafn.utn.stjr.is/hugtakagripill#tillogur"
+		  onselect="selectWord(event);">
+		<treecols>
+		  <treecol id="tillogur-ord" flex="1"/>
+		  <treecol id="tillogur-ordStart" hidden="true"/>
+		  <treecol id="tillogur-ordEnd" hidden="true"/>
+		</treecols>
+                <template>
+                  <rule>
+                    <conditions>
+                      <content uri="?uri"/>
+                      <triple subject="?uri"
+                        predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#tillogur"
+                        object="?tillogur"/>
+                      <member container="?tillogur" child="?tillaga"/>
+                    </conditions>
+		    <bindings>
+		      <binding subject="?tillaga" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#ord" object="?ord"/>
+		      <binding subject="?tillaga" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#ordStart" object="?ordStart"/>
+		      <binding subject="?tillaga" predicate="http://hugtakasafn.utn.stjr.is/hugtakagripill#ordEnd" object="?ordEnd"/>
+		    </bindings>
+                    <action>
+                      <treechildren>
+			<treeitem uri="?tillaga">
+			  <treerow>
+			    <treecell label="?ord"/>
+			    <treecell label="?ordStart"/>
+			    <treecell label="?ordEnd"/>
+			  </treerow>
+			</treeitem>
+                      </treechildren>
+                    </action>
+                  </rule>
+                </template>
+              </tree>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <button label="Skrá enskt" tooltiptext="Færa valið enskt hugtak í skráningarform" onclick="selectEnskt();"/>
+	    <button label="Skrá íslenskt" tooltiptext="Færa valið íslenskt hugtak í skráningarform" onclick="selectIslenskt();"/>
+	    <button label="Á stopplista" tooltiptext="Skrá valið enskt hugtak á stopplista" onclick="if(confirm('Setja '+getSelectedSuggestion()+' á stopplista?')) putOnStoplist(getSelectedSuggestion());"/>
+	    <separator/>
+	    <button label="Skrá par sem dæmi" tooltiptext="Færa innihald pars sem dæmi í skráningarform hugtaks" onclick="setParDaemi();"/>
+	    <button label="Er enskt í HTS?" tooltiptext="Leita að völdum texta úr enska hluta pars í hugtakasafni" onclick="searchEnsktInHTS();"/>
+	  </hbox>
+        </groupbox>
+        <groupbox flex="1">
+          <caption label="Hugtak"/>
+          <hbox flex="1">
+            <vbox flex="1">
+              <hbox>
+                <vbox flex="1">
+	          <label value="Enska"/>
+	          <textbox id="hugtak-enska" value="" flex="1"/>
+	        </vbox>
+	        <vbox flex="1">
+	          <label value="Íslenska"/>
+	          <textbox id="hugtak-islenska" value="" flex="1"/>
+	        </vbox>
+	      </hbox>
+	      <label value="Dæmi á ensku"/>
+	      <textbox id="hugtak-daemi-enskt" multiline="true" flex="1" value=""/>
+	      <label value="Dæmi á íslensku"/>
+	      <textbox id="hugtak-daemi-islenskt" multiline="true" flex="1" value=""/>
+	      <hbox>
+		<vbox flex="1">
+		  <label value="Rit"/>
+		  <textbox id="hugtak-rit" value=""/>
+		</vbox>
+		<vbox flex="1">
+		  <label value="Skjal nr."/>
+		  <textbox id="hugtak-skjal" value=""/>
+		</vbox>
+	      </hbox>
+            </vbox>
+            <vbox pack="end">
+	      <button label="Afþakka dæmi" tooltiptext="Hreinsa dæmareiti" onclick="cleanParDaemi();"/>
+	      <separator/>
+	      <button label="Til skoðunar" tooltiptext="Vista hugtakafærslu á vinnslulista"/>
+	      <separator/>
+	      <button label="Skrá..." tooltiptext="Skrá færslu hugtaks" onclick="skraHugtak();"/>
+            </vbox>
+          </hbox>
+        </groupbox>
+      </vbox>
+    </vbox>
+  </hbox>
+</window>

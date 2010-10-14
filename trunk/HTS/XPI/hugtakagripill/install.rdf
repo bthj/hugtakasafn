@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+
+		<em:id>{CF105E0A-3AE8-4db4-A1ED-A281F7514AFB}</em:id>
+		<em:name>Hugtakagripill</em:name>
+		<em:version>0.3</em:version>
+		<em:description>Hugtakagripill THM UTN</em:description>
+		<em:creator>Bjorn Thor Jonsson</em:creator>
+		<em:homepageURL>http://hugtakasafn.utn.stjr.is/</em:homepageURL>
+		<em:iconURL>chrome://hugtakagripill/skin/helloworld.png</em:iconURL>
+		<em:aboutURL>chrome://hugtakagripill/content/about.xul</em:aboutURL>
+		<em:updateURL>http://hugtakasafn.utn.stjr.is/update.rdf</em:updateURL>
+		<em:file>
+			<Description about="urn:mozilla:extension:file:hugtakagripill.jar">
+				<em:package>content/hugtakagripill/</em:package>
+				<em:skin>skin/classic/hugtakagripill/</em:skin>
+			</Description>
+		</em:file>
+
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>0.7</em:minVersion>
+				<em:maxVersion>9.9</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+	</Description>
+
+</RDF>

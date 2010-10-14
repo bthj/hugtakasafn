@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>xmlhttp skjol test</title>
+</head>
+<body>
+<script language="Javascript">
+function birtaSkjol(skrarheiti, flokkur, rit, bls, dags) {
+  document.write("<table border=\"1\">");
+  for (var i = 0; i < skrarheiti.length; i++) {
+    document.write("<tr>");
+
+    document.write("<td>" + skrarheiti[i] + "</td>");
+    document.write("<td>" + flokkur[i] + "</td>");
+    document.write("<td>" + rit[i] + "</td>");
+    document.write("<td>" + bls[i] + "</td>");
+    document.write("<td>" + dags[i] + "</td>");
+
+    document.write("</tr>");
+  }
+  document.write("</table>");
+}
+
+req = new XMLHttpRequest();
+req.open('GET', 'http://hugtakasafn.utn.stjr.is/hugtakagripill/xul-skjol.tcl', false);
+req.send(null);
+if(req.status == 200)
+  eval(req.responseText);
+
+</script>
+<br>
+<br>
+</body>
+</html>

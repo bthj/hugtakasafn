@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!-- 
+	Contributed by Sandesh Karalkar (skexz@yahoo.co.in)
+	More hellp @ http://in.geocities.com/skexz
+-->
+
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+
+<window id="in-mem" title="In-memory RDF example" onload="alert('geeeh');"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		width="600"
+		height="400"
+		persist="screenX screenY sizemode">
+
+<script type="application/x-javascript" src="window.js"/>
+
+<!-- Customer tree -->
+		<tree id="bo-customer-tree" flex="1" datasources="rdf:null" ref="urn:root"
+					autostretch="always" seltype="single" flags="dont-build-content"
+					containment="http://www.bttlindia.com/RDF#subheadings"
+					enableColumnDrag="true" onselect="selectCustomer(event);">
+			<treecols>
+				<treecol	id="customer-id" label="Customer ID" 
+									flex="1" persist="width ordinal hidden sortActive sortDirection" 
+									primary="true" class="sortDirectionIndicator" sortActive="true"
+									sortDirection="ascending" sort="rdf:http://www.bttlindia.com/rdf#id"/>
+				<splitter class="tree-splitter" />
+				<treecol	id="customer-name" label="Name" flex="3" 
+									persist="width ordinal hidden sortActive sortDirection" class="sortDirectionIndicator" 
+									sortActive="true" sort="rdf:http://www.bttlindia.com/rdf#name"/>
+				<splitter class="tree-splitter" />
+				<treecol	id="customer-phone" label="Phone" flex="1" 
+									persist="width ordinal hidden sortActive sortDirection" class="sortDirectionIndicator"
+									sortActive="true" sort="rdf:http://www.bttlindia.com/rdf#pfone"/>
+				<splitter class="tree-splitter" />
+				<treecol	id="customer-phiscal-number" label="Phiscal No." flex="1" 
+									persist="width ordinal hidden sortActive sortDirection" class="sortDirectionIndicator"
+									sortActive="true" sort="rdf:http://www.bttlindia.com/rdf#fiscalnumber"/>
+			</treecols>
+
+			<template>
+			<rule>
+				<conditions>
+					<treeitem uri="?uri" />
+						<triple subject="?uri" predicate="http://www.bttlindia.com/RDF#subheadings"        object="?subheadings" />
+						<member container="?subheadings" child="?subheading" />
+				</conditions>
+
+				<bindings>
+							<binding subject="?subheading" predicate="http://www.bttlindia.com/RDF#id"       object="?id" />
+							<binding subject="?subheading" predicate="http://www.bttlindia.com/RDF#name"       object="?name" />
+							<binding subject="?subheading" predicate="http://www.bttlindia.com/RDF#phone"       object="?phone" />
+							<binding subject="?subheading" predicate="http://www.bttlindia.com/RDF#fiscalnumber"    object="?fiscalnumber" />
+				</bindings>
+
+				<action>
+					<treechildren>
+						<treeitem uri="?subheading" >
+							<treerow>
+							 <treecell label="?id"/>
+							 <treecell label="?name"/>
+							 <treecell label="?phone"/>
+							 <treecell label="?fiscalnumber"/>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</action>
+
+			</rule>
+	</template>
+	</tree>
+</window>
