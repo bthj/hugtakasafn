@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window>
+<window xmlns= "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        windowtype="hugtakagripill"
+        onload="skraHugtakLoad();">
+        
+    <script src="hugtakagripill-skra-hugtak.js"/>
+    <groupbox flex="1">
+      <caption label="Hugtak"/>
+      <hbox flex="1">
+	<vbox flex="1">
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Enska"/>
+	      <textbox id="hugtak-enska" value="" flex="1"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Íslenska"/>
+	      <textbox id="hugtak-islenska" value="" flex="1"/>
+	    </vbox>
+	  </hbox>
+	  <label value="Dæmi á ensku"/>
+	  <textbox id="hugtak-daemi-enskt" multiline="true" flex="1" value=""/>
+	  <label value="Dæmi á íslensku"/>
+	  <textbox id="hugtak-daemi-islenskt" multiline="true" flex="1" value=""/>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Rit"/>
+	      <textbox id="hugtak-rit" value=""/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Skjal nr."/>
+	      <textbox id="hugtak-skjal" value=""/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Aðalorð"/>
+	      <textbox id="hugtak-adalord"/>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Svið"/>
+	      <menulist editable="true" id="hugtak-svid">
+	      	<menupopup>
+	      	  <menuitem label=""/>
+		  <menuitem label="afnám tæknilegra hindrana í viðskiptum með vín (viðskipti með vín) "/>
+		  <menuitem label="almenn ákvæði á sviði tæknilegra viðskiptahindrana (tæknilegar viðskiptahindranir)"/>
+		  <menuitem label="áburður"/>
+		  <menuitem label="brenndir drykkir"/>
+		  <menuitem label="búnaður um borð í skipum "/>
+		  <menuitem label="byggingarsvæði og búnaður"/>
+		  <menuitem label="byggingarvörur"/>
+		  <menuitem label="dýr"/>
+		  <menuitem label="fast orðasamband í EB/ESB-textum (fast orðasamband)"/>
+		  <menuitem label="félagaréttur"/>
+		  <menuitem label="félagslegt öryggi"/>
+		  <menuitem label="fjarskiptaþjónusta"/>
+		  <menuitem label="fjármálaþjónusta"/>
+		  <menuitem label="flugmál"/>
+		  <menuitem label="flutningastarfsemi"/>
+		  <menuitem label="fóður"/>
+		  <menuitem label="frelsi launþega til flutninga"/>
+		  <menuitem label="frjálsir fjármagnsflutningar"/>
+		  <menuitem label="frjálsir vöruflutningar"/>
+		  <menuitem label="gagnkvæm viðurkenning á starfsmenntun og hæfi (starfsmenntun og hæfi)"/>
+		  <menuitem label="gastæki"/>
+		  <menuitem label="hagskýrslugerð"/>
+		  <menuitem label="heimilistæki"/>
+		  <menuitem label="hljóð- og myndmiðlun"/>
+		  <menuitem label="hugtak, almennt notað í EB/ESB-textum (almennt hugtak)"/>
+		  <menuitem label="hugverkaréttindi"/>
+		  <menuitem label="hættuleg efni"/>
+		  <menuitem label="lagamál"/>
+		  <menuitem label="landamæraeftirlit og réttaraðstoð"/>
+		  <menuitem label="landbúnaðardráttarvélar"/>
+		  <menuitem label="leikföng"/>
+		  <menuitem label="lyf"/>
+		  <menuitem label="lyfti- og flutningabúnaður"/>
+		  <menuitem label="lækningatæki"/>
+		  <menuitem label="matvæli"/>
+		  <menuitem label="menningarverðmæti"/>
+		  <menuitem label="milliríkjasamningar"/>
+		  <menuitem label="mælitæki"/>
+		  <menuitem label="neytendavernd"/>
+		  <menuitem label="opinber innkaup"/>
+		  <menuitem label="orka"/>
+		  <menuitem label="persónuhlífar"/>
+		  <menuitem label="plöntur"/>
+		  <menuitem label="rafmagnsvörur"/>
+		  <menuitem label="ríkisaðstoð"/>
+		  <menuitem label="samkeppni"/>
+		  <menuitem label="samvinna á sérstökum sviðum utan marka fjórþætta frelsisins (utan fjórþætta frelsisins)"/>
+		  <menuitem label="skemmtibátar"/>
+		  <menuitem label="snyrtivörur"/>
+		  <menuitem label="sprengiefni til almennra nota"/>
+		  <menuitem label="staðfesturéttur"/>
+		  <menuitem label="staðlar"/>
+		  <menuitem label="textílefni"/>
+		  <menuitem label="tóbak"/>
+		  <menuitem label="umhverfismál"/>
+		  <menuitem label="umhverfisvernd "/>
+		  <menuitem label="upplýsingatækni, fjarskipti og gagnavinnsla (upplýsingatækni)"/>
+		  <menuitem label="vélar"/>
+		  <menuitem label="vélknúin ökutæki"/>
+		  <menuitem label="þrýstihylki"/>
+		  <menuitem label="öryggi og hollustuhættir á vinnustöðum, vinnuréttur og jafnrétti kynjanna (öryggi á vinnustöðum)"/>
+		</menupopup>
+	      </menulist>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Orðflokkur"/>
+	      <menulist id="hugtak-ordflokkur">
+	      	<menupopup>
+		  <menuitem label="" value=""/>
+		  <menuitem label="no." value="no."/>
+		  <menuitem label="lo." value="lo."/>
+		  <menuitem label="so." value="so."/>
+		  <menuitem label="to." value="to."/>
+		  <menuitem label="fn." value="fn."/>
+		  <menuitem label="ao." value="ao."/>
+		  <menuitem label="fs." value="fs."/>
+		  <menuitem label="st." value="st."/>
+		</menupopup>
+	      </menulist>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Kyn"/>
+	      <menulist id="hugtak-kyn">
+	      	<menupopup>
+		  <menuitem label="" value=""/>
+		  <menuitem label="kk." value="kk."/>
+		  <menuitem label="kvk." value="kvk."/>
+		  <menuitem label="hk." value="hk."/>
+		</menupopup>
+	      </menulist>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Önnur málfræði"/>
+	      <menulist editable="true" id="hugtak-onnurmalfraedi">
+	      	<menupopup>
+		  <menuitem label="" value=""/>
+		  <menuitem label="ft." value="ft."/>
+		  <menuitem label="fleirtöluorð" value="fleirtöluorð"/>
+		  <menuitem label="fyrri liður samsetts orðs" value="fyrri liður samsetts orðs"/>
+		  <menuitem label="seinni liður samsetts orðs" value="seinni liður samsetts orðs"/>
+		  <menuitem label="forsetningarliður" value="forsetningarliður"/>
+		  <menuitem label="atviksliður" value="atviksliður"/>
+		  <menuitem label="sagnliður" value="sagnliður"/>
+		  <menuitem label="nafnháttarliður" value="nafnháttarliður"/>
+		  <menuitem label="tilvísunarsetning" value="tilvísunarsetning"/>
+		  <menuitem label="atvikssetning" value="atvikssetning"/>
+		</menupopup>
+	      </menulist>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Skilgreining"/>
+	      <textbox id="hugtak-skilgreining"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Nafn orðtaka"/>
+	      <textbox id="hugtak-nafn-ordtaka"/>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Samheiti"/>
+	      <textbox id="hugtak-samheiti"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Athugasemd"/>
+	      <textbox id="hugtak-athugasemd"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Heimild"/>
+	      <textbox id="hugtak-heimild"/>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="Gilding"/>
+	      <menulist id="hugtak-gilding">
+	      	<menupopup>
+	      	  <menuitem label="" value=""/>
+		  <menuitem label="tillaga" value="tillaga"/>
+		  <menuitem label="í athugun" value="í athugun"/>
+		  <menuitem label="yfirfarið af sérfræðingi" value="yfirfarið af sérfræðingi"/>
+		  <menuitem label="frágengið" value="frágengið"/>
+		</menupopup>
+	      </menulist>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="Skammstöfun"/>
+	      <textbox id="hugtak-skammstofun"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="EN skammstöfun"/>
+	      <textbox id="hugtak-en-skammstofun"/>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="IS annar ritháttur"/>
+	      <textbox id="hugtak-is-annar-rithattur"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="EN annar ritháttur"/>
+	      <textbox id="hugtak-en-annar-rithattur"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="DA/NO/SÆ"/>
+	      <textbox id="hugtak-da-no-sae"/>
+	    </vbox>
+	  </hbox>
+	  <hbox>
+	    <vbox flex="1">
+	      <label value="DE"/>
+	      <textbox id="hugtak-de"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="FR"/>
+	      <textbox id="hugtak-fr"/>
+	    </vbox>
+	    <vbox flex="1">
+	      <label value="LA"/>
+	      <textbox id="hugtak-la"/>
+	    </vbox>
+	  </hbox>
+	</vbox>
+	<vbox pack="end">
+	  <button label="Hætta við" tooltiptext="Hætta við skráningu hugtaks" onclick="window.close();"/>
+	  <separator/>
+	  <button label="Til skoðunar" tooltiptext="Vista hugtakafærslu á vinnslulista" disabled="true" />
+	  <separator/>
+	  <button label="Vista" tooltiptext="Vista færslu hugtaks" onclick="skraHugtak();"/>
+	</vbox>
+      </hbox>
+    </groupbox>
+    <textbox hidden="true" id="hugtak-id" />
+</window>

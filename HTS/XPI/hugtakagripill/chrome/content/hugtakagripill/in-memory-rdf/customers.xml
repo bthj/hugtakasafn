@@ -1,0 +1,10 @@
+<getCustomers id="dif-customers">
+	<customer id="S0003266542" name="Vijaya Bank" phone="91-022-2563256" fiscalnumber="501214565"/>
+	<customer id="S0003264566" name="Karvey Tradings" phone="02365-89566" fiscalnumber="456578987"/>
+	<customer id="S0003278945" name="TataTeleservice" phone="78964-15632" fiscalnumber="789654558"/>
+	<customer id="S0003278978" name="ShareKhan Investments" phone="011-98715456" fiscalnumber="789565465"/>
+	<customer id="S0003277896" name="TataTeleservice" phone="78964-15632" fiscalnumber="789654558"/>
+	<customer id="S0003789956" name="KRC International" phone="78964-15632" fiscalnumber="789654558"/>
+	<customer id="S0003277896" name="IndiaMart" phone="78964-15632" fiscalnumber="789654558"/>
+	<customer id="S0009865323" name="Satyam Computer services" phone="78964-15632" fiscalnumber="789654558"/>
+</getCustomers>
