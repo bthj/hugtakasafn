@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Hugtök úr Hugtakagripli</title>
+</head>
+<body>
+<table>
+<tr>
+
+<th>Dags skráð</th>
+<th>Enska</th>
+<th>Íslenska</th>
+<th>Dæmi á ensku</th>
+<th>Dæmi á íslensku</th>
+<th>Rit</th>
+<th>Skjal nr.</th>
+<th>Samheiti</th>
+<th>Svið</th>
+<th>Uppruni skjals</th>
+<th>Heimild</th>
+<th>Athugasemd</th>
+<th>Aðalorð</th>
+<th>Orðflokkur</th>
+<th>Kyn</th>
+<th>Önnur málfræði</th>
+<th>Skammstöfun</th>
+<th>Skilgreining</th>
+<th>Nafn orðtaka</th>
+
+</tr>
+<%
+set db [ns_db gethandle]
+set sql_query "select id, dags, enska, islenska, daemi_enska, daemi_islenska, rit, skjal_nr, samheiti, svid, uppruni_skjals, heimild, athugasemd, adalord, ordflokkur, kyn, onnur_malfraedi, skammstofun, skilgreining, nafn_ordtaka from hugtakagripill_hugtok where hidden = 'f' order by dags desc"
+set selection [ns_db select $db $sql_query]
+while { [ns_db getrow $db $selection] } {
+	set_variables_after_query
+	ns_puts "<tr>"
+	ns_puts "<td>$dags</td>"
+	ns_puts "<td>$enska</td>"
+	ns_puts "<td>$islenska</td>"
+	ns_puts "<td>$daemi_enska</td>"
+	ns_puts "<td>$daemi_islenska</td>"
+	ns_puts "<td>$rit</td>"
+	ns_puts "<td>$skjal_nr</td>"
+	ns_puts "<td>$samheiti</td>"
+	ns_puts "<td>$svid</td>"
+	ns_puts "<td>$uppruni_skjals</td>"
+	ns_puts "<td>$heimild</td>"
+	ns_puts "<td>$athugasemd</td>"
+	ns_puts "<td>$adalord</td>"
+	ns_puts "<td>$ordflokkur</td>"
+	ns_puts "<td>$kyn</td>"
+	ns_puts "<td>$onnur_malfraedi</td>"
+	ns_puts "<td>$skammstofun</td>"
+	ns_puts "<td>$skilgreining</td>"
+	ns_puts "<td>$nafn_ordtaka</td>"
+	ns_puts "</tr>"
+}
+%>
+	</table>
+</body>
+</html>

@@ -1,0 +1,389 @@
+    
+  </div>
+</div>
+
+<hr class="stream" />
+
+
+              
+    
+  </div>
+  </div>
+
+
+  
+<div class='pgextra2' id='pgnav'>
+<div class="wrap">
+<!-- eplica-exclude-content -->
+                <!-- eplica-no-index -->
+              <div class="snav">
+
+                <h2 class="boxhead">Ráðuneytið</h2>
+                <div class="boxbody">
+                    <ul class="level1"
+                      ><li class="cat1 branch"><a href="http://www.utanrikisraduneyti.is/raduneytid/hlutverk/" class="cat1">Hlutverk</a
+                    ></li
+                      ><li class="cat2"><a href="http://www.utanrikisraduneyti.is/raduneytid/skipulag/" class="cat2">Skipulag</a
+                    ></li
+                      ><li class="cat3 branch"><a href="http://www.utanrikisraduneyti.is/raduneytid/starfsmenn/utanrikisraduneytid" class="cat3">Starfsfólk</a
+                    ></li
+                      ><li class="cat4"><a href="http://www.utanrikisraduneyti.is/verkefni/sendi-og-raedisskrifstofur/" class="cat4">Sendiskrifstofur</a
+                    ></li
+                      ><li class="cat5 branch"><a href="http://www.utanrikisraduneyti.is/stofnanir-og-nefndir/" class="cat5">Stofnanir og nefndir</a
+                    ></li
+                      ><li class="cat6 branch"><a href="http://www.utanrikisraduneyti.is/upplysingar/laus-storf/" class="cat6">Laus störf</a
+                    ></li
+                      ><li class="cat7"><a href="http://www.utanrikisraduneyti.is/upplysingar/Starfsthjalfun/" class="cat7">Starfsþjálfun</a
+                    ></li
+                      ><li class="cat11 current"><a href="http://www.utanrikisraduneyti.is/raduneytid/thydingarmidstod/" class="cat11">Þýðingamiðstöð</a
+                    ></li
+                      ><li class="cat12"><a href="http://www.utanrikisraduneyti.is/raduneytid/Merki_raduneytis/" class="cat12">Merki ráðuneytis</a
+                    ></li
+                      ><li class="cat13"><a href="http://www.utanrikisraduneyti.is/raduneytid/ordskyringar/" class="cat13">Orðskýringar</a
+                    ></li
+                      ><li class="cat14"><a href="http://www.utanrikisraduneyti.is/raduneytid/sogulegt-yfirlit/" class="cat14">Sögulegt yfirlit</a
+                    ></li
+                      ><li class="cat15 last"><a href="http://www.utanrikisraduneyti.is/raduneytid/fyrirspurnir" class="cat15">Fyrirspurnir</a
+                    ></li
+                 ></ul>
+
+             
+                </div>
+              </div>
+              <hr class="stream" />
+        
+      <!-- /eplica-no-index -->
+  
+
+
+              <!-- /eplica-exclude-content -->
+                <!-- eplica-no-index -->
+            
+<div class="breadcrumbs"><div>
+  <strong>Þú ert hér:</strong> <a href="http://www.utanrikisraduneyti.is/" class='home'>Forsíða</a> <i>&gt;</i> <a href="http://www.utanrikisraduneyti.is/raduneytid/">Ráðuneytið</a> <i>&gt;</i> <a href="http://www.utanrikisraduneyti.is/raduneytid/thydingarmidstod/">Þýðingamiðstöð</a> <i>&gt;</i> <b class="current"><a href="http://hugtakasafn.utn.stjr.is/">Hugtakasafn</a></b>
+
+</div></div>
+<hr class="stream" />
+
+              <div class="mnav">
+                <h2 class="boxhead">www.utanrikisraduneyti.is</h2>
+                <div class="boxbody">
+                    <ul class="level1"
+                      ><li class="home"><a href="http://www.utanrikisraduneyti.is/">Forsíða</a></li
+                      ><li class="cat1 parent branch"><a href="http://www.utanrikisraduneyti.is/raduneytid/" class="cat1">Ráðuneytið</a
+                    ></li
+                      ><li class="cat2 branch"><a href="http://www.utanrikisraduneyti.is/radherra/um-radherra" class="cat2">Ráðherra</a
+                    ></li
+                      ><li class="cat3 branch"><a href="http://www.utanrikisraduneyti.is/verkefni/" class="cat3">Verkefni</a
+                    ></li
+                      ><li class="cat4 branch"><a href="http://www.utanrikisraduneyti.is/frettir/" class="cat4">Útgáfa</a
+                    ></li
+                      ><li class="cat6"><a href="http://www.utanrikisraduneyti.is/log-og-reglugerdir/" class="cat6">Lög og reglugerðir</a
+                    ></li
+                 ></ul>
+
+             
+                </div>
+              </div>
+              <hr class="stream" />
+        
+      <!-- /eplica-no-index -->
+  
+
+
+              
+</div>
+</div>
+
+
+  <div class="pgfoot">
+  <div class="wrap">
+
+    
+    
+<div class='imglinklist'>
+<div class="wrap">
+
+                
+
+
+
+<div class="imglink" >
+
+  <a href="http://www.ismal.hi.is/" target='_blank'>
+    <img src="http://www.utanrikisraduneyti.is/media/Logo/Islmalstod.gif" alt="Íslensk málstöð" />
+  </a>
+
+  
+  
+
+    
+</div>
+
+              
+                
+
+
+
+<div class="imglink" >
+
+  <a href="http://secretariat.efta.int/" target='_blank'>
+    <img src="http://www.utanrikisraduneyti.is/media/Logo/efta_logo.gif" alt="EFTA-Fríverslunarsamtök Evrópu" />
+  </a>
+
+  
+  
+
+    
+</div>
+
+              
+                
+
+
+
+<div class="imglink" >
+
+  <a href="http://europa.eu.int/eur-lex" target='_blank'>
+
+    <img src="http://www.utanrikisraduneyti.is/media/Logo/eurlex.gif" alt="Eur-Lex" />
+  </a>
+
+  
+  
+
+    
+</div>
+
+              
+</div>
+</div>
+
+    
+    <!-- eplica-exclude-content --><div class="xnav">
+                <h2 class="boxhead">www.utanrikisraduneyti.is</h2>
+
+                <div class="boxbody">
+                    <ul class="level1"
+                      ><li class="cat1 branch"><a href="http://www.utanrikisraduneyti.is/raduneytid/" class="cat1">Ráðuneytið</a
+                    
+                      ><ul class="level2"
+                        ><li><a href="http://www.utanrikisraduneyti.is/raduneytid/hlutverk/">Hlutverk</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/raduneytid/skipulag/">Skipulag</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/raduneytid/starfsmenn/utanrikisraduneytid">Starfsfólk</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/upplysingar/laus-storf/">Laus störf</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/stofnanir-og-nefndir/">Stofnanir og nefndir</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/upplysingar/Starfsthjalfun/">Starfsþjálfun</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/raduneytid/thydingarmidstod/">Þýðingamiðstöð</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/raduneytid/Merki_raduneytis/">Merki ráðuneytis</a
+                    ></li
+                      ></ul
+                      ></li
+                      ><li class="cat2 branch"><a href="http://www.utanrikisraduneyti.is/radherra/um-radherra" class="cat2">Ráðherra</a
+                    
+                      ><ul class="level2" >
+                     <li><a href="http://www.utanrikisraduneyti.is/radherra/um-radherra/">Um ráðherra</a></li>
+
+                    <li><a href="http://www.althingi.is/vefur/thmstorf.html?nfaerslunr=631">Þingstörf</a></li>
+                    <li><a href="http://www.utanrikisraduneyti.is/radherra/myndir/">Myndir</a></li>
+                    <li><a href="http://www.althingi.is/dba-bin/raedur.pl?ggr=r&ktmenu=1&knt=1906538119&s_lt=0">Ræður á Alþingi</a></li >
+                     <li><a href="http://www.utanrikisraduneyti.is/radherra/fyrri-radherrar/">Fyrri ráðherrar</a
+                    ></li
+                      ></ul
+                      ></li
+                      ><li class="cat3 branch"><a href="http://www.utanrikisraduneyti.is/verkefni/" class="cat3">Verkefni</a
+                    
+                      ><ul class="level2"
+                        ><li><a href="http://www.utanrikisraduneyti.is/verkefni/evropumal/">Evrópumál</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/verkefni/menningarmal/">Menningarmál</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/verkefni/althjoda-og-oryggissvid/nordurlandasamstarf/">Norræn samvinna</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/nyr-starfssvid/vidskiptasvid/">Viðskipti</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/verkefni/throunarsvid/">Þróunarmál</a
+                    ></li
+                        ><li><a href="http://www.utanrikisraduneyti.is/verkefni/althjoda-og-oryggissvid/varnar-og-oryggismal/">Varnar- og öryggismál</a
+                    ></li
+                      ></ul
+                      ></li
+                      ><li class="cat4 branch"><a href="http://www.utanrikisraduneyti.is/utgefid-efni-yfirflokkur/" class="cat4">Útgefið efni</a
+                    
+                      ><ul class="level2"
+                        ><li><a href="http://www.utanrikisraduneyti.is/utgefid-efni/">Útgefið efni</a
+                    ></li
+                        ><li class="branch"><a href="http://www.utanrikisraduneyti.is/frettir/">Fréttir</a
+                    ></li
+                        ></ul
+                      ></li>
+
+<li class="cat6"><a href="http://www.utanrikisraduneyti.is/log-og-reglugerdir/" class="cat6">Lög og reglugerðir</a>
+<ul class="level2">
+<li><a href="http://www.utanrikisraduneyti.is/log-og-reglugerdir/">Lög og reglugerðir á sviði utanríkisráðuneytisins, flokkuð eftir málaflokkum ráðuneytisins </a>
+</li>
+</ul>
+</li>
+
+<li class="cat7 branch"><a href="#" class="cat7">Annað</a>
+<ul class="level2">
+<li><a href="http://www.utanrikisraduneyti.is/frettir/rss.xml">RSS frá fréttum</a></li>
+<li><a href="http://www.utanrikisraduneyti.is/raduneytid/fyrirspurnir/">Fyrirspurnarform</a></li>
+
+<li><a href="http://www.utanrikisraduneyti.is/vefvisir/">Veftré</a></li>
+<li><a href="http://www.utanrikisraduneyti.is/um-vefinn/">Um vefinn</a></li>
+
+</ul>
+</li>
+</ul>
+             
+                </div>
+              </div><!-- /eplica-exclude-content --><div class="box footer">
+<h2 class="boxhead">Samskipti</h2>
+
+<div class="boxbody">
+<p>Utanríkisráðuneytið - Rauðarárstíg 25 - 150 Reykjavík <a href="http://raduneyti.is/Stadsetning/nr/151"> Sjá kort </a> - Veffang <a href="http://www.utanrikisraduneyti.is/">utanrikisraduneyti.is</a> Netfang: <a href="mailto:postur@utn.stjr.is">postur@utn.stjr.is</a>
+
+<br/>Kt.: 670269-4779 - Sími 545-9900 - Bréfasímar 562-2373, 562-2386 - <a href="http://www.stjornarrad.is/Fyrirvari2"> Fyrirvari</a> - <a href="http://forsaetisraduneyti.is/um-vefinn/nr/2287"> Aðgengisstefna</a>
+
+			</p>
+		</div>
+	</div>
+                
+<div class="qsearch" id="pg-search">
+
+  <h2 class="boxhead">Leit á vefsvæðinu</h2>
+  <form class="boxbody" action="/leit">
+    <div>
+      <span class="fi_txt req"><label for="qstr">Leitarorð:</label> <input id="qstr" name="q" value="" /></span>
+      <span class="fi_btn"><input class="submit" type="submit" value="Leita" /></span>
+    </div>
+    
+  </form>
+
+</div>
+<hr class="stream" />
+              
+                
+
+
+<div class="pagestyle screen">
+  <h2 class="boxhead">Útlit síðu:</h2>
+  <div class="boxbody">
+    <ul
+
+      ><li class="up"><a href="http://www.utanrikisraduneyti.is/bitar/c2/style/setStyleCookie.jsp?fontSize=1" title="Stækka letrið">Stærra letur</a></li
+      ><li class="dwn"><a href="http://www.utanrikisraduneyti.is/bitar/c2/style/setStyleCookie.jsp?fontSize=-1"  title="Minnka letrið">Minna letur</a></li
+
+      ><li class="userstyles"><a href="http://www.utanrikisraduneyti.is/bitar/c2/style/setStyleCookie.jsp?userstyles=on" title="Nota mínar lita- og leturstillingar">Nota mínar stillingar</a></li
+
+    ></ul>
+  </div>
+</div>
+
+              <!-- eplica-exclude-content --><div class="langnav">
+        <h2 class="boxhead">Tungumál</h2>
+        <div class="boxbody">
+
+          
+          <ul>
+            <li class="lang-en"><a href="http://eng.utanrikisraduneyti.is">Enska</a></li>
+          </ul>  
+          
+        </div>
+
+      </div>
+      <hr class="stream" /><!-- /eplica-exclude-content --><!-- eplica-exclude-content --><div class="flnav">
+        <h2 class="boxhead">Flýtival</h2>
+        <div class="boxbody">
+
+          <ul class="level1 EPLICA_edit">
+            <li><a href="http://www.utanrikisraduneyti.is/vefvisir/">Veftré</a></li>
+            <li><a href="http://www.utanrikisraduneyti.is/raduneytid/fyrirspurnir">Hafa samband</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+      <hr class="stream" />
+
+<div class="droplinks-trigger">
+<div class="boxbody">
+<ul>
+  <li class=""><a href="#droplinks">Veldu ráðuneyti</a></li>
+</ul>
+
+</div>
+</div>
+<hr class="stream" /><!-- /eplica-exclude-content --><!-- eplica-exclude-content --><div class="droplinks" id="droplinks"><!-- include svæði - ef ekkert er sett í það þá kemur það ekki framm -->
+      <div class="wrap">
+
+          <div class="dbox dbox-first">
+            <div class="boxbody">
+
+              <ul>
+                <li><a href="http://www.stjornarrad.is">Stjórnarráð Íslands</a></li>
+              </ul>
+
+            </div>
+          </div>
+          
+          <div class="dbox">
+            <h2 class="boxhead">Ráðuneyti:</h2>
+
+            <div class="boxbody">
+              
+              <ul>
+                <li><a href="http://www.forsaetisraduneyti.is/">Forsætisráðuneyti</a></li>
+
+                <li><a href="http://www.domsmalaraduneyti.is/">Dómsmála- og mannréttindaráðuneyti</a></li>
+                <li><a href="http://www.efnahagsraduneyti.is/">Efnahags- og viðskiptaráðuneyti</a></li>
+                <li><a href="http://www.felagsmalaraduneyti.is/">Félags- og tryggingamálaráðuneytið</a></li>
+                <li><a href="http://www.fjarmalaraduneyti.is/">Fjármálaráðuneytið</a></li>
+                <li><a href="http://www.heilbrigdisraduneyti.is/">Heilbrigðisráðuneyti</a></li>
+                <li><a href="http://www.idnadarraduneyti.is/">Iðnaðarráðuneytið</a></li>
+
+                <li><a href="http://www.menntamalaraduneyti.is/">Mennta- og menningarmálaráðuneyti</a></li>
+                <li><a href="http://www.samgonguraduneyti.is/">Samgöngu- og sveitarstjórnarráðuneyti</a></li>
+                <li><a href="http://www.sjavarutvegsraduneyti.is/">Sjávarútvegs- og landbúnaðarráðuneyti</a></li>
+                <li><a href="http://www.umhverfisraduneyti.is/">Umhverfisráðuneyti</a></li>
+                <li><a href="http://www.utanrikisraduneyti.is/">Utanríkisráðuneyti</a></li>
+                
+
+              </ul>  
+              
+            </div>
+
+          </div>
+          <hr class="stream" />
+          
+          
+          
+      </div>
+
+      </div><!-- /eplica-exclude-content -->
+  </div>
+  </div>
+
+
+    
+	<!-- eplica-no-index -->
+
+    <div class="byggiraeplica" lang="is"><span class="stream">Þetta vefsvæði  </span><a href="http://www.eplica.is/" title="Þetta vefsvæði byggir á Eplica">byggir á Eplica</a></div>
+    <!-- /eplica-no-index -->
+
+    
+
+  </div>
+  <script src='http://static.stjr.is/js/init.js' type='text/javascript'></script>
+
+  
+</body>
+</html>
