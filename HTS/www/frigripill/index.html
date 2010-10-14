@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<title>BAKskrárupphleðsla</title>
+<script language="javascript">
+function setFormat() {
+	var form = document.getElementById('frigripill');
+	if( document.getElementById('txt').checked == true ) {
+		form.action = "txt.tcl";
+	} else if( document.getElementById('html').checked == true ) {
+		form.action = "html.tcl";
+	} else {
+		alert( 'villa' );
+	}
+	showAugnablik();
+}
+function showAugnablik() {
+	var oMain = document.getElementById('main');
+	if( null != oMain ) {
+		oMain.style.display="none";
+	}
+	var oAugnablik = document.getElementById('augnablik');
+	if( null != oAugnablik ) {
+			oAugnablik.style.display="block";
+	}
+}
+function showMain() {
+	var oAugnablik = document.getElementById('augnablik');
+	if( null != oAugnablik ) {
+			oAugnablik.style.display="none";
+	}
+	var oMain = document.getElementById('main');
+	if( null != oMain ) {
+		oMain.style.display="block";
+	}
+}
+</script>
+</head>
+
+<body>
+<h1>Frígripill</h1>
+<div id="main">
+<form enctype="multipart/form-data" method="POST" name="frigripill" action="." id="frigripill" onsubmit="setFormat()">
+Vinnsluskrá (.doc) til að grípa orð úr
+<br/>Skrá: <input name="clientfile" type="file">
+<br/>
+<input type="radio" name="format" value="txt" id="txt" value="txt.tcl" checked /><label for="txt">Flatur texti</label>
+<input type="radio" name="format" value="html" id="html" value="html.tcl" /><label for="html">HTML snið</label>
+<input name="submit" type="submit" value="Hlaða inn" />
+</form>
+</div>
+
+<div id="augnablik" style="display:none;text-align:center;">
+<h2>Gríp orð...</h2>
+<img src="vinnsla.gif" alt="vinnslumerki" />
+</div>
+
+
+</body>
+</html>

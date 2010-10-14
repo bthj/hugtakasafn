@@ -1,0 +1,170 @@
+.ne-fix2{
+	height : 100px;
+}
+
+.ne-fix3{
+	height : 200px;
+}
+
+.ne-fix{
+	height : 0px;
+}
+
+.ne-fix2{
+	height : 13px;
+}
+
+INPUTx
+{
+    BACKGROUND-COLOR: #FFFFFF;
+    BORDER-BOTTOM-COLOR: #003366;
+    BORDER-LEFT-COLOR: #003366;
+    BORDER-RIGHT-COLOR: #003366;
+    BORDER-TOP-COLOR: #003366;
+    COLOR: #003366;
+    FONT-FAMILY: trebuchet, verdana, Arial, geneva;
+    FONT-SIZE: 11pt
+}
+
+/* Valmyndakrækjur */
+.Linkurval{font-family : Arial, Helvetica, sans-serif; font-size : 12px; color : #0000FF; font-weight : bold;}
+.Linkur2{font-family : Arial, Helvetica, sans-serif; font-size : 12px; color : #000066; font-weight : bold;}
+.Linkur{font-family : Arial, Helvetica, sans-serif; font-size : 12px; color : #000066; font-weight : bold;}
+.Linkur-undir-blar{font-family : Arial, Helvetica, sans-serif; font-size : 11px; color : #0000FF; font-weight : bold;}
+.Linkur-undir{font-family : Arial, Helvetica, sans-serif; font-size : 11px; color : #000066; font-weight : bold;}
+.nedraval{font-family : Arial, Helvetica, sans-serif; font-size : 11px; color : #000066; font-weight : bold;}
+.efraval{font-family : Arial, Helvetica, sans-serif; font-size : 11px; color : #EEEEF5; font-weight : bold;}
+a.efraval:hover{color: #EAD28C; text-decoration: none;}
+
+
+
+/* Útlit á forsíðufréttum */
+
+.dagsfrett{font-family : Arial, Helvetica, sans-serif; font-size : 11px; color : #4f4f4f;}
+.raduneytifrett{font-family : Arial, Helvetica, sans-serif; font-size : 12px; color : #4f4f4f;	font-weight : bold;}
+.textifrett{font-family : Arial, Helvetica, sans-serif; font-size : 12px;}
+.linkurfrett{font-family : Arial, Helvetica, sans-serif; font-size : 11px;}
+
+/* Krækjur í eftirfarandi klösum eru ekki undirstrikaðar */
+a.Linkurval:link, a.Linkurval:active, a.Linkurval:hover, a.Linkurval:visited, 
+a.Linkur2:link, a.Linkur2:active, a.Linkur2:hover, a.Linkur2:visited,
+a.Linkur:link, a.Linkur:active, a.Linkur:hover, a.Linkur:visited,
+a.nedraval:link, a.nedraval:active, a.nedraval:hover, a.nedraval:visited,
+a.efraval:link, a.efraval:active, a.efraval:visited
+{text-decoration: none;}
+
+
+.Simanumer{font-family : Arial, Helvetica, sans-serif; font-size : 13px; color : #000000; font-weight : bold;}
+.mainfont{font-family : Arial, Helvetica, sans-serif; font-size : 10pt;}
+.botnfont{font-family : Arial, Helvetica, sans-serif; font-size : 11px;	color : #333333; font-weight : bold;}
+.botnf{font-family : Arial, Helvetica, sans-serif; font-size : 10px; color : #333333;}
+
+a:active {
+	text-decoration: underline;
+}
+a:hover {
+   text-decoration: underline;
+   color : #0000FF;
+}
+a:link {
+	text-decoration: underline;
+}
+a:visited {
+	text-decoration: underline;
+}
+
+.leitafont{font-family : Arial, Helvetica, sans-serif ; color:white;;  text-decoration :  none;  font-size :  8pt;}
+
+.valf{font-family : Arial, Helvetica, sans-serif ; color:black;;  text-decoration :  none;  font-size :  10pt;}
+.valftop{font-family : Arial, Helvetica, sans-serif ; color:black;;  text-decoration :  none;  font-size :  8pt; font-weight : bold;}
+.valftop2{font-family : Arial, Helvetica, sans-serif ; color:white;;  text-decoration :  none;  font-size :  9pt;}
+.textfield{font-family : monospace; font-size : 9pt;}
+
+/* MRN */
+input.radioHaus {background-color:#000066}
+
+a.braudmolaLinkur{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #000066;
+	font-weight : bold;
+	text-decoration: none;
+}
+a.braudmolaLinkur:hover {background-color: #FFF7EF; color: #000066; text-decoration: none;}
+a.braudmolaLinkur:visited, a.braudmolaLinkur:active {color: #000066; text-decoration: none;}
+
+
+a.hlidarval, a.hlidarval:visited, a.hlidarval:active {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #000066;
+	font-weight : bold;
+	text-decoration: none;
+}
+a.hlidarval-valid, a.hlidarval-valid:visited, a.hlidarval-valid:active {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #0000FF;
+	font-weight : bold;
+	text-decoration: none;
+}
+a.hlidarval-undir-valid, a.hlidarval-undir-valid:visited, a.hlidarval-undir-valid:active {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #0000FF;
+	font-weight : bold;
+	text-decoration: none;
+}
+a.hlidarval-undir, a.hlidarval-undir:visited, a.hlidarval-undir:active {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	color : #000066;
+	font-weight : bold;
+	
+}
+a.hlidarval:hover{color: #0000ff; text-decoration: none;}
+a.hlidarval-valid:hover{color: #0000ff; text-decoration: none;}
+a.hlidarval-undir-valid:hover{color: #0000ff; text-decoration: none;}
+a.hlidarval-undir:hover{color: #0000ff; text-decoration: none;}
+
+
+SELECT {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 12px;
+}
+
+.flytivisun{
+	BACKGROUND: #EAD28C; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+SPAN.flytivisun{
+	BACKGROUND: #EAD28C; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+SPAN.flytivisun SELECT {
+	BACKGROUND: #EAD28C; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+
+
+.rnFelliGluggi{
+	BACKGROUND: #FDFAF1; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+SPAN.rnFelliGluggi{
+	BACKGROUND: #FDFAF1; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+SPAN.rnFelliGluggi SELECT {
+	BACKGROUND: #FDFAF1; COLOR: #006; FONT-WEIGHT: bold; TEXT-DECORATION: none; FONT-SIZE: 12px
+}
+
+/* Leitarniðurstöður */
+.leit { font-family : Arial, Helvetica, sans-serif; font-size : 10pt; }
+
+/* Rafbirting */
+a.valid{
+   text-decoration: underline;
+   color : #0000FF;
+   font-weight : bold;
+}
+
+.mainfont{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 10pt;
+	
+}
