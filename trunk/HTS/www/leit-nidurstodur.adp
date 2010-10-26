@@ -15,6 +15,7 @@ if { [empty_string_p $leitarord] } {
   ns_puts "<p>Engin leitarskilyrði gefin.</p>"
 } else {
   set sql_query "select * from hugtakasafn where "
+  set leitarord [DoubleApos $leitarord]
   set list_leitarord [split $leitarord]
   if { ![info exists ordrett] || [empty_string_p $ordrett] } {
     switch $tungumal {
