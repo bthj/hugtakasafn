@@ -27,6 +27,13 @@ if { [info exists leitarord] } {
   regsub -all "#####" $lang_is "<b style=\"color:black;background-color:#ffff66\">" lang_is
   regsub -all "bbbbb" $lang_is "</b>" lang_is
 }
+if { [empty_string_p $lang_is] } {
+  if { [info exists leitarord] } {
+    ns_returnerror 404 "Hugtak fannst ekki.  Leit a&eth;:  <a href=\"http://hugtakasafn.utn.stjr.is/leit-nidurstodur.adp?leitarord=$leitarord\">$leitarord</a>."
+  } else {
+    ns_returnerror 404 "Hugtak fannst ekki &iacute; <a href=\"http://hugtakasafn.utn.stjr.is\">Hugtakasafni</a>." 
+  }
+} else {
 ns_puts "
   <dl>
     <dt><font color=\"gray\"><b>ÍSLENSKA</b></font></dt>
@@ -242,6 +249,9 @@ ns_puts "
 "
 }
 ns_puts "</dl><br/>"
+
+} 
+# if empty lang_is
 %>
 
 <script>
