@@ -10,7 +10,9 @@ Created on 5.10.2010
 from lxml import etree
 import codecs, sys, os
 
+
 if __name__ == '__main__':
+
 
     if len(sys.argv) < 2:
         print "Engin export skra tiltekin"
@@ -19,8 +21,12 @@ if __name__ == '__main__':
         dataDir = thisPath + "/../import/"   
         exportFile = sys.argv[1]
         
+        
         print "Thatta export skjal: " + (dataDir + exportFile)
+        # tree = etree.parse((dataDir + exportFile), parser=etree.XMLParser(strip_cdata=False, encoding='utf-16le'))
         tree = etree.parse(dataDir + exportFile)
+        
+        print(tree.docinfo.encoding)
         
         tabFile = exportFile.replace(".xml", ".tab")
         f = codecs.open(dataDir + tabFile, 'w', encoding='utf-8')
@@ -102,25 +108,25 @@ if __name__ == '__main__':
                     
                 
                 if isLangGrp is not None and len(isLangGrp) > 0:
-                    adalordGrp = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='aðalorð']/..")
+                    adalordGrp = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='aðalorð']/..")
                     if adalordGrp is not None:
                         is_adalord = adalordGrp.find("descrip").text
-                        if adalordGrp.find("descripGrp/descrip[@type='orðfl.']") is not None:
-                            is_adalord_ordfl = adalordGrp.find("descripGrp/descrip[@type='orðfl.']").text
+                        if adalordGrp.find(u"descripGrp/descrip[@type='orðfl.']") is not None:
+                            is_adalord_ordfl = adalordGrp.find(u"descripGrp/descrip[@type='orðfl.']").text
                         if adalordGrp.find("descripGrp/descrip[@type='kyn']") is not None:
                             is_adalord_kyn = adalordGrp.find("descripGrp/descrip[@type='kyn']").text
                     else:
-                        if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
-                            is_adalord_ordfl = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='orðfl.']").text
+                        if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
+                            is_adalord_ordfl = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
                         if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='kyn']") is not None:
                             is_adalord_kyn = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='kyn']").text
                     
                     if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='samh.']") is not None:
                         is_samh = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='samh.']").text
-                    if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='svið']") is not None:
-                        is_svid = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='svið']").text
-                    if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='dæmi']") is not None:
-                        is_daemi = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='dæmi']").text
+                    if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='svið']") is not None:
+                        is_svid = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='svið']").text
+                    if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']") is not None:
+                        is_daemi = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']").text
                     if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='skilgr.']") is not None:
                         is_skilgr = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='skilgr.']").text
                     if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='rit']") is not None:
@@ -146,8 +152,8 @@ if __name__ == '__main__':
                     
                         
                 if enLangGrp is not None and len(enLangGrp) > 0:
-                    if enLangGrp[0].find("termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
-                        en_ordfl = enLangGrp[0].find("termGrp/descripGrp/descrip[@type='orðfl.']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
+                        en_ordfl = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
         
                 isSkstGrp = conceptGrp.find("./languageGrp/language[@type='IS skst']/..")
                 if isSkstGrp is not None:
