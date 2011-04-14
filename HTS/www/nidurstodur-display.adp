@@ -20,19 +20,43 @@ if { ![empty_string_p $sql_query] } {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_is "<b>&</b>" lang_is
         }
-        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a></dt>"
+        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a>"
+        if { ![empty_string_p $is_annar_rith] } {
+          set is_annar_rith_parts [split $is_annar_rith ";"]
+          foreach is_annar_rith_part $is_annar_rith_parts {
+            regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+            ns_puts "<br />$is_annar_rith_part"
+          }
+        }
+        ns_puts "</dt>"
       }
       "is" {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_is "<b>&</b>" lang_is
         }
-        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a></dt>"
+        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a>"
+        if { ![empty_string_p $is_annar_rith] } {
+          set is_annar_rith_parts [split $is_annar_rith ";"]
+          foreach is_annar_rith_part $is_annar_rith_parts {
+            regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+            ns_puts "<br />$is_annar_rith_part"
+          }
+        }
+        ns_puts "</dt>"
       }
       "en" {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_en "<b>&</b>" lang_en
         }
-        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_en</a></dt>"
+        ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_en</a>"
+        if { ![empty_string_p $en_annar_rith] } {
+          set en_annar_rith_parts [split $en_annar_rith ";"]
+          foreach en_annar_rith_part $en_annar_rith_parts {
+            regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+            ns_puts "<br />$en_annar_rith_part"
+          }
+        }
+        ns_puts "</dt>"
       }
       "danosae" {
         foreach eitt_leitarord $list_leitarord {
@@ -63,13 +87,29 @@ if { ![empty_string_p $sql_query] } {
       foreach eitt_leitarord $list_leitarord {
         regsub -all -nocase $eitt_leitarord $lang_is "<b>&</b>" lang_is
       }
-      ns_puts "<dd>$lang_is \[is\]</dd>"
+      ns_puts "<dd>$lang_is \[is\]"
+      if { ![empty_string_p $is_annar_rith] } {
+        set is_annar_rith_parts [split $is_annar_rith ";"]
+        foreach is_annar_rith_part $is_annar_rith_parts {
+          regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+          ns_puts "<br />$is_annar_rith_part \[is\]"
+        }
+      }
+      ns_puts "</dd>"
     }
     if { ![empty_string_p $lang_en] && [string compare $tungumal "en"] != 0 } {
       foreach eitt_leitarord $list_leitarord {
         regsub -all -nocase $eitt_leitarord $lang_en "<b>&</b>" lang_en
       }
-      ns_puts "<dd>$lang_en \[en\]</dd>"
+      ns_puts "<dd>$lang_en \[en\]"
+      if { ![empty_string_p $en_annar_rith] } {
+        set en_annar_rith_parts [split $en_annar_rith ";"]
+        foreach en_annar_rith_part $en_annar_rith_parts {
+          regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+          ns_puts "<br />$en_annar_rith_part \[en\]"
+        }
+      }
+      ns_puts "</dd>"
     }
     if { ![empty_string_p $lang_danosae] && [string compare $tungumal "danosae"] != 0 } {
       foreach eitt_leitarord $list_leitarord {

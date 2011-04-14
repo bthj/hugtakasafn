@@ -210,16 +210,21 @@ ns_puts "
 "
 }
 if { ![empty_string_p $is_annar_rith] } {
-  if { [info exists leitarord] } {
-    foreach eitt_leitarord $list_leitarord {
-      regsub -all -nocase $eitt_leitarord $is_annar_rith "#####&bbbbb" is_annar_rith
-    }
-    regsub -all "#####" $is_annar_rith "<b style=\"color:black;background-color:#ffff66\">" is_annar_rith
-    regsub -all "bbbbb" $is_annar_rith "</b>" is_annar_rith
+  set is_annar_rith_parts [split $is_annar_rith ";"]
+  set is_annar_rith_display ""
+  foreach is_annar_rith_part $is_annar_rith_parts {
+	  if { [info exists leitarord] } {
+	    foreach eitt_leitarord $list_leitarord {
+	      regsub -all -nocase $eitt_leitarord $is_annar_rith_part "#####&bbbbb" is_annar_rith_part
+	    }
+	    regsub -all "#####" $is_annar_rith_part "<b style=\"color:black;background-color:#ffff66\">" is_annar_rith_part
+	    regsub -all "bbbbb" $is_annar_rith_part "</b>" is_annar_rith_part
+	  }
+	  append is_annar_rith_display "$is_annar_rith_part<br />"
   }
 ns_puts "
     <dt><font color=\"gray\"><b>ÍSLENSKA annar ritháttur</b></font></dt>
-    <dd>$is_annar_rith</dd>
+    <dd>$is_annar_rith_display</dd>
 "
 }
 if { ![empty_string_p $en_skst] } {
@@ -236,16 +241,21 @@ ns_puts "
 "
 }
 if { ![empty_string_p $en_annar_rith] } {
-  if { [info exists leitarord] } {
-    foreach eitt_leitarord $list_leitarord {
-      regsub -all -nocase $eitt_leitarord $en_annar_rith "#####&bbbbb" en_annar_rith
-    }
-    regsub -all "#####" $en_annar_rith "<b style=\"color:black;background-color:#ffff66\">" en_annar_rith
-    regsub -all "bbbbb" $en_annar_rith "</b>" en_annar_rith
+  set en_annar_rith_parts [split $en_annar_rith ";"]
+  set en_annar_rith_display ""
+  foreach en_annar_rith_part $en_annar_rith_parts {
+	  if { [info exists leitarord] } {
+	    foreach eitt_leitarord $list_leitarord {
+	      regsub -all -nocase $eitt_leitarord $en_annar_rith_part "#####&bbbbb" en_annar_rith_part
+	    }
+	    regsub -all "#####" $en_annar_rith_part "<b style=\"color:black;background-color:#ffff66\">" en_annar_rith_part
+	    regsub -all "bbbbb" $en_annar_rith_part "</b>" en_annar_rith_part
+	  }
+	  append en_annar_rith_display "$en_annar_rith_part<br />"
   }
 ns_puts "
     <dt><font color=\"gray\"><b>ENSKA annar ritháttur</b></font></dt>
-    <dd>$en_annar_rith</dd>
+    <dd>$en_annar_rith_display</dd>
 "
 }
 ns_puts "</dl><br/>"
