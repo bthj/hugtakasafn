@@ -70,25 +70,29 @@ if __name__ == '__main__':
         
                 isLangGrp = conceptGrp.findall("./languageGrp/language[@type='IS']/..")
                 for idx, val in enumerate(isLangGrp):
-                    isTerm = isLangGrp[idx].find("termGrp/term").text
-                    if isTerm is not None:
-                        if idx > 0:
-                            if is_annar_rith != "":
-                                is_annar_rith += ";"
-                            is_annar_rith += isTerm
-                        else:
-                            lang_is = isTerm
+                    isTermGrp = isLangGrp[idx].findall("termGrp")
+                    for grpIdx, grpVal in enumerate(isTermGrp):
+                        isTerm = isTermGrp[grpIdx].find("term").text
+                        if isTerm is not None:
+                            if idx+grpIdx > 0:
+                                if is_annar_rith != "":
+                                    is_annar_rith += ";"
+                                is_annar_rith += isTerm
+                            else:
+                                lang_is = isTerm
         
                 enLangGrp = conceptGrp.findall("./languageGrp/language[@type='EN']/..")
                 for idx, val in enumerate(enLangGrp):
-                    enTerm = enLangGrp[idx].find("termGrp/term").text
-                    if enTerm is not None:
-                        if idx > 0:
-                            if en_annar_rith != "":
-                                en_annar_rith += ";"
-                            en_annar_rith += enTerm
-                        else:
-                            lang_en = enTerm
+                    enTermGrp = enLangGrp[idx].findall("termGrp")
+                    for grpIdx, grpVal in enumerate(enTermGrp):
+                        enTerm = enTermGrp[grpIdx].find("term").text
+                        if enTerm is not None:
+                            if idx+grpIdx > 0:
+                                if en_annar_rith != "":
+                                    en_annar_rith += ";"
+                                en_annar_rith += enTerm
+                            else:
+                                lang_en = enTerm
                             
                 danosaeTermGrp = conceptGrp.find("./languageGrp/language[@type='DA/NO/SÆ']/../termGrp")
                 if danosaeTermGrp is not None:
@@ -155,7 +159,7 @@ if __name__ == '__main__':
                     if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
                         en_ordfl = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
         
-                isSkstGrp = conceptGrp.find("./languageGrp/language[@type='IS skst']/..")
+                isSkstGrp = conceptGrp.find("./languageGrp/language[@type='c']/..")
                 if isSkstGrp is not None:
                     is_skst = isSkstGrp.find("termGrp/term").text
                 enSkstGrp = conceptGrp.find("./languageGrp/language[@type='EN skst']/..")
