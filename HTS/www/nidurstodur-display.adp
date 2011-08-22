@@ -3,6 +3,10 @@ upvar leitarord leitarord
 if { ![info exists leitarord] } {
   set leitarord ""
 }
+upvar hugtak hugtak
+if { ![info exists hugtak] } {
+  set hugtak ""
+}
 upvar tungumal tungumal
 upvar sql_query sql_query
 upvar hugtakUrlLeitarParam hugtakUrlLeitarParam
@@ -12,7 +16,12 @@ if { ![empty_string_p $sql_query] } {
   set selection [ns_db select $db $sql_query]
   ns_puts "<dl>"
   set count 0
-  set list_leitarord [split $leitarord]
+  set list_leitarord [list]
+  if { ![empty_string_p $leitarord] } {
+  	set list_leitarord [split $leitarord]
+  } elseif { ![empty_string_p $hugtak] } {
+  	set list_leitarord [split $hugtak]
+  }
   while { [ns_db getrow $db $selection] } {
     set_variables_after_query
     switch $tungumal {
@@ -24,7 +33,9 @@ if { ![empty_string_p $sql_query] } {
         if { ![empty_string_p $is_annar_rith] } {
           set is_annar_rith_parts [split $is_annar_rith ";"]
           foreach is_annar_rith_part $is_annar_rith_parts {
-            regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+          	foreach eitt_leitarord $list_leitarord {
+              regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+            }
             ns_puts "<br />$is_annar_rith_part"
           }
         }
@@ -38,7 +49,9 @@ if { ![empty_string_p $sql_query] } {
         if { ![empty_string_p $is_annar_rith] } {
           set is_annar_rith_parts [split $is_annar_rith ";"]
           foreach is_annar_rith_part $is_annar_rith_parts {
-            regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+            foreach eitt_leitarord $list_leitarord {
+              regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+            }
             ns_puts "<br />$is_annar_rith_part"
           }
         }
@@ -52,7 +65,9 @@ if { ![empty_string_p $sql_query] } {
         if { ![empty_string_p $en_annar_rith] } {
           set en_annar_rith_parts [split $en_annar_rith ";"]
           foreach en_annar_rith_part $en_annar_rith_parts {
-            regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+            foreach eitt_leitarord $list_leitarord {
+              regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+            }
             ns_puts "<br />$en_annar_rith_part"
           }
         }
@@ -91,7 +106,9 @@ if { ![empty_string_p $sql_query] } {
       if { ![empty_string_p $is_annar_rith] } {
         set is_annar_rith_parts [split $is_annar_rith ";"]
         foreach is_annar_rith_part $is_annar_rith_parts {
-          regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+          foreach eitt_leitarord $list_leitarord {
+            regsub -all -nocase $eitt_leitarord $is_annar_rith_part "<b>&</b>" is_annar_rith_part
+          }
           ns_puts "<br />$is_annar_rith_part \[is\]"
         }
       }
@@ -105,7 +122,9 @@ if { ![empty_string_p $sql_query] } {
       if { ![empty_string_p $en_annar_rith] } {
         set en_annar_rith_parts [split $en_annar_rith ";"]
         foreach en_annar_rith_part $en_annar_rith_parts {
-          regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+          foreach eitt_leitarord $list_leitarord {
+            regsub -all -nocase $eitt_leitarord $en_annar_rith_part "<b>&</b>" en_annar_rith_part
+          }
           ns_puts "<br />$en_annar_rith_part \[en\]"
         }
       }
