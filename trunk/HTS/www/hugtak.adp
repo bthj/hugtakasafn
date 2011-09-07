@@ -116,11 +116,16 @@ ns_puts "
     <dd>$is_svid</dd>
 "
 }
-if { ![empty_string_p $is_daemi] } {
+if { ![empty_string_p $is_daemi] && ![empty_string_p $en_daemi] } {
 ns_puts "
     <dt><font color=\"green\"><b>Dæmi</b></font></dt>
-    <dd>$is_daemi</dd>
 "
+  if { ![empty_string_p $is_daemi] } {
+    ns_puts "<dd>\[<strong>is</strong>\]  $is_daemi</dd>"
+  }
+  if { ![empty_string_p $en_daemi] } {
+    ns_puts "<dd>\[<strong>en</strong>\]  $en_daemi</dd>"
+  }
 }
 if { ![empty_string_p $is_skilgr] } {
 ns_puts "
