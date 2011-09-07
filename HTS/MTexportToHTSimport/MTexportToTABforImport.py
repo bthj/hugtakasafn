@@ -62,7 +62,7 @@ if __name__ == '__main__':
             is_heimild = ""
             is_aths = ""
             is_skjalnr = ""
-    
+            en_daemi = ""
             
             entrynumber = conceptGrp.find("concept").text
             if entrynumbers.count(entrynumber) == 0:
@@ -119,16 +119,19 @@ if __name__ == '__main__':
                             is_adalord_ordfl = adalordGrp.find(u"descripGrp/descrip[@type='orðfl.']").text
                         if adalordGrp.find("descripGrp/descrip[@type='kyn']") is not None:
                             is_adalord_kyn = adalordGrp.find("descripGrp/descrip[@type='kyn']").text
-                    else:
+                    if not is_adalord_ordfl:
                         if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
                             is_adalord_ordfl = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
+                    if not is_adalord_kyn:
                         if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='kyn']") is not None:
-                            is_adalord_kyn = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='kyn']").text
+                            is_adalord_kyn = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='kyn']").text                                                
                     
                     if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='samh.']") is not None:
                         is_samh = isLangGrp[0].find("termGrp/descripGrp/descrip[@type='samh.']").text
                     if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='svið']") is not None:
                         is_svid = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='svið']").text
+                    if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='önnur málfr.']") is not None:
+                        is_onnurmalfr = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='önnur málfr.']").text
                     if isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']") is not None:
                         is_daemi = isLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']").text
                     if isLangGrp[0].find("termGrp/descripGrp/descrip[@type='skilgr.']") is not None:
@@ -158,6 +161,8 @@ if __name__ == '__main__':
                 if enLangGrp is not None and len(enLangGrp) > 0:
                     if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']") is not None:
                         en_ordfl = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']") is not None:
+                        en_daemi = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']").text
         
                 isSkstGrp = conceptGrp.find("./languageGrp/language[@type='c']/..")
                 if isSkstGrp is not None:
@@ -191,9 +196,10 @@ if __name__ == '__main__':
                 is_heimild = is_heimild.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 is_aths = is_aths.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 is_skjalnr = is_skjalnr.replace("\n", "<br/>").replace("'","''").replace("\t", "")
+                en_daemi = en_daemi.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 
                 
-                tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr]
+                tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr,en_daemi]
                 tabLine = "\t".join(tabEntry) + "\n"
     
                 tabLineLATINcompatible = tabLine.encode("utf_16_le", "ignore").decode("utf_16_le", "ignore")
