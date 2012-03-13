@@ -116,12 +116,16 @@ ns_puts "
     <dd>$is_svid</dd>
 "
 }
-if { ![empty_string_p $is_daemi] && ![empty_string_p $en_daemi] } {
+if { ![empty_string_p $is_daemi] || ![empty_string_p $en_daemi] } {
 ns_puts "
     <dt><font color=\"green\"><b>Dæmi</b></font></dt>
 "
   if { ![empty_string_p $is_daemi] } {
-    ns_puts "<dd>\[<strong>is</strong>\]  $is_daemi</dd>"
+    ns_puts "<dd>"
+    if { ![empty_string_p $en_daemi] } {
+      ns_puts "\[<strong>is</strong>\]"  
+    }
+    ns_puts "$is_daemi</dd>"
   }
   if { ![empty_string_p $en_daemi] } {
     ns_puts "<dd>\[<strong>en</strong>\]  $en_daemi</dd>"
@@ -148,12 +152,6 @@ ns_puts "
 }
 
 
-if { ![empty_string_p $is_heimild] } {
-ns_puts "
-    <dt><font color=\"green\"><b>Heimild</b></font></dt>
-    <dd>$is_heimild</dd>
-"
-}
 if { ![empty_string_p $is_aths] } {
   regsub -all -nocase <XREF>(.*?)</XREF> $is_aths "<a href=\"http://hugtakasafn.utn.stjr.is/leit-nidurstodur.adp?leitarord=\\1\\&tungumal=en\\&ordrett=t\">\\1</a>" is_aths
   regsub -all -nocase (<DESCRIPTEXT>|</DESCRIPTEXT>) $is_aths "" is_aths
