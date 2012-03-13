@@ -65,6 +65,9 @@ if __name__ == '__main__':
             en_daemi = ""
             
             entrynumber = conceptGrp.find("concept").text
+            
+            print "Vinn faerslu #" + entrynumber
+            
             if entrynumbers.count(entrynumber) == 0:
                 entrynumbers.append(entrynumber)
         
