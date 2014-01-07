@@ -131,12 +131,35 @@ if { ![empty_string_p $sql_query] } {
       }
       ns_puts "</dd>"
     }
+    
     if { ![empty_string_p $lang_danosae] && [string compare $tungumal "danosae"] != 0 } {
-      foreach eitt_leitarord $list_leitarord {
-        regsub -all -nocase $eitt_leitarord $lang_danosae "<b>&</b>" lang_danosae
-      }
-      ns_puts "<dd>$lang_danosae \[da/no/sæ\]</dd>"
+	    set danosae_parts [split $lang_danosae ";"]
+	    if { ![empty_string_p [lindex $danosae_parts 0]] } {
+	      set lang_da [lindex $danosae_parts 0]
+	      regsub -all " \\(da.\\)" $lang_da "" lang_da
+	      foreach eitt_leitarord $list_leitarord {
+	        regsub -all -nocase $eitt_leitarord $lang_da "<b>&</b>" lang_da
+	      }
+	      ns_puts "<dd>$lang_da \[da\]</dd>"
+	    }
+	    if { ![empty_string_p [lindex $danosae_parts 1]] } {
+	      set lang_se [lindex $danosae_parts 1]
+	      regsub -all " \\(sæ.\\)" $lang_se "" lang_se
+	      foreach eitt_leitarord $list_leitarord {
+	        regsub -all -nocase $eitt_leitarord $lang_se "<b>&</b>" lang_se
+	      }
+	      ns_puts "<dd>$lang_se \[sæ\]</dd>"
+	    }
+	    if { ![empty_string_p [lindex $danosae_parts 2]] } {
+	      set lang_no [lindex $danosae_parts 2]
+	      regsub -all " \\(no.\\)" $lang_no "" lang_no
+	      foreach eitt_leitarord $list_leitarord {
+	        regsub -all -nocase $eitt_leitarord $lang_no "<b>&</b>" lang_no
+	      }
+	      ns_puts "<dd>$lang_no \[no\]</dd>"	    
+	    }
     }
+    
     if { ![empty_string_p $lang_fr] && [string compare $tungumal "fr"] != 0 } {
       foreach eitt_leitarord $list_leitarord {
         regsub -all -nocase $eitt_leitarord $lang_fr "<b>&</b>" lang_fr
