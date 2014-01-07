@@ -1,5 +1,5 @@
 <% ns_adp_include stjrFyrir.adp %>
-
+<% ns_adp_include heading1is.adp %>
 
 <% ns_adp_include leit-einfold.adp %>
 
@@ -7,18 +7,15 @@
   <tr>
     <td vAlign="top">
       <p>
-        <a href="umhts.adp">Um hugtakasafnið</a>:
+        <a href="umhts.adp">Um Hugtakasafnið</a>:
       <ul>
-        <li><a href="umhts.adp#almennt">Almennt</a></li>
-        <li><a href="umhts.adp#notkun">Notkun</a></li>
-        <li><a href="umhts.adp#saga">Saga</a></li>
       </ul>
       </p>
       <p>
         Sjá einnig:
       </p>
       <ul>
-        <li><a href="http://www.ordabanki.ismal.hi.is/search">ORÐABANKI Íslenskrar málstöðvar</a></li>
+        <li><a href="http://www.ordabanki.hi.is/wordbank/search">ORÐABANKI Íslenskrar málstöðvar</a></li>
       </ul>
     </td>
     <td>
@@ -26,11 +23,10 @@
         <b>Þýðingamiðstöð utanríkisráðuneytisins</b> hefur birt hugtakasafn sitt á vefslóðinni: www.hugtakasafn.utn.stjr.is.
       </p>
       <p>
-        Unnið hefur verið að söfnun hugtaka og orðasambanda í safnið allt frá stofnun Þýðingamiðstöðvarinnar árið 1990. Sífellt er unnið að endurskoðun og aðlögun safnsins með vefsetningu þess í huga enda er vefsetning íslenskra hugtakasafna liður í tungutækniverkefni ríkisstjórnarinnar.
+        Unnið hefur verið að söfnun íðorða (sérfræðiorða) og orðasambanda hjá þýðingamiðstöð frá árinu 1990 í tengslum við þýðingu samningsins um Evrópska efnahagssvæðið (EES-samningsins) og lagatexta sem falla undir hann. Flest íðorðanna tengjast hinum ýmsu sérsviðum EES-samningsins. Þá eru í safninu mörg íðorð úr lagamáli og stjórnsýslu, svo og heiti milliríkjasamninga, stofnana, nefnda, ráða o.fl. Einnig hefur orðasafn Þróunarsamvinnustofnunar Íslands verið birt í hugtakasafninu.
       </p>
       <p>
-        Hugtökin og orðasamböndin eru að stórum hluta úr tilskipunum og reglugerðum sem falla undir EES-samninginn en þýðing þeirra yfir á íslensku er einmitt helsta verkefni  Þýðingamiðstöðvarinnar. Einnig eru í safninu hugtök sem tengjast öðrum milliríkjasamningum, svo sem Schengen-samningnum og samningnum um stofnun Alþjóðaviðskiptastofnunarinnar (GATT). Þá eru í safninu fjöldamörg hugtök sem tengjast Evrópusambandinu og stofnunum þess. Nú eru í safninu u.þ.b. 55.000 grunnfærslur en hverri þeirra fylgja á bilinu
-6-8 upplýsingareitir.  Ný hugtök eru reglulega færð inn.
+        Hjá þýðingamiðstöð er unnið að íðorðastarfi og nýyrðasmíð í samstarfi við sérfræðinga hjá opinberum stofnunum, í háskólasamfélaginu og atvinnulífinu. Nú eru í safninu rúmlega 70.000 færslur en hverri þeirra fylgja á bilinu 5-8 upplýsingareitir. Ný íðorð eru reglulega færð inn.
       </p>
       <p>
         Aðgangur að safninu er öllum opinn.
@@ -41,9 +37,9 @@
 
 <p>
 <b>Athugið:</b><br/>
-Hugtakasafnið er í eigu Þýðingamiðstöðvar utanríkisráðuneytisins og unnið af starfsmönnum hennar. Óheimilt er með öllu að afrita það eða nýta á nokkurn hátt til útgáfu eða fjölföldunar. Hins vegar er öllum heimilt að fletta upp í hugtakasafninu.
-Umsjón með vefsetningu hugtakasafns:  <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a>.
-</p>
+Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins og unnið af starfsmönnum hennar. Heimilt er að endurnota upplýsingar úr hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið. 
+Ritstjóri hugtakasafns er <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a> og vefstjóri er  <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a>.
+</p> Að ritstjórn hugtakasafns hafa unnið Björgvin R. Andersen, Hálfdan Ó. Hálfdanarson og Sindri Guðjónsson.
 
 <%
 set sql_query "select  max(updated) as updated from hugtakasafn_updated"

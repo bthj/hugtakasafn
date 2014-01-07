@@ -1,4 +1,5 @@
 <% ns_adp_include stjrFyrir.adp %>
+<% ns_adp_include heading1is.adp %>
 
 <% 
 set_the_usual_form_variables 0 

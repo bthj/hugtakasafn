@@ -294,7 +294,7 @@
 
           
           <ul>
-            <li class="lang-en"><a href="http://eng.utanrikisraduneyti.is">Enska</a></li>
+            <li class="lang-en"><a href="index.en.adp">Enska</a></li>
           </ul>  
           
         </div>
