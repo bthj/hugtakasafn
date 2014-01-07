@@ -1,4 +1,5 @@
 <% ns_adp_include stjrFyrir.adp %>
+<% ns_adp_include heading1is.adp %>
 
   <a href="/">Hugtakasafn</a>
 <br/><br/>

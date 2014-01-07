@@ -1,7 +1,7 @@
     <html>
       <head>
         <title>
-          Hugtakasafn Þýðingamiðstöðvar utanríkisráðuneytis
+          Hugtakasafn þýðingamiðstöðvar utanríkisráðuneytis
         </title>
         <LINK REL="STYLESHEET" HREF="css/ne-fix.css" TYPE="text/css"/>
           <script language="Javascript">

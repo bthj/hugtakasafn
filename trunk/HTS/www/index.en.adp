@@ -1,6 +1,6 @@
 <% ns_adp_include stjrFyrir.adp %>
+<% ns_adp_include heading1en.adp %>
 
-<h1>Term Bank</h1>
 
 <% ns_adp_include leit-einfold.en.adp %>
 
@@ -8,11 +8,11 @@
   <tr>
     <td vAlign="top">
       <p>
-        <a href="umhts.adp">On the Term Bank</a>:
+        <a href="umhts.en.adp">On the Term Bank</a>:
       <ul>
-        <li><a href="umhts.adp#almennt">General</a></li>
-        <li><a href="umhts.adp#notkun">Usage</a></li>
-        <li><a href="umhts.adp#saga">History</a></li>
+        <li><a href="umhts.en.adp#almennt">General</a></li>
+        <li><a href="umhts.en.adp#notkun">Usage</a></li>
+        <li><a href="umhts.en.adp#saga">History</a></li>
       </ul>
       </p>
       <p>

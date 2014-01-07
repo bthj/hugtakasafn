@@ -1,4 +1,5 @@
 <% ns_adp_include stjrFyrir.adp %>
+<% ns_adp_include heading1is.adp %>
 
 <% ns_adp_include leit-einfold.adp %>
 

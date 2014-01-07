@@ -23,6 +23,7 @@ if { ![empty_string_p $sql_query] } {
   	set list_leitarord [split $hugtak]
   }
   while { [ns_db getrow $db $selection] } {
+    ns_puts "<div class=\"term\">"
     set_variables_after_query
     switch $tungumal {
       "oll" {
@@ -155,6 +156,7 @@ if { ![empty_string_p $sql_query] } {
       ns_puts "<dd>$lang_la \[la\]</dd>"
     }
     incr count
+    ns_puts "</div>"
   }
   ns_puts "</dl>"
   if { $count > 0 } {
@@ -168,7 +170,7 @@ if { ![empty_string_p $sql_query] } {
       ns_puts "<p>$count niðurstöður fundust.</p>"
     }
   } else {
-    ns_puts "<p>Ekkert fannst.</p><p>Má bjóða þér að leita í <a href=\"http://www.ordabanki.hi.is/wordbank/search\">Orðabanka Íslenskrar málstöðvar</a> eða í lagasafni ESB <a href=\"http://eur-lex.europa.eu/RECH_mot.do\">EURLEX</a> eða á EES-vefsetrinu <a href=\"http://www.utanrikisraduneyti.is/samningar/ees/\">EES</a> ?<a </p>."
+    ns_puts "<p>Ekkert fannst.</p><p>Má bjóða þér að leita í <a href=\"http://www.ordabanki.hi.is/wordbank/search\">Orðabanka Íslenskrar málstöðvar</a> eða í lagasafni ESB <a href=\"http://eur-lex.europa.eu/RECH_mot.do\">EURLEX</a> eða á EES-vefsetrinu <a href=\"http://www.utanrikisraduneyti.is/samningar/ees/\">EES</a>?<a </p>"
   }
 }
 }
