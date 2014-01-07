@@ -1,4 +1,4 @@
-#Mon Aug 22 22:50:15 GMT 2011
+#Mon Jan 06 22:39:19 CET 2014
 eclipse.preferences.version=1
 encoding//MTexportToHTSimport/MTexportToTABforImport.py=utf-8
 encoding//MTexportToHTSimport/legacy/import.tcl=ISO-8859-1
@@ -13,3 +13,5 @@ encoding//www/leit-nidurstodur.adp=ISO-8859-1
 encoding//www/nidurstodur-display.adp=ISO-8859-1
 encoding//www/stjrEftir.adp=ISO-8859-1
 encoding//www/stjrFyrir.adp=ISO-8859-1
+encoding//www/umhts.adp=ISO-8859-1
+encoding/<project>=ISO-8859-1

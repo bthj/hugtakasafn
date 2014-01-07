@@ -53,19 +53,53 @@ ns_puts "
     <dd>$lang_en</dd>
 "
 }
-if { ![empty_string_p $lang_danosae] } {
+set danosae_parts [split $lang_danosae ";"]
+if { ![empty_string_p [lindex $danosae_parts 0]] } {
+  set lang_da [lindex $danosae_parts 0]
+  regsub -all " \\(da.\\)" $lang_da "" lang_da
   if { [info exists leitarord] } {
     foreach eitt_leitarord $list_leitarord {
-      regsub -all -nocase $eitt_leitarord $lang_danosae "#####&bbbbb" lang_danosae
+      regsub -all -nocase $eitt_leitarord $lang_da "#####&bbbbb" lang_da
     }
-    regsub -all "#####" $lang_danosae "<b style=\"color:black;background-color:#ffff66\">" lang_danosae
-    regsub -all "bbbbb" $lang_danosae "</b>" lang_danosae
+    regsub -all "#####" $lang_da "<b style=\"color:black;background-color:#ffff66\">" lang_da
+    regsub -all "bbbbb" $lang_da "</b>" lang_da
   }
-ns_puts "
-    <dt><font color=\"gray\"><b>DANSKA / NORSKA / SÆNSKA</b></font></dt>
-    <dd>$lang_danosae</dd>
-"
+  ns_puts "
+    <dt><font color=\"gray\"><b>DANSKA</b></font></dt>
+    <dd>$lang_da</dd>
+  "
 }
+if { ![empty_string_p [lindex $danosae_parts 1]] } {
+  set lang_se [lindex $danosae_parts 1]
+  regsub -all " \\(sæ.\\)" $lang_se "" lang_se
+  if { [info exists leitarord] } {
+    foreach eitt_leitarord $list_leitarord {
+      regsub -all -nocase $eitt_leitarord $lang_se "#####&bbbbb" lang_se
+    }
+    regsub -all "#####" $lang_se "<b style=\"color:black;background-color:#ffff66\">" lang_se
+    regsub -all "bbbbb" $lang_se "</b>" lang_se
+  }
+  ns_puts "
+    <dt><font color=\"gray\"><b>SÆNSKA</b></font></dt>
+    <dd>$lang_se</dd>
+  "
+}
+if { ![empty_string_p [lindex $danosae_parts 2]] } {
+  set lang_no [lindex $danosae_parts 2]
+  regsub -all " \\(no.\\)" $lang_no "" lang_no
+  if { [info exists leitarord] } {
+    foreach eitt_leitarord $list_leitarord {
+      regsub -all -nocase $eitt_leitarord $lang_no "#####&bbbbb" lang_no
+    }
+    regsub -all "#####" $lang_no "<b style=\"color:black;background-color:#ffff66\">" lang_no
+    regsub -all "bbbbb" $lang_no "</b>" lang_no
+  }
+  ns_puts "
+    <dt><font color=\"gray\"><b>NORSKA</b></font></dt>
+    <dd>$lang_no</dd>
+  "
+}
+
 if { ![empty_string_p $lang_fr] } {
   if { [info exists leitarord] } {
     foreach eitt_leitarord $list_leitarord {
