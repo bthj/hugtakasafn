@@ -97,14 +97,9 @@ if __name__ == '__main__':
                             else:
                                 lang_en = enTerm
                             
-                #danosaeTermGrp = conceptGrp.find("./languageGrp/language[@type='DA/NO/SÆ']/../termGrp")
-                #danosaeTermGrp = conceptGrp.find("./languageGrp/language[@lang='DA']/../termGrp")
                 danosaeTermGrp = conceptGrp.xpath("./languageGrp/language[contains(@type,'DA/NO/')]/../termGrp")
                 if len(danosaeTermGrp) > 0:
-                    print "fann skandinavisku"
                     lang_danosae = danosaeTermGrp[0].find("term").text
-                else:
-                    print "fann EKKI skandinavisku"
                     
                 frTermGrp = conceptGrp.find("./languageGrp/language[@type='FR']/../termGrp")
                 if frTermGrp is not None:
