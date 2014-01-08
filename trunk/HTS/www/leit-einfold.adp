@@ -88,7 +88,7 @@ if { ![info exists tungumal] } {
         }
         %>
          
-        <input type="radio" name="ordrett" value="" id="matchAll"<%=$matchAllChecked%>><label for="matchAll" style="vertical-align:text-top;">öll tilvik</label>
+        <input type="radio" name="ordrett" value="o" id="matchAll"<%=$matchAllChecked%>><label for="matchAll" style="vertical-align:text-top;">öll tilvik</label>
         
         <input type="radio" name="ordrett" value="t" id="matchExact"<%=$matchExactChecked%>><label for="matchExact" style="vertical-align:text-top;">orðrétt</label>
         

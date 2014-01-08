@@ -18,7 +18,7 @@ if { [empty_string_p $leitarord] } {
   set sql_query "select * from hugtakasafn where "
   set leitarord [DoubleApos $leitarord]
   set list_leitarord [split $leitarord]
-  if { ![info exists ordrett] || [empty_string_p $ordrett] } {
+  if { ![info exists ordrett] || [string compare $ordrett "o"] == 0 } {
     switch $tungumal {
       "oll" {
         set i 0
@@ -91,7 +91,7 @@ if { [empty_string_p $leitarord] } {
         }
       }
     }
-    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal"
+    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=o"
     
     
   } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
