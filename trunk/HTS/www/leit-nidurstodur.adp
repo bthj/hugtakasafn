@@ -92,6 +92,34 @@ if { [empty_string_p $leitarord] } {
       }
     }
     set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal"
+    
+    
+  } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
+    switch $tungumal {
+      "oll" {
+        append sql_query "lang_is ilike '$leitarord%' or lang_en ilike '$leitarord%' or lang_danosae ilike '$leitarord%' or lang_fr ilike '$leitarord%' or lang_de ilike '$leitarord%' or lang_la ilike '$leitarord%' or en_annar_rith ilike '$leitarord%' or is_annar_rith ilike '$leitarord%' or en_skst ilike '$leitarord%' or is_skst ilike '$leitarord%' "
+      }
+      "is" {
+        append sql_query "lang_is ilike '$leitarord%' or is_annar_rith ilike '$leitarord%' or is_skst ilike '$leitarord%' "
+      }
+      "en" {
+        append sql_query "lang_en ilike '$leitarord%' or en_annar_rith ilike '$leitarord%' or en_skst ilike '$leitarord%' "
+      }
+      "danosae" {
+        append sql_query "lang_danosae ilike '$leitarord%' "
+      }
+      "fr" {
+        append sql_query "lang_fr ilike '$leitarord%' "
+      }
+      "de" {
+        append sql_query "lang_de ilike '$leitarord%' "
+      }
+      "la" {
+        append sql_query "lang_la ilike '$leitarord%' "
+      }
+    }
+    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=s"    
+    
   } else {
     switch $tungumal {
       "oll" {
