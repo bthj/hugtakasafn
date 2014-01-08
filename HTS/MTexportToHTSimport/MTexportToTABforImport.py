@@ -63,6 +63,10 @@ if __name__ == '__main__':
             is_aths = ""
             is_skjalnr = ""
             en_daemi = ""
+            en_samh= ""
+            en_skilgr = ""
+            en_aths = ""
+            en_rit = ""
             
             entrynumber = conceptGrp.find("concept").text
             
@@ -166,6 +170,15 @@ if __name__ == '__main__':
                         en_ordfl = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='orðfl.']").text
                     if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']") is not None:
                         en_daemi = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='dæmi']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='samh.']") is not None:
+                        en_samh = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='samh.']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='skilgr.']") is not None:
+                        en_skilgr = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='skilgr.']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='aths.']") is not None:
+                        en_aths = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='aths.']").text
+                    if enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='rit']") is not None:
+                        en_rit = enLangGrp[0].find(u"termGrp/descripGrp/descrip[@type='rit']").text
+                    
         
                 isSkstGrp = conceptGrp.find("./languageGrp/language[@type='c']/..")
                 if isSkstGrp is not None:
@@ -200,9 +213,13 @@ if __name__ == '__main__':
                 is_aths = is_aths.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 is_skjalnr = is_skjalnr.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 en_daemi = en_daemi.replace("\n", "<br/>").replace("'","''").replace("\t", "")
+                en_samh = en_samh.replace("\n", "<br/>").replace("'","''").replace("\t", "")
+                en_skilgr = en_skilgr.replace("\n", "<br/>").replace("'","''").replace("\t", "")
+                en_aths = en_aths.replace("\n", "<br/>").replace("'","''").replace("\t", "")
+                en_rit = en_rit.replace("\n", "<br/>").replace("'","''").replace("\t", "")
                 
                 
-                tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr,en_daemi]
+                tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr,en_daemi,en_samh,en_skilgr,en_aths,en_rit]
                 tabLine = "\t".join(tabEntry) + "\n"
     
                 tabLineLATINcompatible = tabLine.encode("utf_16_le", "ignore").decode("utf_16_le", "ignore")
