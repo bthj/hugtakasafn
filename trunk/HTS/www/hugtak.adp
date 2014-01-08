@@ -139,18 +139,31 @@ ns_puts "
     <dd>$lang_la</dd>
 "
 }
-if { ![empty_string_p $is_samh] } {
-ns_puts "
+
+
+if { ![empty_string_p $is_samh] || ![empty_string_p $en_samh] } {
+  ns_puts "
     <dt><font color=\"green\"><b>Samheiti</b></font></dt>
-    <dd>$is_samh</dd>
-"
+  "  
+  if { ![empty_string_p $is_samh] } {
+    ns_puts "<dd>"
+    if { ![empty_string_p $en_samh] } {
+      ns_puts "\[<strong>is</strong>\]"  
+    }
+    ns_puts "$is_samh</dd>"
+  }
+  if { ![empty_string_p $en_samh] } {
+    ns_puts "<dd>\[<strong>en</strong>\]  $en_samh</dd>"
+  }
 }
+
 if { ![empty_string_p $is_svid] } {
 ns_puts "
     <dt><font color=\"green\"><b>Svið</b></font></dt>
     <dd>$is_svid</dd>
 "
 }
+
 if { ![empty_string_p $is_daemi] || ![empty_string_p $en_daemi] } {
 ns_puts "
     <dt><font color=\"green\"><b>Dæmi</b></font></dt>
@@ -166,17 +179,37 @@ ns_puts "
     ns_puts "<dd>\[<strong>en</strong>\]  $en_daemi</dd>"
   }
 }
-if { ![empty_string_p $is_skilgr] } {
-ns_puts "
+
+if { ![empty_string_p $is_skilgr] || ![empty_string_p $en_skilgr] } {
+  ns_puts "
     <dt><font color=\"green\"><b>Skilgreining</b></font></dt>
-    <dd>$is_skilgr</dd>
-"
+  "
+  if { ![empty_string_p $is_skilgr] } {
+    ns_puts "<dd>"
+    if { ![empty_string_p $en_skilgr] } {
+      ns_puts "\[<strong>is</strong>\]"  
+    }
+    ns_puts "$is_skilgr</dd>"
+  }
+  if { ![empty_string_p $en_skilgr] } {
+    ns_puts "<dd>\[<strong>en</strong>\]  $en_skilgr</dd>"
+  }
 }
-if { ![empty_string_p $is_rit] } {
-ns_puts "
+
+if { ![empty_string_p $is_rit] || ![empty_string_p $en_rit] } {
+  ns_puts "
     <dt><font color=\"green\"><b>Rit</b></font></dt>
-    <dd>$is_rit</dd>
-"
+  "
+  if { ![empty_string_p $is_rit] } {
+    ns_puts "<dd>"
+    if { ![empty_string_p $en_rit] } {
+      ns_puts "\[<strong>is</strong>\]"  
+    }
+    ns_puts "$is_rit</dd>"
+  }
+  if { ![empty_string_p $en_rit] } {
+    ns_puts "<dd>\[<strong>en</strong>\]  $en_rit</dd>"
+  }
 }
 
 if { ![empty_string_p $is_skjalnr] } {
@@ -186,15 +219,24 @@ ns_puts "
 "
 }
 
-
-if { ![empty_string_p $is_aths] } {
-  regsub -all -nocase <XREF>(.*?)</XREF> $is_aths "<a href=\"http://hugtakasafn.utn.stjr.is/leit-nidurstodur.adp?leitarord=\\1\\&tungumal=en\\&ordrett=t\">\\1</a>" is_aths
-  regsub -all -nocase (<DESCRIPTEXT>|</DESCRIPTEXT>) $is_aths "" is_aths
-ns_puts "
+if { ![empty_string_p $is_aths] || ![empty_string_p $en_aths] } {
+  ns_puts "
     <dt><font color=\"green\"><b>Athugasemd</b></font></dt>
-    <dd>$is_aths</dd>
-"
+  "
+  if { ![empty_string_p $is_aths] } {
+    regsub -all -nocase <XREF>(.*?)</XREF> $is_aths "<a href=\"http://hugtakasafn.utn.stjr.is/leit-nidurstodur.adp?leitarord=\\1\\&tungumal=en\\&ordrett=t\">\\1</a>" is_aths
+    regsub -all -nocase (<DESCRIPTEXT>|</DESCRIPTEXT>) $is_aths "" is_aths
+    ns_puts "<dd>"
+    if { ![empty_string_p $en_aths] } {
+      ns_puts "\[<strong>is</strong>\]"  
+    }
+    ns_puts "$is_aths</dd>"
+  }
+  if { ![empty_string_p $en_aths] } {
+    ns_puts "<dd>\[<strong>en</strong>\]  $en_aths</dd>"
+  }
 }
+
 if { ![empty_string_p $is_adalord] } {
 ns_puts "
     <dt><font color=\"green\"><b>Aðalorð</b></font></dt>
