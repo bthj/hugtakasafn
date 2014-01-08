@@ -69,12 +69,32 @@ if { ![info exists tungumal] } {
       </td>
       <td nowrap>
         <%
+        set matchAllChecked ""
+        set matchExactChecked ""
+        set matchStartChecked ""
         if { [info exists ordrett] && [string compare $ordrett "t"] == 0 } {
-          ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Orðrétt leit</label>"
+        
+          #ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Orðrétt leit</label>"
+          set matchExactChecked " checked=\"checked\""
+        
+        } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
+        
+          set matchStartChecked " checked=\"checked\""
+          
         } else {
-          ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Orðrétt leit</label>"
+        
+          #ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Orðrétt leit</label>"
+          set matchAllChecked " checked=\"checked\""
         }
         %>
+         
+        <input type="radio" name="ordrett" value="" id="matchAll"<%=$matchAllChecked%>><label for="matchAll" style="vertical-align:text-top;">öll tilvik</label>
+        
+        <input type="radio" name="ordrett" value="t" id="matchExact"<%=$matchExactChecked%>><label for="matchExact" style="vertical-align:text-top;">orðrétt</label>
+        
+        <input type="radio" name="ordrett" value="s" id="matchStart"<%=$matchStartChecked%>><label for="matchStart" style="vertical-align:text-top;">byrjar á</label>
+        
+        
         <!-- select name="tungumal">
           <option selected>Enska -> Íslenska</option>
           <option>Íslenska -> Enska</option>
