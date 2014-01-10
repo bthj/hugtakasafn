@@ -102,7 +102,7 @@ if { ![info exists tungumal] } {
       </td>
     </tr>
   </table>
-  <input type="submit" value="leita"/> <a href="itarleit.adp">Nánari leit</a>
+  <input type="submit" value="leita"/> <a href="itarleit.adp">Nánari leit</a> &nbsp;|&nbsp; <a href="fletta-svid.adp">Fletting sviða</a>
 </form>
 <script language="JavaScript">
 <!--
