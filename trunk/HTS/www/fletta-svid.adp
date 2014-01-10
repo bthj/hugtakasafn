@@ -3,8 +3,9 @@
 
 <% ns_adp_include leit-einfold.adp %>
 
-<a href="/">Hugtakasafn</a> : Fletting sviða
-
+<p>
+	<a href="/">Hugtakasafn</a> : Fletting sviða
+</p>
 <ul>
 <%
 set sql_query "select is_svid, count(is_svid) as fjoldi from hugtakasafn group by is_svid order by is_svid"
