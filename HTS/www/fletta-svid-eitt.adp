@@ -40,9 +40,26 @@ while { [ns_db getrow $db $selection] } {
   if { ![empty_string_p $lang_en] } {
     ns_puts "<dd>$lang_en \[en\]</dd>"
   }
+  
   if { ![empty_string_p $lang_danosae] } {
-    ns_puts "<dd>$lang_danosae \[da/no/sæ\]</dd>"
+  	set danosae_parts [split $lang_danosae ";"]
+  	if { ![empty_string_p [lindex $danosae_parts 0]] } {
+  		set lang_da [lindex $danosae_parts 0]
+  		regsub -all " \\(da.\\)" $lang_da "" lang_da
+  		ns_puts "<dd>$lang_da \[da\]</dd>"
+  	}
+  	if { ![empty_string_p [lindex $danosae_parts 1]] } {
+  		set lang_se [lindex $danosae_parts 1]
+  		regsub -all " \\(sæ.\\)" $lang_se "" lang_se
+  		ns_puts "<dd>$lang_se \[sæ\]</dd>"
+  	}
+  	if { ![empty_string_p [lindex $danosae_parts 2]] } {
+  		set lang_no [lindex $danosae_parts 2]
+  		regsub -all " \\(no.\\)" $lang_no "" lang_no
+  		ns_puts "<dd>$lang_no \[no\]</dd>"
+  	}
   }
+
   if { ![empty_string_p $lang_fr] } {
     ns_puts "<dd>$lang_fr \[fr\]</dd>"
   }
