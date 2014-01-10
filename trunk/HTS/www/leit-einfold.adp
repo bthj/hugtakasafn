@@ -6,9 +6,9 @@ if { ![info exists tungumal] } {
   set tungumal "oll"
 }
 %>
-<table align="right">
-<tr><td>Ritstjóri: <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a></td></tr>
-</table>
+<span style="float:right;">
+	Ritstjóri: <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a>
+</span>
 <form method=get action="leit-nidurstodur.adp" name="leit">
   <table>
     <tr>
