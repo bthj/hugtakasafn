@@ -1,5 +1,5 @@
 #!/bin/bash
 
-eval MTexportToHTSimport/MTexportToTABforImport.py $1
+eval MTexportToHTSimport/MTexportToTABforImport.py
 
 eval MTexportToHTSimport/importFromTABfile.tcl
