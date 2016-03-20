@@ -422,7 +422,7 @@ if { ![empty_string_p $annarrh] } {
   append sql_query "(en_annar_rith ilike '%$annarrh%' or is_annar_rith ilike '%$annarrh%') "
   append leitarskilyrdi "\"$annarrh\" "
 }
-append sql_query "order by lang_is"
+append sql_query "order by db_nr, lang_is"
 set hugtakUrlLeitarParam ""
 if { [string first "where" $sql_query] == -1 } {
   set sql_query ""

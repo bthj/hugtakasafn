@@ -1,8 +1,8 @@
 <% ns_adp_include stjrFyrir.adp %>
 <% ns_adp_include heading1is.adp %>
 
-<% 
-set_the_usual_form_variables 0 
+<%
+set_the_usual_form_variables 0
 set leitarord [string trim $leitarord]
 regsub -all {\s+} $leitarord " " leitarord
 %>
@@ -92,8 +92,8 @@ if { [empty_string_p $leitarord] } {
       }
     }
     set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=o"
-    
-    
+
+
   } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
     switch $tungumal {
       "oll" {
@@ -118,8 +118,8 @@ if { [empty_string_p $leitarord] } {
         append sql_query "lang_la ilike '$leitarord%' "
       }
     }
-    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=s"    
-    
+    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=s"
+
   } else {
     switch $tungumal {
       "oll" {
@@ -146,7 +146,7 @@ if { [empty_string_p $leitarord] } {
     }
     set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=t"
   }
-  append sql_query "order by lang_is"
+  append sql_query "order by db_nr, lang_is"
 }
 %>
 

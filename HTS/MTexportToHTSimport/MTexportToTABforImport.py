@@ -17,11 +17,11 @@ if __name__ == '__main__':
     # if len(sys.argv) < 2:
     #     print "Engin export skra tiltekin"
     # else:
-        # thisPath = os.path.split( sys.argv[0] )[0]
-        # dataDir = thisPath + "/../import/"
-
-        dataDir = "../import/"
-        globPathName = "../import/*.xml"
+        thisPath = os.path.split( sys.argv[0] )[0]
+        dataDir = thisPath + "/../import/"
+        print "Data dir: " + dataDir
+        # dataDir = "../import/"
+        globPathName = thisPath + "/../import/*.xml"
 
         tabFile = "exportCombined.tab"
         f = codecs.open(dataDir + tabFile, 'w', encoding='utf-8')
@@ -29,6 +29,7 @@ if __name__ == '__main__':
         f.truncate()
 
         # print "globPathName: " + globPathName
+        exportFileNr = 0
         count = 0
         entrynumbers = []  #thad getur komid fyrir ad eitt entrynumber se tvitekid; komum i veg fyrir thad
         omittedEntrynumbers = []
@@ -38,10 +39,12 @@ if __name__ == '__main__':
 
             # exportFile = sys.argv[1]
 
+            exportFileNr += 1
 
             print "Thatta export skjal: " + oneExportFile
             # tree = etree.parse((dataDir + exportFile), parser=etree.XMLParser(strip_cdata=False, encoding='utf-16le'))
-            tree = etree.parse(dataDir + oneExportFile)
+            # tree = etree.parse(dataDir + oneExportFile)
+            tree = etree.parse(oneExportFile)
 
             print(tree.docinfo.encoding)
 
@@ -238,7 +241,7 @@ if __name__ == '__main__':
                     en_rit = en_rit.replace("\n", "<br/>").replace("'","''").replace("\t", "")
 
 
-                    tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr,en_daemi,en_samh,en_skilgr,en_aths,en_rit]
+                    tabEntry = [entrynumber,lang_is,lang_en,lang_danosae,lang_fr,lang_de,lang_la,is_samh,is_svid,is_daemi,is_skilgr,is_rit,is_efnisfl,is_adalord,is_adalord_ordfl,is_adalord_kyn,is_onnurmalfr,en_ordfl,en_skst,en_annar_rith,is_skst,is_annar_rith,is_heimild,is_aths,is_skjalnr,en_daemi,en_samh,en_skilgr,en_aths,en_rit,str(exportFileNr)]
                     tabLine = "\t".join(tabEntry) + "\n"
 
                     tabLineLATINcompatible = tabLine.encode("utf_16_le", "ignore").decode("utf_16_le", "ignore")
