@@ -1,37 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="is">
 <head>
-
-<!-- eplica-no-index -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>Þýðingamiðstöð | Ráðuneytið | Utanríkisráðuneyti</title>
-
-
-
-
-  <link rel="stylesheet" href="http://static.stjr.is/design/global.css" media="screen" type="text/css" />
-
-  <link rel="stylesheet" href="http://static.stjr.is/design/global-print.css" media="print" type="text/css" />
-  <link rel="stylesheet" href="http://static.stjr.is/design/global-stream.css" media="aural, braille, embossed, tty" type="text/css" />
-
-
-
-  <script src='http://static.stjr.is/js/noflicker.js' type='text/javascript'></script>
-  <script src='http://codecentre.eplica.is/req/jqreq.js' type='text/javascript'></script>
-
-
-
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Björn Þór Jónsson
+      BjÃ¶rn ÃžÃ³r JÃ³nsson
       bangsi@bthj.is
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  -->
 
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
-
-  <link rel="shortcut icon" href="http://static.stjr.is/design/i/fav.ico" />
-
-<!-- /eplica-no-index -->
+<style>
+  body {
+    font-family: 'Open Sans';
+  }
+</style>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -45,47 +26,4 @@
 </script>
 
 </head>
-<body class=" twocol">
-  <div class="pgwrap  twocol">
-
-
-
-<div class="pghead" id="pghead">
-<div class="wrap">
-
-
-<!-- eplica-no-index -->
-<div class="brand"><a href="http://www.utanrikisraduneyti.is/" title="Stjórnarráð Íslands - forsíða"
-    ><img class="logo" src="http://www.utanrikisraduneyti.is/skin/basic/design/i/sitelogo.png" alt="Stjórnarráð Íslands" /></a></div>
-<div class="stream"><p>Beint í <a href='#pgnav'>leiðarkerfi vefsins</a>.</p><hr /></div>
-
-<!-- /eplica-no-index -->
-
-
-
-
-</div>
-</div>
-
-
-
-
-
-
-  <div class="pgmain">
-  <div class="wrap">
-
-
-
-
-
-<!-- eplica-search-index-fields
-     title=Þýðingamiðstöð utanríkisráðuneytisins
-     articlepublisheddate=
-     eplica-search-index-fields -->
-
-
-<!-- eplica-contentid 1-2059-MainContent -->
-<div class="article box">
-  <div class="boxhead">Þýðingamiðstöð</div>
-  <div class="boxbody">
+<body>
