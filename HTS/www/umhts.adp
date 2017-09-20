@@ -3,10 +3,6 @@
 
 <% ns_adp_include leit-einfold.adp %>
 
-<p>
-<b>Vinsamlega athugið að Rekstrarskrifstofa stjórnarráðsins er að uppfæra vef Hugtakasafnsins og því er viðmótið óvenjulegt.</b>
-</p>
-
 <p><a href="/">Hugtakasafn</a> : Kynning</p>
 
 <p>
