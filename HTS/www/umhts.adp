@@ -3,6 +3,10 @@
 
 <% ns_adp_include leit-einfold.adp %>
 
+<p>
+<b>Vinsamlega athugið að Rekstrarskrifstofa stjórnarráðsins er að uppfæra vef Hugtakasafnsins og því er viðmótið óvenjulegt.</b>
+</p>
+
 <p><a href="/">Hugtakasafn</a> : Kynning</p>
 
 <p>
@@ -20,15 +24,15 @@
 </p>
 
 <p>
-Meginhluti íðorðanna í Hugtakasafninu tengist hinum ýmsu sérsviðum EES-samningsins en einnig er þar að finna mörg íðorð á sviði laga og stjórnsýslu. Þá eru í safninu fjöldamörg hugtök og heiti sem tengjast alþjóðastofnunum og stofnunum Evrópusambandsins. Lagatextarnir, sem falla undir EES-samninginn, varða margir réttindi og hagsmuni hins almenna borgara, t.d. á sviði félagslegra réttinda, matvælaöryggis, neytendamála, umhverfismála og vinnuréttar. Þessar þýðingar eru ýmist teknar beint inn í íslenskan rétt eða þær eru grunnur að íslenskum lögum og reglugerðum.
+Meginhluti íðorðanna í Hugtakasafninu tengist hinum margvíslegu sérsviðum EES-samningsins en einnig er þar að finna mörg íðorð á sviði laga, stjórnsýslu og öryggis- og varnarmála. Þá eru í safninu mörg hugtök og heiti sem tengjast alþjóðastofnunum, stofnunum Evrópusambandsins og öðrum stofnunum. Lagatextarnir (gerðirnar), sem falla undir EES-samninginn, varða margir réttindi og hagsmuni hins almenna borgara, t.d. á sviði félagslegra réttinda, matvælaöryggis, neytendamála, umhverfismála og vinnuréttar. EES-gerðirnar eru teknar upp í íslenskan rétt með lagasetningu, reglugerðarsetningu eða með auglýsingu eftir því sem við á. Útgáfudeild Fríverslunarsamtaka Evrópu (EFTA) í Brussel hefur umsjón með birtingu efnisins á íslensku og norsku. Íslenskar útgáfur reglugerða, tilskipana og ákvarðana eru birtar í EES-viðbæti við Stjórnartíðindi Evrópusambandsins (www.efta.int/eea-lex).
 </p>
 
 <p>
-Nú eru í safninu rúmlega 70.000 íðorð og orðasambönd og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds. 
+Nú eru í safninu rúmlega 82.000 íðorð og orðasambönd og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds og heimilt er að endurnota upplýsingar úr Hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið. 
 </p>
 
 <p>
-Allir starfsmenn þýðingamiðstöðvar hafa átt þátt í því að byggja upp Hugtakasafnið. Íslenskar þýðingar hugtaka í safninu eru að stórum hluta komnar frá þýðendunum en auk þeirra hefur stór hópur sérfræðinga hjá opinberum stofnunum, í háskólasamfélaginu og atvinnulífinu lagt til efni í safnið. Hugtakasafnið er afurð íðorðastarfsins sem unnið er á þýðingamiðstöð.
+Allir starfsmenn þýðingamiðstöðvar hafa átt þátt í því að byggja upp Hugtakasafnið. Tiltækir gagnabankar, orðabækur og orðasöfn eru að sjálfsögðu nýtt til hins ýtrasta en í mörgum tilvikum þarf einnig að leita til sérfræðinga á viðkomandi sviðum. Í þýðingamiðstöðinni starfa þrír íðorðastjórar við orðarannsóknir og orðasmíð en einnig hafa sérfræðingar í ráðuneytum og opinberum stofnunum alla tíð lagt þýðendunum ómetanlegt lið í orðastarfinu. Þá eru sérfræðingar í háskólasamfélaginu og atvinnulífinu ávallt tilbúnir til að aðstoða þýðendur. Hugtakasafnið er afurð íðorðastarfsins sem unnið er á þýðingamiðstöð.
 </p>
 
 <p>
@@ -36,16 +40,62 @@ Allir starfsmenn þýðingamiðstöðvar hafa átt þátt í því að byggja upp Hugtakasafn
 </p>
 
 <p>
-Smella má á hverja færslu og fá nánari upplýsingar, t.d. um efnissvið, notkunardæmi, tilvísun í rit, númer skjalsins (t.d. Celex-númer í lagasafni Evrópusambandsins), athugasemdir um breytingar, málfræðiupplýsingar o.fl.
+Smella má á hverja færslu og fá nánari upplýsingar, t.d. um efnissvið, notkunardæmi, tilvísun í rit, númer skjalsins (t.d. Celex-númer í lagasafni Evrópusambandsins), athugasemdir um breytingar, málfræðiupplýsingar o.fl. Reitirnir svið, skjalnúmer og rit eru skyldubundnir og einnig reitir fyrir málfræðiupplýsingar. Hægt er að leita í hverjum reit fyrir sig með því að velja <i>nánari leit</i> á upphafssíðu Hugtakasafnsins.
 </p>
 
 <br/>
+
 <p>
-<a name="efnissvið"><b>EFNISSVIÐ</b></a>
+<b>Reitir með færslum í Hugtakasafni eru:</b><br/>
+
 </p>
 
 <p>
-Helstu efnisþættir EES-samningsins varða fjórfrelsið, þ.e. frjálsa vöruflutninga, frjálsa þjónustustarfsemi, frjálsa fjármagnsflutninga og frjálsa för fólks. Sérsvið undir EES-samningnum eru t.d. fjármál, félagsleg réttindi, landbúnaður, hagskýrslugerð, íðefni, lyf, neytendamál, upplýsingatækni og fjarskipti og umhverfismál. Af sérsviðum utan EES-samningsins má nefna t.d. innflytjendamál, sjávarútveg, þróunaraðstoð, skattamál og tollamál. Af öðru tagi eru svið eins og alþjóðastofnanir, lagamál, landa- og staðaheiti og samningaheiti.
+Samheiti (e. Synonym)
+</p>
+<p>
+
+</p>
+<p>
+Svið (e. Subject area)
+</p>
+<p>
+Dæmi (e. Context)
+</p>
+<p>
+Skilgreining (e. Definition)
+</p>
+<p>
+Rit (e. Reference)
+</p>
+<p>
+Skjal nr. (e. Document No)
+</p>
+<p>
+Heimild (e. Source)
+</p>
+<p>
+Athugasemd (e. Note)
+</p>
+<p>
+Orðflokkur (e. Word class)
+</p>
+<p>
+Kyn (e. Gender)
+</p>
+<p>
+Aðalorð (e. Head word)
+</p>
+<p>
+Önnur málfræði (e. Other grammatical information)
+</p>
+
+<p>
+<b>EFNISSVIÐ</b>
+</p>
+
+<p>
+Helstu efnisþættir EES-samningsins varða fjórfrelsið, þ.e. frjálsa vöruflutninga, frjálsa þjónustustarfsemi, frjálsa fjármagnsflutninga og frjálsa för fólks. Sérsvið undir EES-samningnum eru t.d. <i>félagaréttur, landbúnaður, hagskýrslugerð, íðefni, opinber innkaup, orka og iðnaður, sjóðir og áætlanir og vélar</i>. Af sérsviðum utan EES-samningsins má nefna t.d. <i>innflytjendamál, sjávarútveg, skattamál, tollamál, þróunaraðstoð og öryggis- og varnarmál</i>. Af öðru tagi eru svið eins og <i>alþjóðastofnanir, lagamál, landa- og staðaheiti og samningaheiti</i>. Efnissvið Hugtakasafns voru endurskoðuð á árinu 2011 og eru nú 54 alls. Eftirfarandi flokkun er sameiginleg fyrir EES-gerðir, ESB-gerðir og milliríkjasamninga. Hægt er að skoða allar færslur á hverju sviði með því að velja <i>flettingu sviða</i> á upphafssíðu Hugtakasafnsins.
 
 </p>
 
@@ -58,59 +108,64 @@ Helstu efnisþættir EES-samningsins varða fjórfrelsið, þ.e. frjálsa vöruflutninga
   <tr>
     <td>
     <b>
-alþjóðastofnanir (e. international organisations) <br/>
-dómsmálasamstarf (e. judicial cooperation) <br/>
-efnahagsmál (e. economic affairs) <br/>
-fast orðasamband í EB-/ESB-textum (e. fixed phrase in EC/EU texts) <br/>
-félagaréttur (e. company law) <br/>
-félagaréttur (reikningsskil) (e. company law (accounting standards)) <br/>
-félagsleg réttindi (e. social rights) <br/>
-félagsleg réttindi (heilbrigðismál) (e. social rights (health affairs)) <br/>
-fjármál (e. financial affairs) <br/>
-flutningar (e. transport) <br/>
-hagskýrslugerð (e. statistics) <br/>
-hugtak, almennt notað í EB-/ESB-textum (e. term generally used in EC/EU texts) <br/>
-hugverkaréttindi (e. intellectual property law) <br/>
-innflytjendamál (e. immigration) <br/>
-innri markaðurinn — almennt (e. internal market — general) <br/>
-íðefni (e. chemicals) <br/>
-íðefni (efnaheiti) (e. chemicals (chemical names)) <br/>
-lagamál (e. legal terms) <br/>
-landa- og staðaheiti (e. country and place names) <br/>
-landbúnaður (e. agriculture) <br/>
-landbúnaður (dýraheiti) (e. agriculture (zoological names)) <br/>
-landbúnaður (plöntuheiti) (e. agriculture (botanical names)) <br/>
-lyf (e. medicinal products) <br/>
-lyf (plöntuheiti) (e. medicinal products (botanical names)) <br/>
-menntun og menning (e. education and culture) <br/>
+alþjóðamál (e. <i>International affairs</i>) <br/>
+alþjóðastofnanir (e. <i>international organisations</i>) <br/>
+borgaraleg réttindi (e. <i>Civil rights</i>) <br/>
+dómsmálasamstarf (e. <i>Judicial cooperation</i>) <br/>
+efnahagsmál (e. <i>Economic affairs</i>) <br/>
+fast orðasamband í EB-/ESB-textum (e. <i>Fixed phrase in EC/EU texts</i>) <br/>
+félagaréttur (e. <i>Company law</i>) <br/>
+félagaréttur (reikningsskil) (e. <i>Company law (accounting standards</i>)) <br/>
+félagsleg réttindi (e. <i>Social rights </i>) <br/>
+fjármál (e. <i>Financial affairs</i>) <br/>
+flutningar (e. <i>Transport</i>) <br/>
+flutningar (flug) (e. <i>Transport (aviation)</i>) <br/>
+flutningar (járnbrautir) (e. <i>Transport (railroads)</i>) <br/>
+flutningar (siglingar) (e. <i>Transport (maritime and inland waterways transport)</i>) <br/>
+hagskýrslugerð (e. <i>Statistics</i>) <br/>
+hugtak, almennt notað í EB-/ESB-textum (e. <i>Term generally used in EC/EU texts</i>) <br/>
+hugverkaréttindi (e. <i>Intellectual property law</i>) <br/>
+innflytjendamál (e. <i>Immigration</i>) <br/>
+innri markaðurinn (almennt) (e. <i>Internal market (general)</i>) <br/>
+íðefni (e. <i>Chemicals</i>) <br/>
+íðefni (efnaheiti) (e. <i>Chemicals (chemical names</i>)) <br/>
+íslensk stjórnsýsla (e. <i>Public administration</i>) <br/>
+lagamál (e. <i>Legal terms</i>) <br/>
+landa- og staðaheiti (e. <i>Country and place names</i>) <br/>
+landbúnaður (e. <i>Agriculture</i>) <br/>
+landbúnaður (dýraheiti) (e. <i>Agriculture (zoological names</i>)) <br/>
+landbúnaður (plöntuheiti) (e. <i>Agriculture (botanical names</i>)) <br/>
+lyf (e. <i>Medicinal products</i>) <br/>
+menntun og menning (e. <i>Education and culture</i>) <br/>
     </b>
     </td>
     <td>
     <b>
-milliríkjasamningar (e. international agreements) <br/>
-neytendamál (e. consumer affairs) <br/>
-opinber innkaup (e. public procurement) <br/>
-orka og iðnaður (e. energy and industry) <br/>
-samkeppni og ríkisaðstoð (e. competition and state aid) <br/>
-samningar og sáttmálar (e. agreements and treaties) <br/>
-sjávarútvegur (e. fisheries)  <br/>
-sjávarútvegur (dýraheiti) (e. fisheries (zoological names)) <br/>
-sjóðir og áætlanir (e. funds, instruments and policies) <br/>
-sjóðir og áætlanir (heilbrigðismál) (e. funds, instruments and policies (health affairs)) <br/>
-skattamál (e. taxation) <br/>
-smátæki (e. instruments and appliances) <br/>
-sprengiefni og efnavopn (e. explosives and chemical weapons) <br/>
-staðfesturéttur og þjónusta (e. right of establishment and freedom to provide services) <br/>
-stofnanir (e. institutions) <br/>
-tollamál (e. customs) <br/>
-tæki og iðnaður (e. technology and industry) <br/>
-umhverfismál (e. environment) <br/>
-upplýsingatækni og fjarskipti (e. information technology and telecommunications) <br/>
-utanríkisráðuneytið (e. Ministry for Foreign Affairs) <br/>
-vélar (e. machinery) <br/>
-vinnuréttur (e. labour law) <br/>
-þróunaraðstoð (e. development aid) <br/>
-öryggis- og varnarmál. (e. security and defense policy). <br/>
+milliríkjasamningar (e. <i>International agreements</i>) <br/>
+milliríkjasamningar (samningaheiti) (e. <i>Titles of international agreements</i>) <br/>
+neytendamál (e. <i>Consumer affairs</i>) <br/>
+opinber innkaup (e. <i>Public procurement</i>) <br/>
+orka og iðnaður (e. <i>Energy and industry</i>) <br/>
+samkeppni og ríkisaðstoð (e. <i>Competition and state aid</i>) <br/>
+samningar og sáttmálar (e. <i>Agreements and treaties</i>) <br/>
+sjávarútvegur (e. <i>Fisheries</i>)  <br/>
+sjávarútvegur (dýraheiti) (e. <i>Fisheries (zoological names)</i>) <br/>
+sjóðir og áætlanir (e. <i>Funds, instruments and policies</i>) <br/>
+sjóðir og áætlanir (heilbrigðismál) (e. <i>Funds, instruments and policies (health affairs)</i>) <br/>
+skattamál (e. <i>Taxation</i>) <br/>
+smátæki (e. <i>Instruments and appliances</i>) <br/>
+sprengiefni og efnavopn (e. <i>Explosives and chemical weapons</i>) <br/>
+staðfesturéttur og þjónusta (e. <i>Right of establishment and freedom to provide services</i>) <br/>
+stofnanir (e. <i>Institutions</i>) <br/>
+tollamál (e. <i>Customs</i>) <br/>
+tæki og iðnaður (e. <i>Technology and industry</i>) <br/>
+umhverfismál (e. <i>Environment</i>) <br/>
+upplýsingatækni og fjarskipti (e. <i>Information technology and telecommunications</i>) <br/>
+utanríkisráðuneytið (e. <i>Ministry for Foreign Affairs</i>) <br/>
+vélar (e. <i>Machinery</i>) <br/>
+vinnuréttur (e. <i>Labour law</i>) <br/>
+þróunaraðstoð (e. <i>Development aid</i>) <br/>
+öryggis- og varnarmál. (e. <i>Security and defense policy</i>). <br/>
     </b>
     </td>
   </tr>
