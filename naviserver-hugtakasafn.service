@@ -1,0 +1,13 @@
+[Unit]
+Description=Hugtakasafn NaviServer service
+After=network.target
+
+[Service]
+Type=simple
+User=hugtakasafn
+ExecStart=/usr/local/ns/bin/nsd -f -u hugtakasafn -t /home/hugtakasafn/web/hugtakasafn/hugtakasafn-naviserver4.99.15.tcl
+Restart=on-abort
+
+
+[Install]
+WantedBy=multi-user.target
