@@ -1,1 +1,1 @@
-<h1 style="white-space:nowrap;">Hugtakasafn þýðingamiðstöðvar utanríkisráðuneytisins</h1>
+<!-- h1 style="white-space:nowrap;">Hugtakasafn ï¿½ï¿½ï¿½ingamiï¿½stï¿½ï¿½var utanrï¿½kisrï¿½ï¿½uneytisins</h1 -->
