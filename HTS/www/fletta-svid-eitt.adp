@@ -5,14 +5,14 @@
 
 <% ns_adp_include leit-einfold.adp %>
 
-<a href="/">Hugtakasafn</a> : <a href="fletta-svid.adp">Fletting sviða</a> : <b><%=$id%></b>
+<a href="/">Hugtakasafn</a> : <a href="fletta-svid.adp">Fletting svi&eth;a</a> : <b><%=$id%></b>
 
 <%
 set db [ns_db gethandle]
 if { [info exists c] } {
   set count $c
 } else {
-  set selection [ns_db select $db "select count(is_svid) as svid_fjoldi from hugtakasafn where is_svid = '$id'"]
+  set selection [ns_db select $db "select count(is_svid) as svid_fjoldi from hugtakasafn where is_svid = [ns_dbquotevalue $id]"]
   ns_db getrow $db $selection
   set_variables_after_query
   set count $svid_fjoldi
@@ -23,7 +23,7 @@ if { [info exists o] } {
   set offset 0
 }
 set max 10
-ns_puts "<br/><font color=\"gray\">Hugtök [expr $offset + 1] "
+ns_puts "<br/><font color=\"gray\">Hugt&ouml;k [expr $offset + 1] "
 if { $count < [expr $offset + $max] } {
   ns_puts "til $count"
 } else {
@@ -33,7 +33,7 @@ ns_puts " af $count</font>"
 %>
 <dl>
 <%
-set sql_query "select entrynumber, lang_is, lang_en, lang_danosae, lang_fr, lang_de, lang_la from hugtakasafn where is_svid = '$id' order by lang_is limit 10 offset $offset"
+set sql_query "select entrynumber, lang_is, lang_en, lang_danosae, lang_fr, lang_de, lang_la from hugtakasafn where is_svid = [ns_dbquotevalue $id] order by lang_is limit 10 offset $offset"
 set selection [ns_db select $db $sql_query]
 while { [ns_db getrow $db $selection] } {
   set_variables_after_query
@@ -41,7 +41,7 @@ while { [ns_db getrow $db $selection] } {
   if { ![empty_string_p $lang_en] } {
     ns_puts "<dd>$lang_en \[en\]</dd>"
   }
-  
+
   if { ![empty_string_p $lang_danosae] } {
   	set danosae_parts [split $lang_danosae ";"]
   	if { ![empty_string_p [lindex $danosae_parts 0]] } {
@@ -51,8 +51,8 @@ while { [ns_db getrow $db $selection] } {
   	}
   	if { ![empty_string_p [lindex $danosae_parts 1]] } {
   		set lang_se [lindex $danosae_parts 1]
-  		regsub -all " \\(sæ.\\)" $lang_se "" lang_se
-  		ns_puts "<dd>$lang_se \[sæ\]</dd>"
+  		regsub -all " \\(sï¿½.\\)" $lang_se "" lang_se
+  		ns_puts "<dd>$lang_se \[s&aelig;\]</dd>"
   	}
   	if { ![empty_string_p [lindex $danosae_parts 2]] } {
   		set lang_no [lindex $danosae_parts 2]

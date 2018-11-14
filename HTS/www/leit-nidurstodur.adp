@@ -9,11 +9,11 @@ regsub -all {\s+} $leitarord " " leitarord
 
 <% ns_adp_include leit-einfold.adp %>
 
-  <p><a href="/">Hugtakasafn</a> : Niðurstöður leitar að "<b><%=$leitarord%></b>"</p>
+  <p><a href="/">Hugtakasafn</a> : Ni&eth;urst&ouml;&eth;ur leitar a&eth; "<b><%=$leitarord%></b>"</p>
 
 <%
 if { [empty_string_p $leitarord] } {
-  ns_puts "<p>Engin leitarskilyrði gefin.</p>"
+  ns_puts "<p>Engin leitarskilyr&eth;i gefin.</p>"
 } else {
   set sql_query "select * from hugtakasafn where "
   set leitarord [DoubleApos $leitarord]
@@ -23,7 +23,7 @@ if { [empty_string_p $leitarord] } {
       "oll" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_is ilike '%$eitt_leitarord%' or lang_en ilike '%$eitt_leitarord%' or lang_danosae ilike '%$eitt_leitarord%' or lang_fr ilike '%$eitt_leitarord%' or lang_de ilike '%$eitt_leitarord%' or lang_la ilike '%$eitt_leitarord%' or en_annar_rith ilike '%$eitt_leitarord%' or is_annar_rith ilike '%$eitt_leitarord%' or en_skst ilike '%$eitt_leitarord%' or is_skst ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_is ilike [ns_dbquotevalue %$eitt_leitarord%] or lang_en ilike [ns_dbquotevalue %$eitt_leitarord%] or lang_danosae ilike [ns_dbquotevalue %$eitt_leitarord%] or lang_fr ilike [ns_dbquotevalue %$eitt_leitarord%] or lang_de ilike [ns_dbquotevalue %$eitt_leitarord%] or lang_la ilike [ns_dbquotevalue %$eitt_leitarord%] or en_annar_rith ilike [ns_dbquotevalue %$eitt_leitarord%] or is_annar_rith ilike [ns_dbquotevalue %$eitt_leitarord%] or en_skst ilike [ns_dbquotevalue %$eitt_leitarord%] or is_skst ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -33,7 +33,7 @@ if { [empty_string_p $leitarord] } {
       "is" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_is ilike '%$eitt_leitarord%' or is_annar_rith ilike '%$eitt_leitarord%' or is_skst ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_is ilike [ns_dbquotevalue %$eitt_leitarord%] or is_annar_rith ilike [ns_dbquotevalue %$eitt_leitarord%] or is_skst ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -43,7 +43,7 @@ if { [empty_string_p $leitarord] } {
       "en" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_en ilike '%$eitt_leitarord%' or en_annar_rith ilike '%$eitt_leitarord%' or en_skst ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_en ilike [ns_dbquotevalue %$eitt_leitarord%] or en_annar_rith ilike [ns_dbquotevalue %$eitt_leitarord%] or en_skst ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -53,7 +53,7 @@ if { [empty_string_p $leitarord] } {
       "danosae" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_danosae ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_danosae ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -63,7 +63,7 @@ if { [empty_string_p $leitarord] } {
       "fr" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_fr ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_fr ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -73,7 +73,7 @@ if { [empty_string_p $leitarord] } {
       "de" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_de ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_de ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -83,7 +83,7 @@ if { [empty_string_p $leitarord] } {
       "la" {
         set i 0
         foreach eitt_leitarord $list_leitarord {
-          append sql_query "(lang_la ilike '%$eitt_leitarord%') "
+          append sql_query "(lang_la ilike [ns_dbquotevalue %$eitt_leitarord%]) "
           incr i
           if {$i < [llength $list_leitarord]} {
             append sql_query "and "
@@ -97,25 +97,25 @@ if { [empty_string_p $leitarord] } {
   } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
     switch $tungumal {
       "oll" {
-        append sql_query "lang_is ilike '$leitarord%' or lang_en ilike '$leitarord%' or lang_danosae ilike '$leitarord%' or lang_fr ilike '$leitarord%' or lang_de ilike '$leitarord%' or lang_la ilike '$leitarord%' or en_annar_rith ilike '$leitarord%' or is_annar_rith ilike '$leitarord%' or en_skst ilike '$leitarord%' or is_skst ilike '$leitarord%' "
+        append sql_query "lang_is ilike [ns_dbquotevalue $leitarord%] or lang_en ilike [ns_dbquotevalue $leitarord%] or lang_danosae ilike [ns_dbquotevalue $leitarord%] or lang_fr ilike [ns_dbquotevalue $leitarord%] or lang_de ilike [ns_dbquotevalue $leitarord%] or lang_la ilike [ns_dbquotevalue $leitarord%] or en_annar_rith ilike [ns_dbquotevalue $leitarord%] or is_annar_rith ilike [ns_dbquotevalue $leitarord%] or en_skst ilike [ns_dbquotevalue $leitarord%] or is_skst ilike [ns_dbquotevalue $leitarord%] "
       }
       "is" {
-        append sql_query "lang_is ilike '$leitarord%' or is_annar_rith ilike '$leitarord%' or is_skst ilike '$leitarord%' "
+        append sql_query "lang_is ilike [ns_dbquotevalue $leitarord%] or is_annar_rith ilike [ns_dbquotevalue $leitarord%] or is_skst ilike [ns_dbquotevalue $leitarord%] "
       }
       "en" {
-        append sql_query "lang_en ilike '$leitarord%' or en_annar_rith ilike '$leitarord%' or en_skst ilike '$leitarord%' "
+        append sql_query "lang_en ilike [ns_dbquotevalue $leitarord%] or en_annar_rith ilike [ns_dbquotevalue $leitarord%] or en_skst ilike [ns_dbquotevalue $leitarord%] "
       }
       "danosae" {
-        append sql_query "lang_danosae ilike '$leitarord%' "
+        append sql_query "lang_danosae ilike [ns_dbquotevalue $leitarord%] "
       }
       "fr" {
-        append sql_query "lang_fr ilike '$leitarord%' "
+        append sql_query "lang_fr ilike [ns_dbquotevalue $leitarord%] "
       }
       "de" {
-        append sql_query "lang_de ilike '$leitarord%' "
+        append sql_query "lang_de ilike [ns_dbquotevalue $leitarord%] "
       }
       "la" {
-        append sql_query "lang_la ilike '$leitarord%' "
+        append sql_query "lang_la ilike [ns_dbquotevalue $leitarord%] "
       }
     }
     set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=s"
@@ -123,25 +123,25 @@ if { [empty_string_p $leitarord] } {
   } else {
     switch $tungumal {
       "oll" {
-        append sql_query "lang_is ilike '$leitarord' or lang_en ilike '$leitarord' or lang_danosae ilike '$leitarord' or lang_fr ilike '$leitarord' or lang_de ilike '$leitarord' or lang_la ilike '$leitarord' or en_annar_rith ilike '$leitarord' or is_annar_rith ilike '$leitarord' or en_skst ilike '$leitarord' or is_skst ilike '$leitarord' "
+        append sql_query "lang_is ilike [ns_dbquotevalue $leitarord] or lang_en ilike [ns_dbquotevalue $leitarord] or lang_danosae ilike [ns_dbquotevalue $leitarord] or lang_fr ilike [ns_dbquotevalue $leitarord] or lang_de ilike [ns_dbquotevalue $leitarord] or lang_la ilike [ns_dbquotevalue $leitarord] or en_annar_rith ilike [ns_dbquotevalue $leitarord] or is_annar_rith ilike [ns_dbquotevalue $leitarord] or en_skst ilike [ns_dbquotevalue $leitarord] or is_skst ilike [ns_dbquotevalue $leitarord] "
       }
       "is" {
-        append sql_query "lang_is ilike '$leitarord' or is_annar_rith ilike '$leitarord' or is_skst ilike '$leitarord' "
+        append sql_query "lang_is ilike [ns_dbquotevalue $leitarord] or is_annar_rith ilike [ns_dbquotevalue $leitarord] or is_skst ilike [ns_dbquotevalue $leitarord] "
       }
       "en" {
-        append sql_query "lang_en ilike '$leitarord' or en_annar_rith ilike '$leitarord' or en_skst ilike '$leitarord' "
+        append sql_query "lang_en ilike [ns_dbquotevalue $leitarord] or en_annar_rith ilike [ns_dbquotevalue $leitarord] or en_skst ilike [ns_dbquotevalue $leitarord] "
       }
       "danosae" {
-        append sql_query "lang_danosae ilike '$leitarord' "
+        append sql_query "lang_danosae ilike [ns_dbquotevalue $leitarord] "
       }
       "fr" {
-        append sql_query "lang_fr ilike '$leitarord' "
+        append sql_query "lang_fr ilike [ns_dbquotevalue $leitarord] "
       }
       "de" {
-        append sql_query "lang_de ilike '$leitarord' "
+        append sql_query "lang_de ilike [ns_dbquotevalue $leitarord] "
       }
       "la" {
-        append sql_query "lang_la ilike '$leitarord' "
+        append sql_query "lang_la ilike [ns_dbquotevalue $leitarord] "
       }
     }
     set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=t"
