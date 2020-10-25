@@ -14,8 +14,8 @@ echo "add Google Analytics script tag and HTS specific CSS to template"
 sed  -e '/<\/body>/r googleAnalyticsScriptTag.html' -e 'x;$G' $SCRIPTS_DIR/product/stjrTemplateInput.html | sed  -e '/<\/head>/r htsStyle.html' -e 'x;$G' > $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html
 
 
-SRC_REPLACE_EXPRESSION='s/src="\(\/[^\/][^"]*\)"/src="https:\/\/www.stjornarradid.is\1"/g'
-HREF_REPLACE_EXPRESSION='s/href="\(\/[^\/][^"]*\)"/href="https:\/\/www.stjornarradid.is\1"/g'
+SRC_REPLACE_EXPRESSION='s/src="\(\/[^\/][^"]*\)"/src="\/\/www.stjornarradid.is\1"/g'
+HREF_REPLACE_EXPRESSION='s/href="\(\/[^\/][^"]*\)"/href="\/\/www.stjornarradid.is\1"/g'
 ACTION_REPLACE_EXPRESSION='s/action="\(\/[^\/][^"]*\)"/action="https:\/\/www.stjornarradid.is\1"/g'
 USE_XLINK_REPLACE_EXPRESSION='s/<use xlink:href="[^#]*#/<use xlink:href="\/stjr\.svg#/g'
 
