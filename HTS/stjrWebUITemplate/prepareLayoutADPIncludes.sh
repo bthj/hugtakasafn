@@ -11,7 +11,7 @@ curl https://www.stjornarradid.is/lisalib/assets/svgsprite/themes/Stjornarrad/te
 
 echo "add Google Analytics script tag and HTS specific CSS to template"
 # https://stackoverflow.com/a/2512379/169858
-sed  -e '/<\/body>/r googleAnalyticsScriptTag.html' -e 'x;$G' $SCRIPTS_DIR/product/stjrTemplateInput.html | sed  -e '/<\/head>/r htsStyle.html' -e 'x;$G' > $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html
+sed  -e "/<\/body>/r $SCRIPTS_DIR/googleAnalyticsScriptTag.html" -e 'x;$G' $SCRIPTS_DIR/product/stjrTemplateInput.html | sed  -e "/<\/head>/r $SCRIPTS_DIR/htsStyle.html" -e 'x;$G' > $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html
 
 
 SRC_REPLACE_EXPRESSION='s/src="\(\/[^\/][^"]*\)"/src="\/\/www.stjornarradid.is\1"/g'
