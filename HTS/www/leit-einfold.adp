@@ -17,7 +17,7 @@ if { ![info exists tungumal] } {
       <th></th>
     </tr>
     <tr>
-      <td>
+      <td style="padding-right:1em">
         <%
         if { [info exists leitarord] } {
           ns_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\" onFocus=\"javascript:this.select();\"/><!-- br/ -->"
@@ -26,7 +26,7 @@ if { ![info exists tungumal] } {
         }
         %>
       </td>
-      <td>
+      <td style="padding-right:1em; width:12em;">
         <select name="tungumal">
         <%
           if { [string compare $tungumal "oll"] != 0 } {
@@ -88,11 +88,11 @@ if { ![info exists tungumal] } {
         }
         %>
 
-        <input type="radio" name="ordrett" value="o" id="matchAll"<%=$matchAllChecked%>><label for="matchAll" style="vertical-align:text-top;">öll tilvik</label>
+        <input type="radio" name="ordrett" value="o" id="matchAll"<%=$matchAllChecked%> style="margin-right:0.3em" /><label for="matchAll" style="margin-right:0.5em">öll tilvik</label>
 
-        <input type="radio" name="ordrett" value="t" id="matchExact"<%=$matchExactChecked%>><label for="matchExact" style="vertical-align:text-top;">orðrétt</label>
+        <input type="radio" name="ordrett" value="t" id="matchExact"<%=$matchExactChecked%> style="margin-right:0.3em" /><label for="matchExact" style="margin-right:0.5em">orðrétt</label>
 
-        <input type="radio" name="ordrett" value="s" id="matchStart"<%=$matchStartChecked%>><label for="matchStart" style="vertical-align:text-top;">byrjar á</label>
+        <input type="radio" name="ordrett" value="s" id="matchStart"<%=$matchStartChecked%> style="margin-right:0.3em" /><label for="matchStart" style="margin-right:0.5em">byrjar á</label>
 
 
         <!-- select name="tungumal">
@@ -102,7 +102,7 @@ if { ![info exists tungumal] } {
       </td>
     </tr>
   </table>
-  <input type="submit" value="leita"/> <a href="itarleit.adp">Nánari leit</a> &nbsp;|&nbsp; <a href="fletta-svid.adp">Fletting sviða</a>
+  <input type="submit" value="leita" style="margin-right:0.5em" /> <a href="itarleit.adp">Nánari leit</a> &nbsp;|&nbsp; <a href="fletta-svid.adp">Fletting sviða</a>
 </form>
 <script language="JavaScript">
 <!--

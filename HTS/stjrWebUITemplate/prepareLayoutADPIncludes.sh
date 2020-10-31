@@ -6,7 +6,7 @@ mkdir -p $SCRIPTS_DIR/product
 rm $SCRIPTS_DIR/product/*
 
 echo "download web page as template"
-curl https://www.stjornarradid.is/gogn/hugtakasafn/ | iconv -f utf-8 -t iso8859-1 > $SCRIPTS_DIR/product/stjrTemplateInput.html
+curl https://www.stjornarradid.is/gogn/hugtakasafn/snidmat/ | iconv -f utf-8 -t iso8859-1 > $SCRIPTS_DIR/product/stjrTemplateInput.html
 curl https://www.stjornarradid.is/lisalib/assets/svgsprite/themes/Stjornarrad/template/svg > $SCRIPTS_DIR/product/stjr.svg
 
 echo "add Google Analytics script tag and HTS specific CSS to template"
@@ -19,9 +19,9 @@ HREF_REPLACE_EXPRESSION='s/href="\(\/[^\/][^"]*\)"/href="\/\/www.stjornarradid.i
 ACTION_REPLACE_EXPRESSION='s/action="\(\/[^\/][^"]*\)"/action="https:\/\/www.stjornarradid.is\1"/g'
 USE_XLINK_REPLACE_EXPRESSION='s/<use xlink:href="[^#]*#/<use xlink:href="\/stjr\.svg#/g'
 
-echo "prepare 'before' template part (before <iframe tag)"
+echo "prepare 'before' template part (before <p>Hugtakasafn)"
 # (https://www.reddit.com/r/bash/comments/6vg83v/removing_everything_after_match_to_end_of_file_in/dm01v3f/?utm_source=reddit&utm_medium=web2x&context=3)
-sed '/<iframe/{s/\(.*\)<iframe.*/\1/;q}' $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html > $SCRIPTS_DIR/product/stjrTemplateBefore.html
+sed '/<p>Hugtakasafn/{s/\(.*\)<p>Hugtakasafn.*/\1/;q}' $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html > $SCRIPTS_DIR/product/stjrTemplateBefore.html
 sed -i "$SRC_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateBefore.html
 sed -i "$HREF_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateBefore.html
 sed -i "$ACTION_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateBefore.html
@@ -29,7 +29,7 @@ sed -i "$USE_XLINK_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateBefore.h
 
 echo "prepare 'after' template part (after iframe tag)"
 # (https://stackoverflow.com/a/6482107/169858)
-sed -n '/\(^.*iframe\)/,$p' $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html | sed '1 s/.*<\/iframe>\(.*\)/\1/' > $SCRIPTS_DIR/product/stjrTemplateAfter.html
+sed -n '/\(^.*<p>Hugtakasafn\)/,$p' $SCRIPTS_DIR/product/stjrTemplateInputWithGA.html | sed '1 s/.*<p>Hugtakasafnið<\/p>\(.*\)/\1/' > $SCRIPTS_DIR/product/stjrTemplateAfter.html
 sed -i "$SRC_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateAfter.html
 sed -i "$HREF_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateAfter.html
 sed -i "$ACTION_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateAfter.html
