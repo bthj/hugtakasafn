@@ -15,13 +15,13 @@
 
     exec /bin/cp "$export_dir$import_file_name" "$import_dir"
     # hack around SELinux restrictions - https://stackoverflow.com/a/28595245/169858
-    exec /usr/bin/chcon -t postgresql_tmp_t "$import_dir$import_file_name"
-    exec /usr/bin/psql -c "delete from hugtakasafn" hugtakasafn
+    # exec /usr/bin/chcon -t postgresql_tmp_t "$import_dir$import_file_name"
+    exec /usr/bin/psql -h postgres -U hugtakasafn -c "delete from hugtakasafn" hugtakasafn
     puts "Les inn i gagnagrunn ur $import_dir$import_file_name"
-    exec /usr/bin/psql -c "copy hugtakasafn from '$import_dir$import_file_name'" hugtakasafn
-    exec /usr/bin/psql -c "insert into hugtakasafn_updated (updated) values (current_timestamp)" hugtakasafn
+    exec /bin/cat "$import_dir$import_file_name" | /usr/bin/psql -h postgres -U hugtakasafn -c "copy hugtakasafn from STDIN" hugtakasafn
+    exec /usr/bin/psql -h postgres -U hugtakasafn -c "insert into hugtakasafn_updated (updated, entry_count) select current_timestamp, count(*) from hugtakasafn" hugtakasafn
     puts "Hreinsa til i gagnagrunni og uppfaeri tolfraediupplysingar um gogn..."
-    if [catch {exec /usr/bin/vacuumdb "-q" "-z" "hugtakasafn"} errmsg] {
+    if [catch {exec /usr/bin/vacuumdb -h postgres -U hugtakasafn "-q" "-z" "hugtakasafn"} errmsg] {
       puts "Villa: $errmsg"
     }
 

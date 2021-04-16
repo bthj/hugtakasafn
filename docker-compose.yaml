@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  naviserver:
+    build:
+      context: ./HTS
+    image: naviserver-hugtakasafn
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    volumes:
+      - /tmp/hugtakasafn-import:/home/nsadmin/web/hugtakasafn/import
+  postgres:
+    build:
+      context: ./database
+    image: postgres-hugtakasafn
+    environment:
+      POSTGRES_USER: "hugtakasafn"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql/data
+      - ./database:/docker-entrypoint-initdb.d
+volumes:
+  data:

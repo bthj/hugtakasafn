@@ -23,13 +23,13 @@ if { [info exists o] } {
   set offset 0
 }
 set max 10
-ns_puts "<br/><font color=\"gray\">Hugt&ouml;k [expr $offset + 1] "
+ns_adp_puts "<br/><font color=\"gray\">Hugt&ouml;k [expr $offset + 1] "
 if { $count < [expr $offset + $max] } {
-  ns_puts "til $count"
+  ns_adp_puts "til $count"
 } else {
-  ns_puts "til [expr $offset + $max]"
+  ns_adp_puts "til [expr $offset + $max]"
 }
-ns_puts " af $count</font>"
+ns_adp_puts " af $count</font>"
 %>
 <dl>
 <%
@@ -37,9 +37,9 @@ set sql_query "select entrynumber, lang_is, lang_en, lang_danosae, lang_fr, lang
 set selection [ns_db select $db $sql_query]
 while { [ns_db getrow $db $selection] } {
   set_variables_after_query
-  ns_puts "<dt><a href=\"hugtak.adp?id=$entrynumber\">$lang_is</a></dt>"
+  ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber\">$lang_is</a></dt>"
   if { ![empty_string_p $lang_en] } {
-    ns_puts "<dd>$lang_en \[en\]</dd>"
+    ns_adp_puts "<dd>$lang_en \[en\]</dd>"
   }
 
   if { ![empty_string_p $lang_danosae] } {
@@ -47,28 +47,28 @@ while { [ns_db getrow $db $selection] } {
   	if { ![empty_string_p [lindex $danosae_parts 0]] } {
   		set lang_da [lindex $danosae_parts 0]
   		regsub -all " \\(da.\\)" $lang_da "" lang_da
-  		ns_puts "<dd>$lang_da \[da\]</dd>"
+  		ns_adp_puts "<dd>$lang_da \[da\]</dd>"
   	}
   	if { ![empty_string_p [lindex $danosae_parts 1]] } {
   		set lang_se [lindex $danosae_parts 1]
   		regsub -all " \\(s�.\\)" $lang_se "" lang_se
-  		ns_puts "<dd>$lang_se \[s&aelig;\]</dd>"
+  		ns_adp_puts "<dd>$lang_se \[s&aelig;\]</dd>"
   	}
   	if { ![empty_string_p [lindex $danosae_parts 2]] } {
   		set lang_no [lindex $danosae_parts 2]
   		regsub -all " \\(no.\\)" $lang_no "" lang_no
-  		ns_puts "<dd>$lang_no \[no\]</dd>"
+  		ns_adp_puts "<dd>$lang_no \[no\]</dd>"
   	}
   }
 
   if { ![empty_string_p $lang_fr] } {
-    ns_puts "<dd>$lang_fr \[fr\]</dd>"
+    ns_adp_puts "<dd>$lang_fr \[fr\]</dd>"
   }
   if { ![empty_string_p $lang_de] } {
-    ns_puts "<dd>$lang_de \[de\]</dd>"
+    ns_adp_puts "<dd>$lang_de \[de\]</dd>"
   }
   if { ![empty_string_p $lang_la] } {
-    ns_puts "<dd>$lang_la \[la\]</dd>"
+    ns_adp_puts "<dd>$lang_la \[la\]</dd>"
   }
 }
 %>

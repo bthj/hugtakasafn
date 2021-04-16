@@ -13,7 +13,7 @@ regsub -all {\s+} $leitarord " " leitarord
 
 <%
 if { [empty_string_p $leitarord] } {
-  ns_puts "<p>Engin leitarskilyr&eth;i gefin.</p>"
+  ns_adp_puts "<p>Engin leitarskilyr&eth;i gefin.</p>"
 } else {
   set sql_query "select * from hugtakasafn where "
   set leitarord [DoubleApos $leitarord]

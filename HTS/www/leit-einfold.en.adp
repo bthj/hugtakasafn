@@ -20,9 +20,9 @@ if { ![info exists tungumal] } {
       <td>
         <%
         if { [info exists leitarord] } {
-          ns_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\"/><!-- br/ -->"
         } else {
-          ns_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
         }
         %>
       </td>
@@ -30,39 +30,39 @@ if { ![info exists tungumal] } {
         <select name="tungumal">
         <%
           if { [string compare $tungumal "oll"] != 0 } {
-            ns_puts "<option value=\"oll\">all languages</option>"
+            ns_adp_puts "<option value=\"oll\">all languages</option>"
           } else {
-            ns_puts "<option value=\"oll\" selected>all languages</option>"
+            ns_adp_puts "<option value=\"oll\" selected>all languages</option>"
           }
           if { [string compare $tungumal "is"] != 0 } {
-            ns_puts "<option value=\"is\">Icelandic</option>"
+            ns_adp_puts "<option value=\"is\">Icelandic</option>"
           } else {
-            ns_puts "<option value=\"is\" selected>Icelandic</option>"
+            ns_adp_puts "<option value=\"is\" selected>Icelandic</option>"
           }
           if { [string compare $tungumal "en"] != 0 } {
-            ns_puts "<option value=\"en\">English</option>"
+            ns_adp_puts "<option value=\"en\">English</option>"
           } else {
-            ns_puts "<option value=\"en\" selected>English</option>"
+            ns_adp_puts "<option value=\"en\" selected>English</option>"
           }
           if { [string compare $tungumal "danosae"] != 0 } {
-            ns_puts "<option value=\"danosae\">Danish, Swedish, Norwegian</option>"
+            ns_adp_puts "<option value=\"danosae\">Danish, Swedish, Norwegian</option>"
           } else {
-            ns_puts "<option value=\"danosae\" selected>Danish, Swedish, Norwegian,</option>"
+            ns_adp_puts "<option value=\"danosae\" selected>Danish, Swedish, Norwegian,</option>"
           }
           if { [string compare $tungumal "fr"] != 0 } {
-            ns_puts "<option value=\"fr\">French</option>"
+            ns_adp_puts "<option value=\"fr\">French</option>"
           } else {
-            ns_puts "<option value=\"fr\" selected>French</option>"
+            ns_adp_puts "<option value=\"fr\" selected>French</option>"
           }
           if { [string compare $tungumal "de"] != 0 } {
-            ns_puts "<option value=\"de\">German</option>"
+            ns_adp_puts "<option value=\"de\">German</option>"
           } else {
-            ns_puts "<option value=\"de\" selected>German</option>"
+            ns_adp_puts "<option value=\"de\" selected>German</option>"
           }
           if { [string compare $tungumal "la"] != 0 } {
-            ns_puts "<option value=\"la\">Latin</option>"
+            ns_adp_puts "<option value=\"la\">Latin</option>"
           } else {
-            ns_puts "<option value=\"la\" selected>Latin</option>"
+            ns_adp_puts "<option value=\"la\" selected>Latin</option>"
           }
         %>
         </select>
@@ -70,9 +70,9 @@ if { ![info exists tungumal] } {
       <td nowrap>
         <%
         if { [info exists ordrett] && [string compare $ordrett "t"] == 0 } {
-          ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Exact search</label>"
+          ns_adp_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Exact search</label>"
         } else {
-          ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Exact search</label>"
+          ns_adp_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Exact search</label>"
         }
         %>
       </td>

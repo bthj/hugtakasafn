@@ -36,8 +36,8 @@ sed -i "$ACTION_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateAfter.html
 sed -i "$USE_XLINK_REPLACE_EXPRESSION" $SCRIPTS_DIR/product/stjrTemplateAfter.html
 
 echo "deploy under web root"
-cp $SCRIPTS_DIR/../web/hugtakasafn/www/stjrTemplateBefore.html /tmp/
-cp $SCRIPTS_DIR/../web/hugtakasafn/www/stjrTemplateAfter.html /tmp/
-cp $SCRIPTS_DIR/product/stjrTemplateBefore.html $SCRIPTS_DIR/../web/hugtakasafn/www/
-cp $SCRIPTS_DIR/product/stjrTemplateAfter.html $SCRIPTS_DIR/../web/hugtakasafn/www/
-cp $SCRIPTS_DIR/product/stjr.svg $SCRIPTS_DIR/../web/hugtakasafn/www/
+cp $SCRIPTS_DIR/../www/stjrTemplateBefore.html /tmp/
+cp $SCRIPTS_DIR/../www/stjrTemplateAfter.html /tmp/
+cp $SCRIPTS_DIR/product/stjrTemplateBefore.html $SCRIPTS_DIR/../www/
+cp $SCRIPTS_DIR/product/stjrTemplateAfter.html $SCRIPTS_DIR/../www/
+cp $SCRIPTS_DIR/product/stjr.svg $SCRIPTS_DIR/../www/

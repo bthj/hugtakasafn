@@ -1,3 +1,8 @@
+<%
+set fetch_dest [ns_set get [ns_conn headers] "Sec-Fetch-Dest"]
+if { $fetch_dest == "iframe" } {
+  ns_adp_puts {
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="is">
 <head>
@@ -27,3 +32,25 @@
 
 </head>
 <body>
+
+  }
+
+} else {
+  ns_adp_include stjrTemplateBefore.html
+}
+%>
+
+
+<%
+# set stjrTemplateExample [ns_httpget http://bthj.is]
+# ns_adp_puts [stjrTemplateExample]
+
+# ns_adp_puts [ns_http run http://example.com/]
+
+#set result [ns_http run http://example.com/]
+# ns_adp_puts $result
+#ns_adp_puts "status"
+
+# ns_http queue http://example.com/
+# ns_adp_puts [ns_http wait http0]
+%>

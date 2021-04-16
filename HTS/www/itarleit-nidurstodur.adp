@@ -426,9 +426,9 @@ append sql_query "order by db_nr, lang_is"
 set hugtakUrlLeitarParam ""
 if { [string first "where" $sql_query] == -1 } {
   set sql_query ""
-  ns_puts "<p>Engin leitarskilyr�i gefin.</p>"
+  ns_adp_puts "<p>Engin leitarskilyr�i gefin.</p>"
 } else {
-  ns_puts "<br/><font color=\"gray\">$leitarskilyrdi</font><br/><br/>"
+  ns_adp_puts "<br/><font color=\"gray\">$leitarskilyrdi</font><br/><br/>"
 }
 %>
 
