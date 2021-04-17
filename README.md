@@ -27,6 +27,7 @@ hugtakasafn/install-docker-ubuntu.sh
 
 hugtakasafn/deploy-hugtakasafn-with-docker-compose.sh
 ```
+- a NaviServer source compilation is performed by the Docker Compose declaration, so the initial deployment by `deploy-hugtakasafn-with-docker-compose.sh` may take several minutes.
 
 ### Restart HTS services
 ```

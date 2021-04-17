@@ -9,7 +9,7 @@ sudo cp $SCRIPTS_DIR/docker-compose@.service /etc/systemd/system/
 
 echo "Deploying xroad-rest-soap-adapters Docker Compose configuration for SystemD services"
 sudo mkdir -p /etc/docker/compose/hugtakasafn
-sudo cp -Rn $SCRIPTS_DIR/* /etc/docker/compose/hugtakasafn/
+sudo cp -R $SCRIPTS_DIR/* /etc/docker/compose/hugtakasafn/
 
 # create dir referenced in Docker Compose declaration - TODO: use Docker tmpfs mount?
 sudo mkdir -p /tmp/hugtakasafn-import
@@ -22,4 +22,4 @@ echo "Waiting 5 seconds for docker-compose@xroad-rest-soap-adapters to start"
 sleep 5
 
 echo "Listing the Hugtakasafn system service:"
-sudo systemctl list-units "*hugtakasafn"
+sudo systemctl list-units "*hugtakasafn*"
