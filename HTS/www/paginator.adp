@@ -73,6 +73,6 @@ if { $offset != [expr ($pageCount) * $max] } {
   append outs "&nbsp;<b><a href=\"$path&o=[expr $offset + $max]\">næsta&#32;&#187;</a></b>"
 }
 
-ns_puts $outs
+ns_adp_puts $outs
 }
 %>

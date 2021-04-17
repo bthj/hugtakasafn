@@ -5,7 +5,7 @@
 
 <table>
   <tr>
-    <td vAlign="top">
+    <td vAlign="top" style="padding-right: 1em;">
       <p>
         <a href="umhts.adp">Um Hugtakasafnið</a>:
       <ul>
@@ -15,7 +15,7 @@
         Sjá einnig:
       </p>
       <ul>
-        <li><a href="http://www.ordabanki.hi.is/wordbank/search">ORÐABANKI Íslenskrar málstöðvar</a></li>
+        <li><a href="http://www.ordabanki.hi.is/wordbank/search">Íðorðabanki Árnastofnunar</a></li>
       </ul>
       </p>
       <p>
@@ -45,12 +45,12 @@
 <b>Athugið:</b><br/>
 Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins og unnið af starfsmönnum hennar. Heimilt er að endurnota upplýsingar úr Hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið.
       <p>
-        Ritstjóri Hugtakasafns þýðingamiðstöðvar er <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a>. Að ritstjórn Hugtakasafns hafa unnið Ásta K. Hauksdóttir Wium íðorðastjóri, Björgvin R. Andersen íðorðastjóri, Hálfdan Ó. Hálfdanarson íðorðastjóri og Sindri Guðjónsson lögfræðingur. <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a> er vefstjóri og Björn Þór Jónsson hefur umsjón með forritun.
+        Ritstjóri Hugtakasafns þýðingamiðstöðvar er <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a>. Að ritstjórn Hugtakasafns hafa unnið Ásta K. Hauksdóttir Wiium íðorðastjóri, Björgvin R. Andersen íðorðastjóri, Brynjólfur Sveinsson íðorðastjóri, Gunnhildur Stefánsdóttir íðorðastjóri, Hálfdan Ó. Hálfdanarson íðorðastjóri og Sindri Guðjónsson lögfræðingur. <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a> er vefstjóri og Björn Þór Jónsson hefur umsjón með forritun.
       </p>
 
 
 <%
-set sql_query "select  max(updated) as updated from hugtakasafn_updated"
+set sql_query "select max(updated) as updated, entry_count from hugtakasafn_updated group by entry_count"
 set db [ns_db gethandle]
 set selection [ns_db select $db $sql_query]
 ns_db getrow $db $selection
@@ -75,7 +75,7 @@ append upd_dags [lindex $list_updated 0]
 %>
 
 <p>
-Hugtakasafnið var <strong>síðast uppfært <%=$upd_dags%></strong>
+Hugtakasafnið var <strong>síðast uppfært <%=$upd_dags%></strong> með <strong><%=$entry_count%></strong> færslum.
 </p>
 
 

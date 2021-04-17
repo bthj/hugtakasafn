@@ -20,9 +20,9 @@ if { ![info exists tungumal] } {
       <td style="padding-right:1em">
         <%
         if { [info exists leitarord] } {
-          ns_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\" onFocus=\"javascript:this.select();\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\" onFocus=\"javascript:this.select();\"/><!-- br/ -->"
         } else {
-          ns_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
         }
         %>
       </td>
@@ -30,39 +30,39 @@ if { ![info exists tungumal] } {
         <select name="tungumal">
         <%
           if { [string compare $tungumal "oll"] != 0 } {
-            ns_puts "<option value=\"oll\">öll tungumál</option>"
+            ns_adp_puts "<option value=\"oll\">öll tungumál</option>"
           } else {
-            ns_puts "<option value=\"oll\" selected>öll tungumál</option>"
+            ns_adp_puts "<option value=\"oll\" selected>öll tungumál</option>"
           }
           if { [string compare $tungumal "is"] != 0 } {
-            ns_puts "<option value=\"is\">íslenska</option>"
+            ns_adp_puts "<option value=\"is\">íslenska</option>"
           } else {
-            ns_puts "<option value=\"is\" selected>íslenska</option>"
+            ns_adp_puts "<option value=\"is\" selected>íslenska</option>"
           }
           if { [string compare $tungumal "en"] != 0 } {
-            ns_puts "<option value=\"en\">enska</option>"
+            ns_adp_puts "<option value=\"en\">enska</option>"
           } else {
-            ns_puts "<option value=\"en\" selected>enska</option>"
+            ns_adp_puts "<option value=\"en\" selected>enska</option>"
           }
           if { [string compare $tungumal "danosae"] != 0 } {
-            ns_puts "<option value=\"danosae\">danska/norska/sænska</option>"
+            ns_adp_puts "<option value=\"danosae\">danska/norska/sænska</option>"
           } else {
-            ns_puts "<option value=\"danosae\" selected>danska/norska/sænska</option>"
+            ns_adp_puts "<option value=\"danosae\" selected>danska/norska/sænska</option>"
           }
           if { [string compare $tungumal "fr"] != 0 } {
-            ns_puts "<option value=\"fr\">franska</option>"
+            ns_adp_puts "<option value=\"fr\">franska</option>"
           } else {
-            ns_puts "<option value=\"fr\" selected>franska</option>"
+            ns_adp_puts "<option value=\"fr\" selected>franska</option>"
           }
           if { [string compare $tungumal "de"] != 0 } {
-            ns_puts "<option value=\"de\">şıska</option>"
+            ns_adp_puts "<option value=\"de\">şıska</option>"
           } else {
-            ns_puts "<option value=\"de\" selected>şıska</option>"
+            ns_adp_puts "<option value=\"de\" selected>şıska</option>"
           }
           if { [string compare $tungumal "la"] != 0 } {
-            ns_puts "<option value=\"la\">latína</option>"
+            ns_adp_puts "<option value=\"la\">latína</option>"
           } else {
-            ns_puts "<option value=\"la\" selected>latína</option>"
+            ns_adp_puts "<option value=\"la\" selected>latína</option>"
           }
         %>
         </select>
@@ -74,7 +74,7 @@ if { ![info exists tungumal] } {
         set matchStartChecked ""
         if { [info exists ordrett] && [string compare $ordrett "t"] == 0 } {
 
-          #ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Orğrétt leit</label>"
+          #ns_adp_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\" checked/><label for=\"ordrett\">Orğrétt leit</label>"
           set matchExactChecked " checked=\"checked\""
 
         } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
@@ -83,7 +83,7 @@ if { ![info exists tungumal] } {
 
         } else {
 
-          #ns_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Orğrétt leit</label>"
+          #ns_adp_puts "<input type=\"checkbox\" name=\"ordrett\" value=\"t\" id=\"ordrett\"/><label for=\"ordrett\">Orğrétt leit</label>"
           set matchAllChecked " checked=\"checked\""
         }
         %>
