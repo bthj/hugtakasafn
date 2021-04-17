@@ -1,4 +1,4 @@
-# hugtakasafn
+# Hugtakasafn
 
 Term catcher implemented in JavaScript and XUL as a Firefox plugin to assist in the harvest of new terms from translation documents by comparing their content with a term bank and related data.
 
@@ -20,13 +20,27 @@ docker-compose up
 ```
 
 ## Deploy as a Linux SystemD service
-
 ```
 git clone https://github.com/bthj/hugtakasafn.git
 
-cd hugtakasafn/
+hugtakasafn//install-docker-ubuntu.sh
 
-./install-docker-ubuntu.sh
+hugtakasafn//deploy-hugtakasafn-with-docker-compose.sh
+```
 
-./deploy-hugtakasafn-with-docker-compose.sh
+### Restart HTS services
+```
+sudo systemctl start docker-compose@hugtakasafn
+```
+
+## Update HTS with MultiTerm export
+
+Place the MultiTerm export XML file in `/tmp/hugtakasafn-import` and run:
+```
+hugtakasafn/updateHTS.sh
+```
+
+## Update the STJR HTML frame around the HTS web UI
+```
+hugtakasafn/updateSTJRframe.sh
 ```
