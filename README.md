@@ -34,6 +34,15 @@ hugtakasafn/deploy-hugtakasafn-with-docker-compose.sh
 sudo systemctl start docker-compose@hugtakasafn
 ```
 
+### View HTS service logs
+```
+cd hugtakasafn/
+sudo docker-compose logs -f -t naviserver
+sudo docker-compose logs --tail=1000 naviserver
+
+sudo docker-compose logs -f -t postgres
+```
+
 ## Update HTS with MultiTerm export
 
 Place the MultiTerm export XML file in `/tmp/hugtakasafn-import` and run:
