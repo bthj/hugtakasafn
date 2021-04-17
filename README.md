@@ -23,9 +23,9 @@ docker-compose up
 ```
 git clone https://github.com/bthj/hugtakasafn.git
 
-hugtakasafn//install-docker-ubuntu.sh
+hugtakasafn/install-docker-ubuntu.sh
 
-hugtakasafn//deploy-hugtakasafn-with-docker-compose.sh
+hugtakasafn/deploy-hugtakasafn-with-docker-compose.sh
 ```
 
 ### Restart HTS services
