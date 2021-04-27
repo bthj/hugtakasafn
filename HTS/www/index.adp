@@ -50,7 +50,7 @@ Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins og unnið af sta
 
 
 <%
-set sql_query "select max(updated) as updated, entry_count from hugtakasafn_updated group by entry_count"
+set sql_query "select max(updated) as updated, entry_count from hugtakasafn_updated group by entry_count order by updated desc"
 set db [ns_db gethandle]
 set selection [ns_db select $db $sql_query]
 ns_db getrow $db $selection
