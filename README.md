@@ -54,3 +54,18 @@ hugtakasafn/updateHTS.sh
 ```
 hugtakasafn/updateSTJRframe.sh
 ```
+
+## Bind mount the HTS web root from the host filesystem
+If ad-hoc edits of file contents in the HTS web root are desirable, for e.g. simple text updates, a copy of the HTS web root in the host file system can be bind mounted to the corresponding location within the `hugtakasafn_naviserver` container.  This can be accomplished by editing the deployed Docker Compose declaration:
+```
+sudo vi /etc/docker/compose/hugtakasafn/docker-compose.yaml
+```
+and adding an entry like:
+```
+services:
+naviserver:
+  ...
+  volumes:
+    ...
+    - /home/hugtakasafn/hugtakasafn/HTS/www:/home/nsadmin/web/hugtakasafn/www
+```
