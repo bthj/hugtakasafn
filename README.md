@@ -31,7 +31,7 @@ hugtakasafn/deploy-hugtakasafn-with-docker-compose.sh
 
 ### Restart HTS services
 ```
-sudo systemctl start docker-compose@hugtakasafn
+sudo systemctl restart docker-compose@hugtakasafn
 ```
 
 ### View HTS service logs
