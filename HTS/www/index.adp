@@ -26,13 +26,13 @@
     </td>
     <td>
       <p>
-        <b>Þýðingamiðstöð utanríkisráðuneytisins</b> hefur birt hugtakasafn sitt á vefslóðinni: www.hugtakasafn.utn.stjr.is.
+        <b>Þýðingamiðstöð utanríkisráðuneytisins</b> hefur birt hugtakasafn sitt á vefslóðinni: https://hugtakasafn.utn.stjr.is
       </p>
       <p>
-        Hátt í aldarfjórðung hafa verið þýddir hjá þýðingamiðstöð utanríkisráðuneytisins lagatextar sem falla undir samninginn um Evrópska efnahagssvæðið (EES-samninginn). Eitt stærsta verkefnið í þýðingarstarfinu er skilgreining nýrra hugtaka í textunum og leit að íslenskum þýðingum þessara sérfræðihugtaka (íslenskum íðorðum). Þetta er jafnan tímafrekasti þátturinn í starfinu og oft þarf að smíða nýyrði þegar orðaleitin ber ekki árangur. Frá upphafi þýðingarstarfsins hefur íðorðum og orðasamböndum verið safnað í Hugtakasafn þýðingamiðstöðvar. Hugtakasafnið er birt á vef utanríkisráðuneytisins og hefur verið aðgengilegt á Netinu frá árinu 1995. Flest íðorðanna tengjast hinum margvíslegu sérsviðum EES-samningsins en af þeim má nefna t.d. félagsleg réttindi, flutninga, fjármál, lyf, neytendamál og umhverfismál. Þá eru í safninu mörg íðorð úr lagamáli og stjórnsýslu, svo og heiti milliríkjasamninga, stofnana, nefnda, ráða o.fl. Einnig hefur orðasafn Þróunarsamvinnustofnunar Íslands verið birt í Hugtakasafninu.
+        Frá árinu 1990 hafa verið þýddir hjá þýðingamiðstöð utanríkisráðuneytisins lagatextar sem falla undir samninginn um Evrópska efnahagssvæðið (EES-samninginn). Eitt stærsta verkefnið í þýðingarstarfinu er skilgreining nýrra hugtaka í textunum og leit að íslenskum þýðingum þessara sérfræðihugtaka (íslenskum íðorðum). Þetta er jafnan tímafrekasti þátturinn í starfinu og oft þarf að smíða nýyrði þegar orðaleitin ber ekki árangur. Frá upphafi þýðingarstarfsins hefur íðorðum og orðasamböndum verið safnað í Hugtakasafn þýðingamiðstöðvar. Hugtakasafnið er birt á vef utanríkisráðuneytisins og hefur verið aðgengilegt á Netinu frá árinu 1995. Flest íðorðanna tengjast hinum margvíslegu sérsviðum EES-samningsins en af þeim má nefna t.d. félagsleg réttindi, flutninga, fjármál, lyf, neytendamál og umhverfismál. Þá eru í safninu mörg íðorð úr lagamáli og stjórnsýslu, svo og heiti milliríkjasamninga, stofnana, nefnda, ráða o.fl. Einnig hefur orðasafn Þróunarsamvinnustofnunar Íslands verið birt í Hugtakasafninu.
       </p>
       <p>
-        Hjá þýðingamiðstöð er unnið að íðorðastarfi og nýyrðasmíð í samstarfi við sérfræðinga hjá ráðuneytum, opinberum stofnunum, í háskólasamfélaginu og atvinnulífinu. Nú eru í safninu rúmlega 82.000 færslur og hverri þeirra fylgja nokkrir upplýsingareitir. Ný íðorð eru reglulega færð inn. Með þýðingum og íðorðastarfi er sífellt unnið að því að stækka íslenskan orðaforða, efla íslenska tungu og styrkja stöðu hennar á nýjum sviðum. Nálgast má allar birtar þýðingar sem falla undir EES-samninginn á vef EFTA: <a href="http://www.efta.int/eea-lex?qs=31998L0047&sort_bef_combine=search_api_relevance+DESC&sort_by=search_api_relevance&=Search">EEA-Lex.</a>
+        Hjá þýðingamiðstöð er unnið að íðorðastarfi og nýyrðasmíð í samstarfi við sérfræðinga hjá ráðuneytum, opinberum stofnunum, í háskólasamfélaginu og atvinnulífinu. Í safninu eru tugþúsundir færslna og hverri þeirra fylgja nokkrir upplýsingareitir (sjá nákvæma tölu færslna hér neðst á síðunni). Ný íðorð eru reglulega færð inn. Með þýðingum og íðorðastarfi er sífellt unnið að því að stækka íslenskan orðaforða, efla íslenska tungu og styrkja stöðu hennar á nýjum sviðum. Nálgast má allar birtar þýðingar sem falla undir EES-samninginn á vef EFTA: <a href="http://www.efta.int/eea-lex?qs=31998L0047&sort_bef_combine=search_api_relevance+DESC&sort_by=search_api_relevance&=Search">EEA-Lex.</a>
       </p>
       <p>
         Aðgangur að safninu er öllum opinn.
@@ -45,7 +45,7 @@
 <b>Athugið:</b><br/>
 Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins og unnið af starfsmönnum hennar. Heimilt er að endurnota upplýsingar úr Hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið.
       <p>
-        Ritstjóri Hugtakasafns þýðingamiðstöðvar er <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a>. Að ritstjórn Hugtakasafns hafa unnið Ásta K. Hauksdóttir Wiium íðorðastjóri, Björgvin R. Andersen íðorðastjóri, Brynjólfur Sveinsson íðorðastjóri, Gunnhildur Stefánsdóttir íðorðastjóri, Hálfdan Ó. Hálfdanarson íðorðastjóri og Sindri Guðjónsson lögfræðingur. <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a> er vefstjóri og Björn Þór Jónsson hefur umsjón með forritun.
+        Framkvæmdastjóri þýðingamiðstöðvar er Kári Örlygsson og ritstjóri Hugtakasafns þýðingamiðstöðvar er Sigrún Þorgeirsdóttir.<br><br> Í ritstjórn Hugtakasafnsins eiga sæti Ásta K. Hauksdóttir Wiium, Björgvin R. Andersen, Brynjólfur Sveinsson, Gunnhildur Stefánsdóttir, Jóhanna Gunnlaugsdóttir, Sindri Guðjónsson og Valgerður Halldórsdóttir.<br><br> Vefstjóri Hugtakasafns er <a href="mailto:reynir.gunnlaugsson@utn.stjr.is">Reynir Gunnlaugsson</a> staðgengill framkvæmdastjóra og Björn Þór Jónsson hefur umsjón með forritun.
       </p>
 
 

@@ -6,7 +6,7 @@ services:
       context: ./HTS
     image: naviserver-hugtakasafn
     ports:
-      - 8080:8080
+      - 127.0.0.1:8080:8080
     depends_on:
       - postgres
     volumes:
@@ -19,7 +19,7 @@ services:
       POSTGRES_USER: "hugtakasafn"
       POSTGRES_HOST_AUTH_METHOD: "trust"
     ports:
-      - 5432:5432
+      - 127.0.0.1:5432:5432
     volumes:
       - data:/var/lib/postgresql/data
       - ./database:/docker-entrypoint-initdb.d

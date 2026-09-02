@@ -24,7 +24,7 @@ Meginhluti íðorðanna í Hugtakasafninu tengist hinum ýmsu sérsviðum EES-samningsi
 </p>
 
 <p>
-Nú eru í safninu rúmlega 70.000 íðorð og orðasambönd og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds. 
+Nú eru í safninu tugþúsundir íðorða og orðasambanda og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds. 
 </p>
 
 <p>

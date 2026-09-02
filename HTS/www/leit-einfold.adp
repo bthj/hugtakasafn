@@ -7,7 +7,7 @@ if { ![info exists tungumal] } {
 }
 %>
 <span style="float:right;">
-	Ritstjóri: <a href="mailto:sigrun.thorgeirsdottir@utn.stjr.is">Sigrún Þorgeirsdóttir</a>
+	<Ritstjóri: Sigrún Þorgeirsdóttir>
 </span>
 <form method=get action="leit-nidurstodur.adp" name="leit">
   <table>

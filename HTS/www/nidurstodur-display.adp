@@ -193,7 +193,7 @@ if { ![empty_string_p $sql_query] } {
       ns_adp_puts "<p>$count niðurstöður fundust.</p>"
     }
   } else {
-    ns_adp_puts "<p>Ekkert fannst.</p><p>Má bjóða þér að leita í <a href=\"http://www.ordabanki.hi.is/wordbank/search\">Orðabanka Íslenskrar málstöðvar</a> eða í lagasafni ESB <a href=\"http://eur-lex.europa.eu/RECH_mot.do\">EURLEX</a> eða á EES-vefsetrinu <a href=\"http://www.utanrikisraduneyti.is/samningar/ees/\">EES</a>?<a </p>"
+    ns_adp_puts "<p>Ekkert fannst.</p><p>Má bjóða þér að leita í <a href=\"http://www.ordabanki.hi.is/wordbank/search\">Íðorðabanka Árnastofnunar</a> eða í þýddum og birtum EES-textum hjá EFTA á vefnum <a href=\"https://www.efta.int/eea-lex\">EEALEX</a>?<a </p>"
   }
 }
 }

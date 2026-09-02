@@ -24,7 +24,7 @@ Meginhluti íðorðanna í Hugtakasafninu tengist hinum margvíslegu sérsviðum EES-sa
 </p>
 
 <p>
-Nú eru í safninu rúmlega 82.000 íðorð og orðasambönd og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds og heimilt er að endurnota upplýsingar úr Hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið. 
+Nú eru í safninu tugþúsundir íðorða og orðasambanda og stöðugt bætast ný við. Safnið er enn í vinnslu og er sem slíkt háð fyrirvörum. Hugtakasafnið er í eigu þýðingamiðstöðvar utanríkisráðuneytisins. Aðgangur er öllum heimill án endurgjalds og heimilt er að endurnota upplýsingar úr Hugtakasafni, sbr. VII. kafla upplýsingalaga nr. 140/2012, enda sé uppruna upplýsinganna jafnan getið.
 </p>
 
 <p>
@@ -32,7 +32,7 @@ Allir starfsmenn þýðingamiðstöðvar hafa átt þátt í því að byggja upp Hugtakasafn
 </p>
 
 <p>
-Í Hugtakasafninu eru aðaltungumálin íslenska og enska en einnig er að finna í safninu íðorð á öðrum málum, þ.e. dönsku, frönsku, norsku, sænsku, þýsku og latínu. Hægt er að slá inn leitarorð á öllum þessum tungumálum og leita í öllum málum í einu. Íslenskan er grunntungumálið og niðurstöður birtast í íslenskri stafrófsröð. Hægt er að haka við orðrétta leit til að takmarka leitina. Ef ekki er hakað við orðrétta leit birtast öll dæmi um tiltekið orð eða orðasamband í safninu. 
+Í Hugtakasafninu eru aðaltungumálin íslenska og enska en einnig er að finna í safninu íðorð á öðrum málum, þ.e. dönsku, frönsku, norsku, sænsku, þýsku og latínu. Hægt er að slá inn leitarorð á öllum þessum tungumálum og leita í öllum málum í einu. Íslenskan er grunntungumálið og niðurstöður birtast í íslenskri stafrófsröð. Hægt er að haka við orðrétta leit til að takmarka leitina. Ef ekki er hakað við orðrétta leit birtast öll dæmi um tiltekið orð eða orðasamband í safninu.
 </p>
 
 <p>
