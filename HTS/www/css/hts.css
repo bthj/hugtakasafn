@@ -1,0 +1,119 @@
+/* Standalone HTS design. Replaces the layout borrowed from stjornarradid.is
+   (see updateSTJRframe.sh in git history) after that site's CMS migration
+   made scraping its chrome unworkable. */
+
+:root {
+  --hts-blue: #003366;
+  --hts-accent: #ead28c;
+  --hts-bg: #ffffff;
+  --hts-text: #1a1a1a;
+  --hts-muted: #555555;
+  --hts-border: #d8d8d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: var(--hts-text);
+  background: var(--hts-bg);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--hts-blue);
+}
+a:hover {
+  color: #0055a4;
+}
+
+.hts-masthead {
+  background: var(--hts-blue);
+  color: #ffffff;
+  padding: 0.6em 1em;
+}
+.hts-masthead-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+  font-size: 0.9em;
+}
+.hts-crest {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hts-crest:hover {
+  text-decoration: underline;
+}
+.hts-masthead-sep {
+  color: var(--hts-accent);
+}
+.hts-masthead-org {
+  color: #f0f0f0;
+}
+
+.hts-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5em 1em 3em;
+}
+
+.hts-page h1 {
+  color: var(--hts-blue);
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--hts-accent);
+  padding-bottom: 0.3em;
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.3em 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  border-bottom: 1px solid var(--hts-border);
+}
+
+dt {
+  margin-top: 0.6em;
+  font-weight: 600;
+  color: var(--hts-blue);
+}
+dd {
+  margin: 0 0 0.6em 0;
+}
+
+input[type="text"], select {
+  font-family: inherit;
+  padding: 0.3em;
+  border: 1px solid var(--hts-border);
+  border-radius: 3px;
+}
+
+.hts-footer {
+  background: #f4f4f4;
+  border-top: 1px solid var(--hts-border);
+  color: var(--hts-muted);
+  padding: 1.5em 1em;
+  margin-top: 2em;
+  font-size: 0.85em;
+  text-align: center;
+}
+.hts-footer a {
+  color: var(--hts-muted);
+}

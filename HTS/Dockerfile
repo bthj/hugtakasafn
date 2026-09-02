@@ -17,7 +17,5 @@ RUN bash install-ns.sh build
 COPY ./hugtakasafn-naviserver-container.tcl /usr/local/ns/conf/hugtakasafn-naviserver-container.tcl
 
 ADD . /home/nsadmin/web/hugtakasafn
-RUN mkdir --parents /home/nsadmin/web/hugtakasafn/stjrWebUITemplate/product
-RUN bash /home/nsadmin/web/hugtakasafn/stjrWebUITemplate/prepareLayoutADPIncludes.sh
 
 CMD /usr/local/ns/bin/nsd -f -u nsadmin -g nsadmin -t /usr/local/ns/conf/hugtakasafn-naviserver-container.tcl

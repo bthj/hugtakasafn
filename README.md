@@ -50,11 +50,6 @@ Place the MultiTerm export XML file in `/tmp/hugtakasafn-import` and run:
 hugtakasafn/updateHTS.sh
 ```
 
-## Update the STJR HTML frame around the HTS web UI
-```
-hugtakasafn/updateSTJRframe.sh
-```
-
 ## Bind mount the HTS web root from the host filesystem
 If ad-hoc edits of file contents in the HTS web root are desirable, for e.g. simple text updates, a copy of the HTS web root in the host file system can be bind mounted to the corresponding location within the `hugtakasafn_naviserver` container.  This can be accomplished by editing the deployed Docker Compose declaration:
 ```

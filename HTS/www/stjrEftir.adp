@@ -1,13 +1,14 @@
 <%
-set fetch_dest [ns_set get [ns_conn headers] "Sec-Fetch-Dest"]
-if { $fetch_dest == "iframe" } {
-  ns_adp_puts {
+ns_adp_puts {
+
+</div><!-- .hts-page -->
+
+<footer class="hts-footer">
+  <p>Þýðingamiðstöð utanríkisráðuneytisins &middot; <a href="https://www.stjornarradid.is/">Stjórnarráð Íslands</a></p>
+</footer>
 
 </body>
 </html>
 
   }
-} else {
-  ns_adp_include stjrTemplateAfter.html
-}
 %>
