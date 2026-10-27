@@ -2,21 +2,27 @@
 <% ns_adp_include heading1is.adp %>
 
 <%
-set_the_usual_form_variables 0
+hts_form_variables {leitarord tungumal ordrett}
+if { ![info exists leitarord] } {
+  set leitarord ""
+}
+if { ![info exists tungumal] } {
+  set tungumal "oll"
+}
+set tungumal [hts_enum $tungumal {oll is en danosae fr de la} oll]
 set leitarord [string trim $leitarord]
 regsub -all {\s+} $leitarord " " leitarord
 %>
 
 <% ns_adp_include leit-einfold.adp %>
 
-  <p><a href="/">Hugtakasafn</a> : Ni&eth;urst&ouml;&eth;ur leitar a&eth; "<b><%=$leitarord%></b>"</p>
+  <p><a href="/">Hugtakasafn</a> : Ni&eth;urst&ouml;&eth;ur leitar a&eth; "<b><%=[ns_quotehtml $leitarord]%></b>"</p>
 
 <%
 if { [empty_string_p $leitarord] } {
   ns_adp_puts "<p>Engin leitarskilyr&eth;i gefin.</p>"
 } else {
   set sql_query "select * from hugtakasafn where "
-  set leitarord [DoubleApos $leitarord]
   set list_leitarord [split $leitarord]
   if { ![info exists ordrett] || [string compare $ordrett "o"] == 0 } {
     switch $tungumal {
@@ -91,7 +97,7 @@ if { [empty_string_p $leitarord] } {
         }
       }
     }
-    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=o"
+    set hugtakUrlLeitarParam "&leitarord=[ns_urlencode $leitarord]&tungumal=$tungumal&ordrett=o"
 
 
   } elseif { [info exists ordrett] && [string compare $ordrett "s"] == 0 } {
@@ -118,7 +124,7 @@ if { [empty_string_p $leitarord] } {
         append sql_query "lang_la ilike [ns_dbquotevalue $leitarord%] "
       }
     }
-    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=s"
+    set hugtakUrlLeitarParam "&leitarord=[ns_urlencode $leitarord]&tungumal=$tungumal&ordrett=s"
 
   } else {
     switch $tungumal {
@@ -144,7 +150,7 @@ if { [empty_string_p $leitarord] } {
         append sql_query "lang_la ilike [ns_dbquotevalue $leitarord] "
       }
     }
-    set hugtakUrlLeitarParam "&leitarord=$leitarord&tungumal=$tungumal&ordrett=t"
+    set hugtakUrlLeitarParam "&leitarord=[ns_urlencode $leitarord]&tungumal=$tungumal&ordrett=t"
   }
   append sql_query "order by db_nr, lang_is"
 }

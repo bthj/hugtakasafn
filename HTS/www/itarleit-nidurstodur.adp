@@ -1,7 +1,7 @@
 <% ns_adp_include stjrFyrir.adp %>
 <% ns_adp_include heading1is.adp %>
 
-<% set_the_usual_form_variables 0 %>
+<% hts_form_variables {hugtak tungumal samh samh_op svid svid_op daemi daemi_op skilgr skilgr_op rit rit_op skjalnr skjalnr_op heimild heimild_op aths aths_op adalord adalord_op ordflokkur ordflokkur_op kyn kyn_op onnurmalfr onnurmalfr_op skst skst_op annarrh annarrh_op} %>
 
 <a href="/">Hugtakasafn</a> : <a href="itarleit.adp">&Iacute;tarleg leit</a> : Ni&eth;urst&ouml;&eth;ur
 
@@ -94,7 +94,7 @@ if { ![empty_string_p $hugtak] } {
       }
     }
   }
-  append leitarskilyrdi "Hugtak inniheldur \"$hugtak\" "
+  append leitarskilyrdi "Hugtak inniheldur \"[ns_quotehtml $hugtak]\" "
 }
 if { ![empty_string_p $samh] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -117,7 +117,7 @@ if { ![empty_string_p $samh] } {
     append leitarskilyrdi "Samh. inniheldur "
   }
   append sql_query "is_samh ilike [ns_dbquotevalue %$samh%] "
-  append leitarskilyrdi "\"$samh\" "
+  append leitarskilyrdi "\"[ns_quotehtml $samh]\" "
 }
 if { ![empty_string_p $svid] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -140,7 +140,7 @@ if { ![empty_string_p $svid] } {
     append leitarskilyrdi "Svi� inniheldur "
   }
   append sql_query "is_svid ilike [ns_dbquotevalue %$svid%] "
-  append leitarskilyrdi "\"$svid\" "
+  append leitarskilyrdi "\"[ns_quotehtml $svid]\" "
 }
 if { ![empty_string_p $daemi] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -163,7 +163,7 @@ if { ![empty_string_p $daemi] } {
     append leitarskilyrdi "D�mi inniheldur "
   }
   append sql_query "is_daemi ilike [ns_dbquotevalue %$daemi%] "
-  append leitarskilyrdi "\"$daemi\" "
+  append leitarskilyrdi "\"[ns_quotehtml $daemi]\" "
 }
 if { ![empty_string_p $skilgr] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -186,7 +186,7 @@ if { ![empty_string_p $skilgr] } {
     append leitarskilyrdi "Skilgr. inniheldur "
   }
   append sql_query "is_skilgr ilike [ns_dbquotevalue %$skilgr%] "
-  append leitarskilyrdi "\"$skilgr\" "
+  append leitarskilyrdi "\"[ns_quotehtml $skilgr]\" "
 }
 if { ![empty_string_p $rit] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -209,7 +209,7 @@ if { ![empty_string_p $rit] } {
     append leitarskilyrdi "Rit inniheldur "
   }
   append sql_query "is_rit ilike [ns_dbquotevalue %$rit%] "
-  append leitarskilyrdi "\"$rit\" "
+  append leitarskilyrdi "\"[ns_quotehtml $rit]\" "
 }
 
 
@@ -234,7 +234,7 @@ if { ![empty_string_p $skjalnr] } {
     append leitarskilyrdi "Skjal nr. inniheldur "
   }
   append sql_query "is_skjalnr ilike [ns_dbquotevalue %$skjalnr%] "
-  append leitarskilyrdi "\"$skjalnr\" "
+  append leitarskilyrdi "\"[ns_quotehtml $skjalnr]\" "
 }
 
 
@@ -259,7 +259,7 @@ if { ![empty_string_p $heimild] } {
     append leitarskilyrdi "Heimild inniheldur "
   }
   append sql_query "is_heimild ilike [ns_dbquotevalue %$heimild%] "
-  append leitarskilyrdi "\"$heimild\" "
+  append leitarskilyrdi "\"[ns_quotehtml $heimild]\" "
 }
 if { ![empty_string_p $aths] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -282,7 +282,7 @@ if { ![empty_string_p $aths] } {
     append leitarskilyrdi "Athugasemd inniheldur "
   }
   append sql_query "is_aths ilike [ns_dbquotevalue %$aths%] "
-  append leitarskilyrdi "\"$aths\" "
+  append leitarskilyrdi "\"[ns_quotehtml $aths]\" "
 }
 if { ![empty_string_p $adalord] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -305,7 +305,7 @@ if { ![empty_string_p $adalord] } {
     append leitarskilyrdi "A�alor� inniheldur "
   }
   append sql_query "is_adalord ilike [ns_dbquotevalue %$adalord%] "
-  append leitarskilyrdi "\"$adalord\" "
+  append leitarskilyrdi "\"[ns_quotehtml $adalord]\" "
 }
 if { ![empty_string_p $ordflokkur] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -328,7 +328,7 @@ if { ![empty_string_p $ordflokkur] } {
     append leitarskilyrdi "Or�flokkur inniheldur "
   }
   append sql_query "is_adalord_ordfl ilike [ns_dbquotevalue %$ordflokkur%] "
-  append leitarskilyrdi "\"$ordflokkur\" "
+  append leitarskilyrdi "\"[ns_quotehtml $ordflokkur]\" "
 }
 if { ![empty_string_p $kyn] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -351,7 +351,7 @@ if { ![empty_string_p $kyn] } {
     append leitarskilyrdi "Kyn inniheldur "
   }
   append sql_query "is_adalord_kyn ilike [ns_dbquotevalue %$kyn%] "
-  append leitarskilyrdi "\"$kyn\" "
+  append leitarskilyrdi "\"[ns_quotehtml $kyn]\" "
 }
 if { ![empty_string_p $onnurmalfr] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -374,7 +374,7 @@ if { ![empty_string_p $onnurmalfr] } {
     append leitarskilyrdi "�nnur m�lfr. inniheldur "
   }
   append sql_query "is_onnurmalfr ilike [ns_dbquotevalue %$onnurmalfr%] "
-  append leitarskilyrdi "\"$onnurmalfr\" "
+  append leitarskilyrdi "\"[ns_quotehtml $onnurmalfr]\" "
 }
 if { ![empty_string_p $skst] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -397,7 +397,7 @@ if { ![empty_string_p $skst] } {
     append leitarskilyrdi "Skammst�fun inniheldur "
   }
   append sql_query "(en_skst ilike [ns_dbquotevalue %$skst%] or is_skst ilike [ns_dbquotevalue %$skst%]) "
-  append leitarskilyrdi "\"$skst\" "
+  append leitarskilyrdi "\"[ns_quotehtml $skst]\" "
 }
 if { ![empty_string_p $annarrh] } {
   if { [string first "where" $sql_query] != -1 } {
@@ -420,7 +420,7 @@ if { ![empty_string_p $annarrh] } {
     append leitarskilyrdi "Annar rith�ttur inniheldur "
   }
   append sql_query "(en_annar_rith ilike [ns_dbquotevalue %$annarrh%] or is_annar_rith ilike [ns_dbquotevalue %$annarrh%]) "
-  append leitarskilyrdi "\"$annarrh\" "
+  append leitarskilyrdi "\"[ns_quotehtml $annarrh]\" "
 }
 append sql_query "order by db_nr, lang_is"
 set hugtakUrlLeitarParam ""

@@ -18,9 +18,9 @@ if { ![empty_string_p $sql_query] } {
   set count 0
   set list_leitarord [list]
   if { ![empty_string_p $leitarord] } {
-  	set list_leitarord [split $leitarord]
+  	set list_leitarord [hts_regexp_words $leitarord]
   } elseif { ![empty_string_p $hugtak] } {
-  	set list_leitarord [split $hugtak]
+  	set list_leitarord [hts_regexp_words $hugtak]
   }
   while { [ns_db getrow $db $selection] } {
     ns_adp_puts "<div class=\"term\">"
@@ -30,7 +30,7 @@ if { ![empty_string_p $sql_query] } {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_is "<b>&</b>" lang_is
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_is</a>"
         if { ![empty_string_p $is_annar_rith] } {
           set is_annar_rith_parts [split $is_annar_rith ";"]
           foreach is_annar_rith_part $is_annar_rith_parts {
@@ -46,7 +46,7 @@ if { ![empty_string_p $sql_query] } {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_is "<b>&</b>" lang_is
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_is</a>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_is</a>"
         if { ![empty_string_p $is_annar_rith] } {
           set is_annar_rith_parts [split $is_annar_rith ";"]
           foreach is_annar_rith_part $is_annar_rith_parts {
@@ -62,7 +62,7 @@ if { ![empty_string_p $sql_query] } {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_en "<b>&</b>" lang_en
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_en</a>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_en</a>"
         if { ![empty_string_p $en_annar_rith] } {
           set en_annar_rith_parts [split $en_annar_rith ";"]
           foreach en_annar_rith_part $en_annar_rith_parts {
@@ -78,25 +78,25 @@ if { ![empty_string_p $sql_query] } {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_danosae "<b>&</b>" lang_danosae
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_danosae</a></dt>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_danosae</a></dt>"
       }
       "fr" {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_fr "<b>&</b>" lang_fr
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_fr</a></dt>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_fr</a></dt>"
       }
       "de" {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_de "<b>&</b>" lang_de
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_de</a></dt>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_de</a></dt>"
       }
       "la" {
         foreach eitt_leitarord $list_leitarord {
           regsub -all -nocase $eitt_leitarord $lang_la "<b>&</b>" lang_la
         }
-        ns_adp_puts "<dt><a href=\"hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam\">$lang_la</a></dt>"
+        ns_adp_puts "<dt><a href=\"[ns_quotehtml hugtak.adp?id=$entrynumber$hugtakUrlLeitarParam]\">$lang_la</a></dt>"
       }
     }
     if { ![empty_string_p $lang_is] && [string compare $tungumal "is"] != 0 && [string compare $tungumal "oll"] != 0 } {

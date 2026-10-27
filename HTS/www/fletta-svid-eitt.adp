@@ -1,33 +1,39 @@
 <% ns_adp_include stjrFyrir.adp %>
 <% ns_adp_include heading1is.adp %>
 
-<% set_the_usual_form_variables 0 %>
+<%
+hts_form_variables {id c o}
+if { ![info exists id] } {
+  set id ""
+}
+%>
 
 <% ns_adp_include leit-einfold.adp %>
 
-<a href="/">Hugtakasafn</a> : <a href="fletta-svid.adp">Fletting svi&eth;a</a> : <b><%=$id%></b>
+<a href="/">Hugtakasafn</a> : <a href="fletta-svid.adp">Fletting svi&eth;a</a> : <b><%=[ns_quotehtml $id]%></b>
 
 <%
 set db [ns_db gethandle]
+set count -1
 if { [info exists c] } {
-  set count $c
-} else {
+  set count [hts_int $c -1]
+}
+if { $count < 0 } {
   set selection [ns_db select $db "select count(is_svid) as svid_fjoldi from hugtakasafn where is_svid = [ns_dbquotevalue $id]"]
   ns_db getrow $db $selection
   set_variables_after_query
   set count $svid_fjoldi
 }
+set offset 0
 if { [info exists o] } {
-  set offset $o
-} else {
-  set offset 0
+  set offset [hts_int $o 0]
 }
 set max 10
-ns_adp_puts "<br/><font color=\"gray\">Hugt&ouml;k [expr $offset + 1] "
-if { $count < [expr $offset + $max] } {
+ns_adp_puts "<br/><font color=\"gray\">Hugt&ouml;k [expr {$offset + 1}] "
+if { $count < [expr {$offset + $max}] } {
   ns_adp_puts "til $count"
 } else {
-  ns_adp_puts "til [expr $offset + $max]"
+  ns_adp_puts "til [expr {$offset + $max}]"
 }
 ns_adp_puts " af $count</font>"
 %>
@@ -74,7 +80,7 @@ while { [ns_db getrow $db $selection] } {
 %>
 </dl>
 
-<% set path "[ns_conn host][ns_conn url]?id=$id&c=$count" %>
+<% set path "[ns_conn url]?id=[ns_urlencode $id]&c=$count" %>
 
 <% ns_adp_include paginator.adp %>
 

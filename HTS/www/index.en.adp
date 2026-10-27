@@ -46,10 +46,5 @@
 <b>Note</b>- The Termbase is the property of the Translation Centre of the Ministry for Foreign Affairs and has been developed by its staff. It is permissible to reuse information from the Termbase, cf. Chapter VII of The Information Act No. 140/2012, provided the source of the information is mentioned. The editor of the Termbase is Sigr n  orgeirsd ttir and its Webmaster is Reynir Gunnlaugsson.  sta Krist n Hauksd ttir Wiium (Terminologist), Bj rgvin R. Andersen (Terminologist), Brynj lfur Sveinsson (Senior translator), Gunnhildur Stef nsd ttir (Senior translator), H lfdan  . H lfdanarson (Terminologist), and Sindri Gu j nsson (Senior translator) have also participated in editing the Termbase.
 </p>
 
-<script>
-<!--
-document.leit.leitarord.focus();
-// -->
-</script>
 
 <% ns_adp_include stjrEftir.adp %>

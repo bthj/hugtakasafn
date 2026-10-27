@@ -20,7 +20,7 @@ if { ![info exists tungumal] } {
       <td style="padding-right:1em">
         <%
         if { [info exists leitarord] } {
-          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\" onFocus=\"javascript:this.select();\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"[ns_quotehtml $leitarord]\"/><!-- br/ -->"
         } else {
           ns_adp_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
         }
@@ -104,9 +104,4 @@ if { ![info exists tungumal] } {
   </table>
   <input type="submit" value="leita" style="margin-right:0.5em" /> <a href="itarleit.adp">Nánari leit</a> &nbsp;|&nbsp; <a href="fletta-svid.adp">Fletting sviða</a>
 </form>
-<script language="JavaScript">
-<!--
-document.leit.leitarord.select();
-// -->
-</script>
 <hr size="1" noshade/>

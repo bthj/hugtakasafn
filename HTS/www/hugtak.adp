@@ -2,7 +2,10 @@
 <% ns_adp_include heading1is.adp %>
 
 <%
-set_the_usual_form_variables 0
+hts_form_variables {id leitarord tungumal ordrett}
+if { ![info exists id] } {
+  set id ""
+}
 if { [info exists leitarord] } {
   set leitarord [string trim $leitarord]
   regsub -all {\s+} $leitarord " " leitarord
@@ -20,7 +23,7 @@ set selection [ns_db select $db $sql_query]
 ns_db getrow $db $selection
 set_variables_after_query
 if { [info exists leitarord] } {
-  set list_leitarord [split $leitarord]
+  set list_leitarord [hts_regexp_words $leitarord]
   foreach eitt_leitarord $list_leitarord {
     regsub -all -nocase $eitt_leitarord $lang_is "#####&bbbbb" lang_is
   }
@@ -30,7 +33,7 @@ if { [info exists leitarord] } {
 }
 if { [empty_string_p $lang_is] } {
   if { [info exists leitarord] } {
-    ns_returnerror 404 "Hugtak fannst ekki.  Leit a&eth;:  <a href=\"http://hugtakasafn.utn.stjr.is/leit-nidurstodur.adp?leitarord=$leitarord\">$leitarord</a>."
+    ns_returnerror 404 "Hugtak fannst ekki.  Leit a&eth;:  <a href=\"/leit-nidurstodur.adp?leitarord=[ns_quotehtml [ns_urlencode $leitarord]]\">[ns_quotehtml $leitarord]</a>."
   } else {
     ns_returnerror 404 "Hugtak fannst ekki &iacute; <a href=\"http://hugtakasafn.utn.stjr.is\">Hugtakasafni</a>."
   }
@@ -344,10 +347,5 @@ ns_adp_puts "</dl><br/>"
 # if empty lang_is
 %>
 
-<script>
-<!--
-document.leit.leitarord.focus(); document.leit.leitarord.select();
-// -->
-</script>
 
 <% ns_adp_include stjrEftir.adp %>

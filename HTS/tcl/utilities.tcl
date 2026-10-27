@@ -3659,3 +3659,44 @@ proc _ns_timeentrywidget {column} {
 
 
 
+
+# Request handling for the HTS pages.  Every value read from a request
+# goes through one of these before it reaches expr, SQL or a regexp.
+
+proc_doc hts_form_variables {names} "Sets each listed form field that is present in the request as a variable in the caller.  Unlike set_the_usual_form_variables, fields not listed are ignored, so a request cannot set a page's internal variables (such as sql_query)." {
+    set form [ns_getform]
+    if { $form == "" } {
+	return
+    }
+    foreach name $names {
+	set i [ns_set find $form $name]
+	if { $i >= 0 } {
+	    uplevel 1 [list set $name [ns_set value $form $i]]
+	}
+    }
+}
+
+proc_doc hts_int {value default} "Returns value as a non-negative integer, or default if it is not one.  Use for request values that reach expr or SQL." {
+    if { [regexp {^[0-9]{1,9}$} $value] } {
+	return [scan $value %d]
+    }
+    return $default
+}
+
+proc_doc hts_enum {value allowed default} "Returns value if it is one of the allowed values, otherwise default." {
+    if { [lsearch -exact $allowed $value] >= 0 } {
+	return $value
+    }
+    return $default
+}
+
+proc_doc hts_regexp_words {string} "Splits user-typed search text into words and escapes regexp metacharacters in each, so the words can be highlighted with regsub and match literally.  Empty words are dropped." {
+    set result [list]
+    foreach word [split $string] {
+	if { $word != "" } {
+	    regsub -all {[][\\{}()*+?.^$|]} $word {\\&} word
+	    lappend result $word
+	}
+    }
+    return $result
+}

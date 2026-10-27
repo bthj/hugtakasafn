@@ -20,7 +20,7 @@ if { ![info exists tungumal] } {
       <td>
         <%
         if { [info exists leitarord] } {
-          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"$leitarord\"/><!-- br/ -->"
+          ns_adp_puts "<input type=\"text\" name=\"leitarord\" value=\"[ns_quotehtml $leitarord]\"/><!-- br/ -->"
         } else {
           ns_adp_puts "<input type=\"text\" name=\"leitarord\"/><!-- br/ -->"
         }
